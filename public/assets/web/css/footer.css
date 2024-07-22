@@ -4,6 +4,9 @@
     margin-top: 50px;
     padding: 70px 0;
 }
+.footer .contact-content .logo{
+    margin-bottom: 25px;
+}
 footer .information .contact-info p{
     font-size: 16px;
     font-weight: 600;
@@ -29,21 +32,48 @@ footer .copyright{
     color: #606060;
     font-size: 16px;
     font-weight: 700;
+    padding-top: 50px;
 }
 .footer .social-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 .footer .social-icons img {
     max-width: 40px;
     margin: 10px;
 }
-
-@media (min-width: 992px) {
-    .footer .social-icons {
-        flex-direction: column;
+.footer .contact-content,
+.footer .introduction,
+.footer .product{
+    margin: 0 auto;
+    width: fit-content;
+}
+#social-icon-mobile {
+    display: none;
+}
+/* Show the mobile icons and hide the desktop icons for smaller screens */
+@media (max-width: 992px) {
+    .footer{
+        padding: 70px 0 0 0;
+    }
+    footer .information-content{
+        flex-direction: column-reverse;
+    }
+    #social-icon-desktop {
+        display: none;
+    }
+    #social-icon-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer .contact-content{
+        margin-top: 20px;
+    }
+    .footer .copyright{
+        padding-top: 0;
+        margin: 0 -140px;
+        font-weight: 400;
+        color: #FFFFFF;
+        background-color: #E6262B;
     }
 }

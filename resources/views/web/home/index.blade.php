@@ -9,7 +9,7 @@
     <section>
         @include('web.home.partials.about')
     </section>
-    <div class="container">
+    <div class="container" style="padding-bottom: 50px;">
         <section>
             @include('web.home.partials.product')
         </section>
