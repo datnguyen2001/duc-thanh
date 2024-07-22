@@ -14,15 +14,15 @@
     </div>
 </div>
 <div class="container" style="margin-top: -200px;">
-    <div class="home-activity-product d-flex">
-        <div class="acts-image col-8">
+    <div class="home-activity-product">
+        <div class="acts-image col-lg-8 col-12">
             <div class="frame-container">
                 <img src="{{asset('assets/images/home/frame1.png')}}" alt="Frame1" class="frame-1">
                 <img src="{{asset('assets/images/home/activity-product-1.webp')}}" alt="Image Activity" class="home-activity-img">
             </div>
             <h5>Hình ảnh Sản Phẩm</h5>
         </div>
-        <div class="acts-video col-4">
+        <div class="acts-video col-lg-4 col-12">
             <div class="frame-container">
                 <img src="{{asset('assets/images/home/frame2.png')}}" alt="Frame2" class="frame-2">
                 <img src="{{asset('assets/images/home/activity-tiktok.webp')}}" alt="Tiktok Activity" class="home-activity-video">
