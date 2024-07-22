@@ -1,0 +1,153 @@
+.header-container {
+    width: 100vw;
+    position: relative;
+    z-index: 9999;
+}
+
+header {
+    display: flex;
+    width: calc(100vw - 18vw);
+    height: 100px;
+    background-color: #fff;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+header .border-side {
+    position: absolute;
+    top: 0;
+}
+
+header .border-side.left {
+    right: 0;
+}
+
+header .border-side.right {
+    left: 0;
+}
+
+header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .nav span a {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38.45px;
+    color: red;
+}
+
+header .nav.active {
+    background-color: #fad6a5;
+    opacity: 0.85;
+}
+
+header .nav.separator {
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+}
+
+header .nav.side {
+    position: relative;
+    width: 80px;
+}
+
+header .nav.side.left {
+    border-right: 1px solid red;
+}
+
+header .nav.side.right {
+    border-left: 1px solid red;
+}
+
+header .nav.small {
+    width: 249.32px;
+}
+
+header .nav.medium {
+    width: 285.58px;
+}
+
+header .nav.large {
+    width: 374.74px;
+}
+
+header .logo {
+    width: 292px;
+    height: 76px;
+}
+
+header .icon {
+    width: 46px;
+    height: 46px;
+    z-index: 10;
+}
+header .search-icon{
+    position: relative;
+    right: 50%;
+}
+header .home-icon{
+    position: relative;
+    left: 50%;
+}
+@media (max-width: 639px) {
+    .header {
+        height: 70px;
+    }
+
+    header .nav.small,
+    header .nav.medium {
+        display: none;
+    }
+
+    header .logo {
+        width: 178.31px;
+        height: 46.2px;
+    }
+
+    header .nav.large {
+        width: 215px;
+    }
+
+    header .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    header .nav.side {
+        width: 56px;
+    }
+
+    header .nav.side.left {
+        padding-right: 16px;
+    }
+
+    header .nav.side.right {
+        padding-left: 16px;
+    }
+
+    header .nav.side.left {
+        justify-content: right;
+    }
+
+    header .nav.side.right {
+        justify-content: left;
+    }
+
+    header .border-side {
+        height: 70px;
+    }
+
+    header .border-side.left {
+        right: 12px;
+    }
+
+    header .border-side.right {
+        left: 12px;
+    }
+}
