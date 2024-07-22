@@ -13,7 +13,7 @@ use \App\Http\Controllers\Web\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('language/{language}', [HomeController::class, 'language'])->name('language');
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
 Route::middleware('auth')->group(function () {
