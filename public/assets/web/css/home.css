@@ -136,7 +136,19 @@
     flex-direction: column;
     align-items: center;
 }
-
+.home-product .swiper-pagination{
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: -5%;
+}
+.home-product .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #F9D5A4;
+}
+.home-product .swiper-pagination-bullet-active{
+    background-color: #E6262B;
+}
 /*Activity*/
 .home-activity{
     background: url("/assets/images/home/background-2.webp") no-repeat center center;
