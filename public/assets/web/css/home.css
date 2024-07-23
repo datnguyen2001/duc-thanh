@@ -350,6 +350,23 @@
     #imageCarousel .carousel-item img {
         left: 5%;
     }
+    .home-about h1{
+        font-size: 50px;
+    }
+    .home-about h5 {
+        font-size: 20px;
+        padding: 18px 15px 10px;
+    }
+    .home-about a, .home-about p {
+        font-size: 18px;
+    }
+    .home-product h1 {
+        font-size: 50px;
+    }
+    .home-product h5{
+        padding: 18px 23px 10px 22px;
+        font-size: 20px;
+    }
     .home-product .list-product-desktop {
         display: none;
     }
@@ -373,6 +390,13 @@
     .home-activity-product .acts-video h5 {
         left: 40%;
     }
+    .home-contact .title {
+        font-size: 20px;
+        padding: 10px 20px 10px;
+    }
+    .home-contact h1 {
+        font-size: 50px;
+    }
     .home-contact .contact-map{
         margin-bottom: 50px;
     }
@@ -391,6 +415,23 @@
     }
 }
 @media (max-width: 425px) {
+    .home-about h1{
+        font-size: 40px;
+    }
+    .home-about h5 {
+        font-size: 16px;
+        padding: 15px 18px 7px;
+    }
+    .home-about a, .home-about p {
+        font-size: 16px;
+    }
+    .home-product h1 {
+        font-size: 40px;
+    }
+    .home-product h5{
+        padding: 19px 16px 10px 15px;
+        font-size: 16px;
+    }
     .home-activity h1 {
         font-size: 40px;
     }
@@ -404,5 +445,17 @@
     .home-activity-product .acts-video h5 {
         font-size: 16px;
         padding: 10px 15px 10px 21px;
+    }
+    .home-contact .title {
+        font-size: 16px;
+    }
+    .home-contact h1 {
+        font-size: 40px;
+    }
+    .home-contact .contact-form h5 {
+        font-size: 20px;
+    }
+    #contact-form button[type="submit"] {
+        font-size: 18px;
     }
 }

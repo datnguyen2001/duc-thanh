@@ -105,6 +105,10 @@
             425: {
                 slidesPerView: 1,
                 spaceBetween: 10,
+            },
+            325: {
+                slidesPerView: 1,
+                spaceBetween: 10,
             }
         }
     });
