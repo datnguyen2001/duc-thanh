@@ -1,0 +1,39 @@
+.activity-page .activity-banner{
+    background: url("/assets/images/activity/background.webp") no-repeat center center;
+    background-size: cover;
+    height: 475px;
+}
+.activity-page .activity-banner h1{
+    font-size: 55px;
+    font-weight: 500;
+    color: #FAD6A5
+}
+.activity-page .activity-banner .container{
+    padding-top: 220px;
+}
+.activity-banner .activity-title{
+    width: max-content;
+    text-align: center;
+}
+.activity-page .activity-image{
+    background: url("/assets/images/activity/background-2.webp") no-repeat center center;
+    background-size: cover;
+}
+.activity-page .activity-image span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.activity-page .activity-image .home{
+    color: #606060;
+}
+.activity-page .activity-image .activity{
+    color: #D23C36;
+}
+.activity-page .list-image .sub-title{
+    background: url("/assets/images/activity/image.png") no-repeat center center;
+    background-size: cover;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFBF6;
+    padding: 15px 15px 15px 15px;
+}
