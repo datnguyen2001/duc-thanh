@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('introduce', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('name_en');
+            $table->longText('name_en');
             $table->longText('content');
             $table->longText('content_en');
             $table->string('src')->nullable();
