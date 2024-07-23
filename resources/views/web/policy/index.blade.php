@@ -25,8 +25,8 @@
                 <div class="box-content-child-policy">
                     @foreach($data as $val)
                     <div>
-                        <p class="title-child-policy">{{$val->name}}</p>
-                        <div class="content-child-policy">{!! $val->content !!}</div>
+                        <p class="title-child-policy">{{$val->names}}</p>
+                        <div class="content-child-policy">{!! $val->contents !!}</div>
                     </div>
                    @endforeach
                 </div>
@@ -49,8 +49,8 @@
                 <img src="{{asset('assets/images/content-mobile.webp')}}" alt="" class="img-content-policy-mobile w-100">
                 @foreach($dataMobile as $item)
                 <div class="box-content-child-policy-mobile">
-                    <p class="title-child-policy">{{$item->name}}</p>
-                    <div class="content-child-policy">{!! $item->content !!} </div>
+                    <p class="title-child-policy">{{$item->names}}</p>
+                    <div class="content-child-policy">{!! $item->contents !!} </div>
                 </div>
                     @endforeach
             </div>
