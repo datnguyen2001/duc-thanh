@@ -53,10 +53,13 @@
                         <img src="{{asset('assets/images/footer/fb.png')}}" alt="Facebook">
                         <img src="{{asset('assets/images/footer/youtube.png')}}" alt="Youtube">
                     </div>
-                    <div class="copyright">
+                    <div class="copyright-desktop">
                         Copyright 2024 © Ducthanh. All rights reserved
                     </div>
                 </div>
             </div>
         </div>
 </footer>
+<div class="copyright-mobile">
+    Copyright 2024 © Ducthanh. All rights reserved
+</div>
