@@ -16,7 +16,7 @@ use \App\Http\Controllers\Web\HomeController;
 Route::get('language/{language}', [HomeController::class, 'language'])->name('language');
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/activity', [HomeController::class, 'activity'])->name('activity');
-Route::get('policy', [HomeController::class, 'policy'])->name('policy');
+Route::get('chinh-sach-bao-mat', [HomeController::class, 'policy'])->name('policy');
 
 Route::middleware('auth')->group(function () {
 
