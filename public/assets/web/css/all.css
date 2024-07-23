@@ -9,3 +9,30 @@ a{
 p, h1{
     margin: 0;
 }
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.blob {
+    display: inline-block;
+    margin: 0 2px;
+    position: relative;
+}
+
+.blob a {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.pagination-ellipsis {
+    font-size: 35px;
+    color: #FAD6A5;
+}
