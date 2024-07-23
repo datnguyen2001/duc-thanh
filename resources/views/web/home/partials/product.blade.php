@@ -4,39 +4,112 @@
         Các dòng sản phẩm tự hào của <br>
         ĐỨC THANH
     </h1>
-    <div class="list-product">
+    <div class="list-product-desktop">
         <div class="d-flex flex-wrap">
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/background1.png') }}" alt="BG1" class="background-img">
-                <img src="{{ asset('assets/images/home/product/product1.png') }}" alt="Product1" class="product-img">
+                <img src="{{ asset('assets/images/home/product/product-1.webp') }}" alt="Product 1" class="product-img">
+                <span class="product-title">PHẤN</span>
             </div>
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/background2.png') }}" alt="BG2" class="background-img">
-                <img src="{{ asset('assets/images/home/product/product2.png') }}" alt="Product2" class="product-img">
+                <img src="{{ asset('assets/images/home/product/product-2.webp') }}" alt="Product 2" class="product-img">
+                <span class="product-title">BẢNG</span>
             </div>
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/background3.png') }}" alt="BG3" class="background-img">
-                <img src="{{ asset('assets/images/home/product/product3.png') }}" alt="Product3" class="product-img">
+                <img src="{{ asset('assets/images/home/product/product-3.webp') }}" alt="Product 3" class="product-img">
+                <span class="product-title">BÚT SÁP MÀU</span>
             </div>
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/background4.png') }}" alt="BG4" class="background-img">
-                <img src="{{ asset('assets/images/home/product/product4.png') }}" alt="Product4" class="product-img">
+                <img src="{{ asset('assets/images/home/product/product-4.webp') }}" alt="Product 4" class="product-img">
+                <span class="product-title">SÁP NẶN</span>
             </div>
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/background5.png') }}" alt="BG5" class="background-img">
-                <img src="{{ asset('assets/images/home/product/product5.png') }}" alt="Product5" class="product-img">
+                <img src="{{ asset('assets/images/home/product/product-5.webp') }}" alt="Product 5" class="product-img">
+                <span class="product-title">MỰC VÀ BÚT MÁY</span>
             </div>
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/background6.png') }}" alt="BG6" class="background-img">
-                <img src="{{ asset('assets/images/home/product/product6.png') }}" alt="Product6" class="product-img">
+                <img src="{{ asset('assets/images/home/product/product-6.webp') }}" alt="Product 6" class="product-img">
+                <span class="product-title">MÀU NƯỚC</span>
             </div>
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/background7.png') }}" alt="BG7" class="background-img">
-                <img src="{{ asset('assets/images/home/product/product7.png') }}" alt="Product7" class="product-img">
+                <img src="{{ asset('assets/images/home/product/product-7.webp') }}" alt="Product 7" class="product-img">
+                <span class="product-title">SẢN PHẨM KHÁC</span>
             </div>
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" style="width: 265px; height: 265px">
+                <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" class="product-img">
+                <span class="product-title">XEM TẤT CẢ</span>
             </div>
         </div>
     </div>
+    <div class="swiper-wrapper-container">
+        <div class="swiper-container list-product-mobile">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{{ asset('assets/images/home/product/product-1.webp') }}" alt="Product 1" class="product-img">
+                    <span class="product-title">PHẤN</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ asset('assets/images/home/product/product-2.webp') }}" alt="Product 2" class="product-img">
+                    <span class="product-title">BẢNG</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ asset('assets/images/home/product/product-3.webp') }}" alt="Product 3" class="product-img">
+                    <span class="product-title">BÚT SÁP MÀU</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ asset('assets/images/home/product/product-4.webp') }}" alt="Product 4" class="product-img">
+                    <span class="product-title">SÁP NẶN</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ asset('assets/images/home/product/product-5.webp') }}" alt="Product 5" class="product-img">
+                    <span class="product-title">MỰC VÀ BÚT MÁY</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ asset('assets/images/home/product/product-6.webp') }}" alt="Product 6" class="product-img">
+                    <span class="product-title">MÀU NƯỚC</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ asset('assets/images/home/product/product-7.webp') }}" alt="Product 7" class="product-img">
+                    <span class="product-title">SẢN PHẨM KHÁC</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" class="product-img">
+                    <span class="product-title">XEM TẤT CẢ</span>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
 </div>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+            425: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            325: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            }
+        }
+    });
+</script>
