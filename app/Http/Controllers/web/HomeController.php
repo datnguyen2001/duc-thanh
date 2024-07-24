@@ -55,4 +55,10 @@ class HomeController extends Controller
 
         return view('web.policy.index',compact('data','dataMobile'));
     }
+
+    public function introduce()
+    {
+
+        return view('web.introduce.index');
+    }
 }
