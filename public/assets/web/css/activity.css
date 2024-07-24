@@ -35,19 +35,22 @@
     color: #D23C36;
 }
 .activity-page .list-image{
+    position: relative;
     margin-top: 30px;
 }
 .activity-page .list-image .sub-title{
     position: absolute;
     background: url("/assets/images/activity/image.png") no-repeat center center;
     background-size: cover;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #FFFBF6;
     padding: 15px 50px 11px 50px;
     width: max-content;
 }
 .activity-page .list-image h1{
+    width: 60%;
+    margin: auto;
     text-align: center;
     font-size: 50px;
     font-weight: 600;
@@ -88,6 +91,33 @@
     font-weight: 400;
     color: #231F20;
 }
+.activity-page .swiper-container{
+    overflow: hidden;
+    width: 100%;
+}
+.activity-page .swiper-slide{
+    width: 33% !important;
+}
+.activity-page .swiper-wrapper{
+    width: 98% !important;
+    justify-content: flex-start;
+}
+.activity-page .swiper-button-next img{
+    position: relative;
+    right: -50px;
+    width: 60px;
+    height: auto;
+}
+.activity-page .swiper-button-prev img{
+    position: relative;
+    left: -50px;
+    width: 60px;
+    height: auto;
+}
+.activity-page .swiper-button-next::after,
+.activity-page .swiper-button-prev::after {
+    display: none;
+}
 
 /*Video*/
 .activity-video{
@@ -96,6 +126,7 @@
     margin-top: 50px;
 }
 .activity-video .list-video{
+    position: relative;
     padding-top: 100px;
     text-align: center;
 }
@@ -103,13 +134,15 @@
     position: absolute;
     background: url("/assets/images/activity/image.png") no-repeat center center;
     background-size: cover;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #FFFBF6;
     padding: 17px 24px 15px 21px;
     width: max-content;
 }
 .activity-video .list-video h1{
+    width: 60%;
+    margin: 0 auto;
     text-align: center;
     font-size: 50px;
     font-weight: 600;
@@ -157,20 +190,135 @@
 
 /*Background Footer*/
 .activity-background-footer-container {
-    position: relative;
-    width: 100%;
-    height: 100%; /* or set a specific height */
-    overflow: hidden; /* Ensure content that overflows is hidden */
+    margin-bottom: -420px;
 }
 
-.activity-background-footer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
+@media (max-width: 1200px){
+    .activity-page .list-image h1 {
+        font-size: 45px;
+    }
 }
-
-
+@media (max-width: 992px) {
+    .activity-page .activity-banner h1 {
+        font-size: 45px;
+    }
+    .activity-page .list-image .sub-title {
+        background-size: contain;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 11px 30px 11px 30px;
+    }
+    .activity-page .list-image h1{
+        padding-top: 65px;
+        width: 100%;
+    }
+    .activity-video .list-video .sub-title {
+        background-size: contain;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px 24px 15px 21px;
+    }
+    .activity-video .list-video h1 {
+        width: 100%;
+        font-size: 45px;
+        padding-top: 65px;
+    }
+    .activity-page .swiper-slide{
+        width: 50% !important;
+    }
+    .activity-page .swiper-button-next img{
+        width: 50px;
+        right: -30px;
+        top: 70%;
+    }
+    .activity-page .swiper-button-prev img{
+        width: 50px;
+        left: -30px;
+        top: 70%;
+    }
+    .activity-video .list-video .video-text p {
+        font-size: 14px;
+    }
+    .activity-video .list-video .video-text .video-btn {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+}
+@media (max-width: 768px) {
+    .activity-page .list-image h1 {
+        font-size: 40px;
+    }
+    .activity-page .list-video h1 {
+        font-size: 40px;
+    }
+    .activity-page .swiper-slide{
+        width: 100% !important;
+    }
+    .activity-page .swiper-button-next img{
+        width: 45px;
+        right: -40px;
+        top: 100%;
+    }
+    .activity-page .swiper-button-prev img{
+        width: 45px;
+        left: -40px;
+        top: 100%;
+    }
+    .activity-video .list-video-product .frame {
+        width: 70%;
+    }
+    .activity-video .list-video-product .video {
+        width: 57%;
+        top: 5%;
+        left: 21%;
+    }
+    .activity-video .list-video .tiktok {
+        width: 30%;
+        left: 35%;
+        top: 30%;
+    }
+}
+@media (max-width: 620px) {
+    .activity-page .swiper-slide{
+        width: 100% !important;
+    }
+    .activity-page .swiper-button-next img{
+        width: 45px;
+        right: -10px;
+        top: 100%;
+    }
+    .activity-page .swiper-button-prev img{
+        width: 45px;
+        left: -10px;
+        top: 100%;
+    }
+}
+@media (max-width: 475px) {
+    .activity-page .activity-banner{
+        background: url("/assets/images/activity/background-mobile.webp") no-repeat center center;
+        background-size: cover;
+        height: 86vh;
+    }
+    .activity-page .list-image .sub-title {
+        font-size: 16px;
+    }
+    .activity-page .list-video .sub-title {
+        font-size: 16px;
+        padding: 10px 16px 10px 13px;
+    }
+    .activity-page .list-product .product-title {
+        font-size: 20px;
+    }
+    .activity-page .list-product .product-detail {
+        font-size: 16px;
+    }
+    .activity-banner .activity-title {
+        margin: -60px auto 0;
+    }
+    .activity-page .activity-banner h1 {
+        font-size: 35px;
+    }
+    .activity-banner .activity-title img {
+        width: 70%;
+    }
+}
