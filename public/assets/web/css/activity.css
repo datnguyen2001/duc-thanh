@@ -1,0 +1,176 @@
+.activity-page .activity-banner{
+    position: relative;
+    z-index: 100;
+    background: url("/assets/images/activity/background.webp") no-repeat center center;
+    background-size: cover;
+    height: 475px;
+}
+.activity-page .activity-banner h1{
+    font-size: 55px;
+    font-weight: 500;
+    color: #FAD6A5
+}
+.activity-page .activity-banner .container{
+    padding-top: 220px;
+}
+.activity-banner .activity-title{
+    width: max-content;
+    text-align: center;
+}
+
+/*Image*/
+.activity-page .activity-image{
+    background: url("/assets/images/activity/background-2.webp") no-repeat center center;
+    background-size: cover;
+    margin-top: -180px;
+}
+.activity-page .activity-image span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.activity-page .activity-image .home{
+    color: #606060;
+}
+.activity-page .activity-image .activity{
+    color: #D23C36;
+}
+.activity-page .list-image{
+    margin-top: 30px;
+}
+.activity-page .list-image .sub-title{
+    position: absolute;
+    background: url("/assets/images/activity/image.png") no-repeat center center;
+    background-size: cover;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFBF6;
+    padding: 15px 50px 11px 50px;
+    width: max-content;
+}
+.activity-page .list-image h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #E6252B;
+}
+.activity-page .list-product{
+    text-align: center;
+    margin-top: 30px;
+}
+.activity-page .list-product .product-image{
+    position: relative;
+}
+.activity-page .list-product .frame{
+    width: 90%;
+}
+.activity-page .list-product .image{
+    position: absolute;
+    width: 100%;
+    top: 4%;
+    left: 0;
+}
+.activity-page .list-product .product-text{
+    margin-top: 20px;
+}
+.activity-page .list-product .product-title{
+    font-size: 22px;
+    font-weight: 600;
+    color: #D23C36;
+}
+.activity-page .list-product .product-detail{
+    font-size: 18px;
+    font-weight: 400;
+    color: #231F20;
+}
+.activity-page .list-product a{
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #231F20;
+}
+
+/*Video*/
+.activity-video{
+    background: url("/assets/images/activity/background-3.webp") no-repeat center center;
+    background-size: cover;
+    margin-top: 50px;
+}
+.activity-video .list-video{
+    padding-top: 100px;
+    text-align: center;
+}
+.activity-video .list-video .sub-title{
+    position: absolute;
+    background: url("/assets/images/activity/image.png") no-repeat center center;
+    background-size: cover;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFBF6;
+    padding: 17px 24px 15px 21px;
+    width: max-content;
+}
+.activity-video .list-video h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #E6252B;
+}
+.activity-video .list-video-product{
+    padding: 50px 0;
+}
+.activity-video .list-video-product .video-image{
+    position: relative;
+}
+.activity-video .list-video-product .frame{
+    width: 90%;
+}
+.activity-video .list-video-product .video{
+    position: absolute;
+    width: 73%;
+    top: 5%;
+    left: 14%;
+}
+.activity-video .list-video .tiktok{
+    position: absolute;
+    width: 50%;
+    left: 24%;
+    top: 30%;
+}
+.activity-video .list-video .video-text{
+    width: 70%;
+    margin: 30px auto 0;
+}
+.activity-video .list-video .video-text p{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #231F20;
+}
+.activity-video .list-video .video-text .video-btn{
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #E6252B;
+    color: #FFFFFF;
+    padding: 3px 15px;
+    border-radius: 99px;
+}
+
+/*Background Footer*/
+.activity-background-footer-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* or set a specific height */
+    overflow: hidden; /* Ensure content that overflows is hidden */
+}
+
+.activity-background-footer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+

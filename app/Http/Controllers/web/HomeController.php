@@ -24,6 +24,11 @@ class HomeController extends Controller
         return view('web.home.index');
     }
 
+    public function activity()
+    {
+        return view('web.activity.index');
+    }
+
     public function policy()
     {
         $data = PolicyModel::orderBy('index','asc')->get();
