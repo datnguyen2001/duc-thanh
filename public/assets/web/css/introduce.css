@@ -152,7 +152,7 @@
 .title4{
     position: absolute;
     top: -30px;
-    right: 20%;
+    right: 12%;
     background: #D23C36;
     width: 100%;
     max-width: 470px;
@@ -233,7 +233,7 @@
     }
     .title4 {
         font-size: 28px;
-        right: 20%;
+        right: 21%;
     }
 }
 @media (max-width: 1200px) {
