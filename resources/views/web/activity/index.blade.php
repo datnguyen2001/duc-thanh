@@ -16,9 +16,9 @@
         <div class="activity-video">
             @include('web.activity.partials.video')
         </div>
-{{--        <div class="activity-background-footer-container">--}}
-{{--            <img src="{{asset('assets/images/activity/background-4.png')}}" alt="Background" class="activity-background-footer"/>--}}
-{{--        </div>--}}
+        <div class="activity-background-footer-container">
+            <img src="{{asset('assets/images/activity/background-4.png')}}" alt="Background" class="activity-background-footer"/>
+        </div>
 
     </div>
 

@@ -344,6 +344,9 @@
     .home-activity-product .frame-2 {
         height: 600px;
     }
+    .home-contact .map-image {
+        top: 4%;
+    }
 }
 @media (max-width: 1200px){
     .home-activity-product .frame-2 {
@@ -352,10 +355,16 @@
     .home-product .product-img {
         height: 225px;
     }
+    .home-contact .map-image {
+        top: 3%;
+    }
 }
 @media (max-width: 1024px){
     .home-activity-product .frame-2 {
         height: 500px;
+    }
+    .home-contact .map-image {
+        top: 5%;
     }
 }
 @media (max-width: 992px) {
