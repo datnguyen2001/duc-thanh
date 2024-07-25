@@ -18,6 +18,7 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/activity', [HomeController::class, 'activity'])->name('activity');
 Route::get('chinh-sach-bao-mat', [HomeController::class, 'policy'])->name('policy');
 Route::get('gioi-thieu-ve-duc-thanh', [HomeController::class, 'introduce'])->name('introduce');
+Route::get('chi-tiet-san-pham', [HomeController::class, 'detailProduct'])->name('detail-product');
 
 Route::middleware('auth')->group(function () {
 
