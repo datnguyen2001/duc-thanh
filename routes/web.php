@@ -20,6 +20,7 @@ Route::get('chinh-sach-bao-mat', [HomeController::class, 'policy'])->name('polic
 Route::get('gioi-thieu-ve-duc-thanh', [HomeController::class, 'introduce'])->name('introduce');
 Route::get('chi-tiet-san-pham', [HomeController::class, 'detailProduct'])->name('detail-product');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/save-contact', [HomeController::class, 'saveContact'])->name('save-contact');
 Route::get('/danh-muc', [HomeController::class, 'category'])->name('category');
 
 Route::middleware('auth')->group(function () {

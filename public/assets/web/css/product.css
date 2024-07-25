@@ -153,8 +153,19 @@
 .header-sp-mobile{
     display: none;
 }
-.img-line-sp{
+.line-sp-bottom{
     margin-top: -700px;
+}
+.background-title{
+    background: url(../../images/box-tab.webp) no-repeat;
+    background-size: cover;
+    position: unset;
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 23px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 @media (max-width: 1592px) {
     .title-banner-sp{
@@ -198,9 +209,10 @@
     }
 
 }
+
 @media (max-width: 992px) {
     .container{
-        max-width: 750px;
+        max-width: 830px;
     }
     .content-left {
         width: 50%;
@@ -232,6 +244,17 @@
         width: 16px;
         height: 16px;
     }
+    .background-title {
+        min-width: 43%;
+    }
+}
+@media (max-width: 830px) {
+    .container {
+        max-width: 740px;
+    }
+    .background-title {
+        min-width: 50%;
+    }
 }
 @media (max-width: 768px) {
     .box-content-product{
@@ -253,10 +276,10 @@
     .close-product-mobile{
         display: inline-block;
         position: absolute;
-        left: 70%;
+        left: 75.5%;
         width: 40px;
         height: 40px;
-        margin-top: -60px;
+        margin-top: 20px;
     }
     .header-sp-desktop{
         display: none;
@@ -271,6 +294,9 @@
         width: 300px;
         bottom: 380px;
     }
+    .background-title {
+        min-width: 31%;
+    }
 }
 @media (max-width: 700px) {
     .title-banner-sp {
@@ -281,15 +307,20 @@
     .box-big-content {
         padding: 0 10px;
     }
-    .close-product-mobile {
-        left: 65%;
-    }
     .col-video {
         width: 90% !important;
     }
     .title-banner-sp {
         left: 24%;
         bottom: 260px;
+    }
+    .background-title {
+        min-width: 33%;
+    }
+}
+@media (max-width: 548px) {
+    .background-title {
+        min-width: 39%;
     }
 }
 @media (max-width: 500px) {
@@ -304,6 +335,9 @@
         left: 24%;
         bottom: 215px;
     }
+    .background-title {
+        min-width: 44%;
+    }
 }
 @media (max-width: 420px) {
     .title-banner-sp {
@@ -317,5 +351,8 @@
         bottom: 185px;
         font-size: 26px;
         width: 215px;
+    }
+    .background-title {
+        min-width: 51%;
     }
 }

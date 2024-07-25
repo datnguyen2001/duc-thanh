@@ -15,8 +15,11 @@
             <label>Email *</label>
             <input type="text" placeholder="Nhập email" name="email"/>
             <label>Lời nhắn</label>
-            <input type="text" placeholder="Nhập nội dung cần tư vấn" name="message"/>
-            <button type="submit">Gửi thông tin</button>
+            <input type="text" placeholder="Nhập nội dung cần tư vấn" name="content"/>
+            <div class="position-relative">
+                <button type="submit" class="btn-save-contact">Gửi thông tin</button>
+                <div class="loading"></div>
+            </div>
         </form>
     </div>
 </div>

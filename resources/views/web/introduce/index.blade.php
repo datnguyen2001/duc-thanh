@@ -179,7 +179,7 @@
 
             </div>
 
-            <div class="content-big-mobile2" style="margin-top: -190px">
+            <div class="content-big-mobile2 content-big-mobile4">
                 <img src="{{asset('assets/images/icon-introduce2.png')}}" alt="" class="icon-introduce-mobile2">
                 <div class="box-mobile1">
                     <img src="{{asset('assets/images/box-introduce-mobile2.webp')}}" alt="" class="icon-content-mobile1 w-100">

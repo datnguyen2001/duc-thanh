@@ -16,7 +16,7 @@
                                     <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col" style="width: 300px">Tiêu đề giới thiệu</th>
+                                        <th scope="col" >Tiêu đề giới thiệu</th>
                                         <th scope="col" class="text-center">Thứ tự</th>
                                         <th scope="col">...</th>
                                     </tr>
