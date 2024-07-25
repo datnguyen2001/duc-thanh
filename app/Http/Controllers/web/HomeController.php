@@ -71,4 +71,11 @@ class HomeController extends Controller
 
         return view('web.introduce.index');
     }
+
+    public function detailProduct()
+    {
+
+        return view('web.product.index');
+    }
+
 }

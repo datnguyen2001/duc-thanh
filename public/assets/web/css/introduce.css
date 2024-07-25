@@ -2,7 +2,7 @@
     position: absolute;
     left: 12%;
     bottom: 60px;
-    width: 245px;
+    width: 260px;
 }
 .title-banner-introduce{
     color: #FAD6A5;
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     padding-left: 80px;
-    margin-top: -410px;
+    margin-top: -420px;
 }
 .line-header-introduce span{
     color: #606060;
