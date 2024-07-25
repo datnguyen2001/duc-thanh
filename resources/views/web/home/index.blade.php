@@ -18,7 +18,18 @@
         @include('web.home.partials.activity')
     </section>
     <section>
-        @include('web.home.partials.contact')
+        <div class="home-contact" style="margin-top: -100px;">
+            <div class="container" style="padding-top: 175px;">
+                <h5 class="title">Liên hệ</h5>
+                <h1>
+                    Liên hệ với Đức Thanh <br>
+                    để được hỗ trợ
+                </h1>
+                <img src="{{asset('assets/images/home/underlined.png')}}" alt="Activity" style="padding-bottom: 50px"/>
+                @include('web.home.partials.contact')
+            </div>
+        </div>
+
     </section>
 @stop
 @section('script_page')
