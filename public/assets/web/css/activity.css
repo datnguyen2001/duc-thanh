@@ -190,6 +190,7 @@
 
 /*Background Footer*/
 .activity-background-footer-container {
+    overflow: hidden;
     margin-bottom: -420px;
 }
 

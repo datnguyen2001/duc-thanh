@@ -29,6 +29,16 @@ class HomeController extends Controller
         return view('web.activity.index');
     }
 
+    public function contact()
+    {
+        return view('web.contact.index');
+    }
+
+    public function category()
+    {
+        return view('web.category.index');
+    }
+
     public function policy()
     {
         $data = PolicyModel::orderBy('index','asc')->get();
