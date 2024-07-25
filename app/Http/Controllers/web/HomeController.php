@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Web;
+namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormSubmitted;
 use App\Models\ContactModel;
 use App\Models\IntroduceModel;
+use App\Models\CategoryModel;
 use App\Models\PolicyModel;
+use App\Models\ProductModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -80,7 +82,25 @@ class HomeController extends Controller
 
     public function category()
     {
-        return view('web.category.index');
+        $categories = CategoryModel::with('products')->get();
+        $currentLocale = app()->getLocale();
+        foreach ($categories as $category){
+            if ($currentLocale == 'vi') {
+                $category->names = $category->name;
+            } else if ($currentLocale == 'en') {
+                $category->names = $category->name_en;
+            }
+            foreach ($category->products as $product) {
+                if ($currentLocale == 'vi') {
+                    $product->names = $product->name;
+                    $product->describes = $product->describe;
+                } else if ($currentLocale == 'en') {
+                    $product->names = $product->name_en;
+                    $product->describes = $product->describe_en;
+                }
+            }
+        }
+        return view('web.category.index', compact('categories'));
     }
 
     public function policy()

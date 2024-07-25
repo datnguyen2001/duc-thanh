@@ -2,7 +2,7 @@
     margin-top: -300px;
 }
 .contact-page .home-contact .container{
-    padding-top: 400px;
+    padding-top: 350px;
 }
 .contact-page .contact-banner{
     position: relative;
@@ -23,7 +23,20 @@
     width: max-content;
     text-align: center;
 }
-
+.contact-page .home-contact .title-link{
+    text-align: left;
+    margin-bottom: 50px;
+}
+.contact-page .home-contact span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.contact-page .home-contact .home{
+    color: #606060;
+}
+.contact-page .home-contact .contact{
+    color: #D23C36;
+}
 @media (max-width: 992px) {
     .contact-page .contact-banner h1 {
         font-size: 45px;

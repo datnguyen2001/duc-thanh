@@ -21,4 +21,8 @@ class ProductModel extends Model
         'src',
         'display',
     ];
+    public function category()
+    {
+        return $this->belongsTo(CategoryModel::class, 'category_id');
+    }
 }
