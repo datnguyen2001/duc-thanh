@@ -21,6 +21,10 @@
         </div>
         <div class="home-contact">
             <div class="container">
+                <div class="title-link">
+                    <span class="home">Trang chủ > </span>
+                    <span class="contact">Liên hệ</span>
+                </div>
                 @include('web.home.partials.contact')
             </div>
         </div>

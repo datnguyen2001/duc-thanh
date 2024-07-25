@@ -16,4 +16,8 @@ class CategoryModel extends Model
         'src',
         'index',
     ];
+    public function products()
+    {
+        return $this->hasMany(ProductModel::class, 'category_id');
+    }
 }
