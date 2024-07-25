@@ -8,6 +8,7 @@ use App\Models\ContactModel;
 use App\Models\IntroduceModel;
 use App\Models\CategoryModel;
 use App\Models\PolicyModel;
+use App\Models\ProductModel;
 use App\Models\ProductVideoModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -27,8 +28,17 @@ class HomeController extends Controller
 
     public function home()
     {
+        $categories = CategoryModel::all();
+        $currentLocale = app()->getLocale();
+        foreach ($categories as $category){
+            if ($currentLocale == 'vi') {
+                $category->names = $category->name;
+            } else if ($currentLocale == 'en') {
+                $category->names = $category->name_en;
+            }
+        }
 
-        return view('web.home.index');
+        return view('web.home.index', compact('categories'));
     }
 
     public function activity()
@@ -147,11 +157,49 @@ class HomeController extends Controller
         return view('web.introduce.index',compact('data'));
     }
 
-    public function detailProduct()
+    public function detailProduct($slug)
     {
-        $videoProducts = ProductVideoModel::get();
+        $productDetails = ProductModel::where('slug',$slug)->first();
 
-        return view('web.product.index');
+        $currentLocale = app()->getLocale();
+        if($currentLocale == 'vi'){
+            $productDetails->contents = $productDetails->content;
+        } else if ($currentLocale == 'en'){
+            $productDetails->contents = $productDetails->content_en;
+        }
+
+        $videoProducts = ProductVideoModel::where('product_id', $productDetails->id)->get();
+        foreach ($videoProducts as $videoProduct){
+            if ($currentLocale == 'vi') {
+                $videoProduct->describes = $videoProduct->describe;
+            } else if ($currentLocale == 'en') {
+                $videoProduct->describes = $videoProduct->describe_en;
+            }
+        }
+        return view('web.product.index', compact('productDetails','videoProducts'));
+    }
+
+    public function categoryProduct($slug){
+        $categorySlug = CategoryModel::where('slug',$slug)->first();
+
+        $currentLocale = app()->getLocale();
+        if ($currentLocale == 'vi') {
+            $categorySlug->names = $categorySlug->name;
+        }elseif ($currentLocale == 'en'){
+            $categorySlug->names = $categorySlug->name_en;
+        }
+
+        $categoryProducts = ProductModel::where('category_id',$categorySlug->id)->get();
+        foreach ($categoryProducts as $categoryProduct){
+            if ($currentLocale == 'vi') {
+                $categoryProduct->names = $categoryProduct->name;
+                $categoryProduct->describes = $categoryProduct->describe;
+            } else if ($currentLocale == 'en') {
+                $categoryProduct->names = $categoryProduct->name_en;
+                $categoryProduct->describes = $categoryProduct->describe_en;
+            }
+        }
+        return view('web.category-product.index', compact('categoryProducts', 'categorySlug'));
     }
 
 }

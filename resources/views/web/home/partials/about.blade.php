@@ -2,7 +2,7 @@
     <div class="container">
         <h5>- Về Đức Thanh -</h5>
         <h1>Khác biệt để vững bền</h1>
-        <p><a>Xem thêm -></a></p>
+        <p><a href="{{route('introduce')}}">Xem thêm -></a></p>
         <img class="underline" src="{{asset('assets/images/home/about-underlined.png')}}" alt="Underlined">
         <p>
             Đức thanh - Vẽ nên tương lai rực rỡ! <br>

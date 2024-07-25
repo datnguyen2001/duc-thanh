@@ -10,7 +10,7 @@
             Hành trình khám phá thế giới nghệ thuật đầy <br>
             màu sắc cùng Đức Thanh.
         </h1>
-        <span><a href="#">Chi tiết -></a></span>
+        <span><a href="{{route('activity')}}">Chi tiết -></a></span>
     </div>
 </div>
 <div class="container" style="margin-top: -200px;">
