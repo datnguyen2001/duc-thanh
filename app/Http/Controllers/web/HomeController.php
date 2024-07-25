@@ -124,7 +124,7 @@ class HomeController extends Controller
             }
         }
 
-        return view('web.introduce.index',compact('$data'));
+        return view('web.introduce.index',compact('data'));
     }
 
     public function detailProduct()

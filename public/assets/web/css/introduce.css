@@ -58,6 +58,24 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    height: 195px;
+    overflow-y: scroll;
+}
+.content1::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px #D6EAFF;
+    background-color: #F5F5F5;
+}
+
+.content1::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.content1::-webkit-scrollbar-thumb
+{
+    background-color: #bbe3ff;
 }
 .title1{
     position: absolute;
@@ -100,6 +118,24 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    height: 165px;
+    overflow-y: auto;
+}
+.content2::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px #FAD6A5;
+    background-color: #F5F5F5;
+}
+
+.content2::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.content2::-webkit-scrollbar-thumb
+{
+    background-color: #faf58a;
 }
 .title2{
     position: absolute;
@@ -188,7 +224,7 @@
 }
 @media (min-width: 1700px) {
     .line-header-introduce{
-        margin-top: -580px;
+        margin-top: -457px;
         padding-left: 0px;
     }
     .box-title-banner{
@@ -197,10 +233,19 @@
     .content-big3 {
         margin-top: -660px;
     }
+    .line-introduce1 {
+        margin-top: -390px;
+    }
+}
+@media (max-width: 1500px) {
+    .line-header-introduce {
+        margin-top: -400px;
+    }
 }
 @media (max-width: 1400px) {
     .line-header-introduce {
         margin-top: -345px;
+        padding-left: 45px;
     }
     .content-big3{
         margin-top: -455px;
@@ -281,6 +326,13 @@
     .content1,.content2{
         font-size: 18px;
     }
+    .content1 {
+        top: 95px;
+        height: 170px;
+    }
+    .content1{
+        height: 147px;
+    }
 }
 @media (max-width: 1100px) {
     .line-header-introduce {
@@ -319,6 +371,7 @@
        font-size: 16px;
         left: 60%;
         top: 70px;
+        height: 160px;
     }
     .icon-introduce1 {
         width: 200px;
@@ -358,6 +411,7 @@
         font-size: 16px;
         left: 40%;
         top: 65px;
+        height: 130px;
     }
     .icon-introduce2 {
         width: 200px;
@@ -408,6 +462,7 @@
         font-size: 15px;
         left: 57%;
         top: 60px;
+        height: 125px;
     }
     .icon-introduce1 {
         width: 170px;
@@ -420,6 +475,7 @@
         font-size: 15px;
         bottom: 10px;
         top: 46px;
+        height: 115px;
     }
     .title2 {
         font-size: 18px;
@@ -553,6 +609,14 @@
         transform: translateX(-50%);
         top: 70px;
         text-align: center;
+        height: 252px;
+        overflow: auto;
+        scrollbar-width: thin;
+    }
+    .content-mobile2{
+        height: 320px;
+        overflow: auto;
+        scrollbar-width: thin;
     }
     .content-big-mobile2{
         position: relative;
@@ -595,13 +659,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        top: -310px;
+        top: 80px;
     }
     .content-mobile3{
-        top: 120px;
+        top: 105px;
+        height: 220px;
     }
     .content-big-mobile4{
-        margin-top: -190px;
+        margin-top: 165px;
+        margin-bottom: 100px;
+    }
+    .content-big-mobile4 .title-mobile2{
+        top: -70px;
+    }
+    .content-big-mobile4 .icon-introduce-mobile2 {
+        top: -35px;
+    }
+    .content-mobile4{
+        height: 320px;
     }
 }
 @media (max-width: 700px) {
@@ -612,7 +687,7 @@
         margin-top: -260px;
     }
     .content-big-mobile3 {
-        top: -420px;
+        top: 75px;
     }
 }
 @media (max-width: 600px) {
@@ -624,7 +699,7 @@
         width: 280px;
     }
     .content-big-mobile4{
-        margin-top: -205px;
+        margin-top: 150px;
     }
     .line-header-introduce-mobile{
         margin-top: -295px;
@@ -632,9 +707,6 @@
     }
     .title-banner-introduce-mobile{
         font-size: 45px;
-    }
-    .content-big-mobile3 {
-        top: -380px;
     }
 }
 @media (max-width: 550px) {
@@ -652,9 +724,7 @@
     .box-title-banner-mobile {
         top: 155px;
     }
-    .content-big-mobile3 {
-        top: -330px;
-    }
+
 }
 @media (max-width: 450px) {
     .line-introduce-mobile{
@@ -665,7 +735,6 @@
     }
     .title-banner-introduce-mobile{
         font-size: 38px;
-        margin-top: -290px;
         padding-left: 10px;
     }
     .box-title-banner-mobile {
@@ -694,14 +763,7 @@
         width: 210px;
         top: -85px;
     }
-    .content-big-mobile3{
-        top: -252px;
-        margin-bottom: 35px;
-    }
     .box-title-banner-mobile {
         top: 125px;
-    }
-    .content-big-mobile4 {
-        margin-top: -180px;
     }
 }

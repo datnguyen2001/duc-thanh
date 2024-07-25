@@ -23,6 +23,3 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/save-contact', [HomeController::class, 'saveContact'])->name('save-contact');
 Route::get('/danh-muc', [HomeController::class, 'category'])->name('category');
 
-Route::middleware('auth')->group(function () {
-
-});

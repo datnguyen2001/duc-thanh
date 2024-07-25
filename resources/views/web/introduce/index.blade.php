@@ -19,79 +19,58 @@
             <span style="color: #D23C36;margin-left: 4px">Giới thiệu về Đức Thanh</span>
         </div>
         <div class="box-big-content-introduce">
-            <div class="content-big1">
-                <img src="{{asset('assets/images/icon-introduce1.png')}}" alt="" class="icon-introduce1">
-                <div class="box1">
-                    <img src="{{asset('assets/images/box-introduce1.webp')}}" alt="" class="icon-content1">
-                    <div class="content1">
-                        Bắt đầu từ năm 1996, Công ty TNHH Thiết bị giáo dục Đức Thanh đã chính thức xuất
-                        hiện trên thị trường thông qua sự ra đời của Cơ sở sản xuất phấn Đức Thanh.
-                        Ngày nay, thương hiệu Đức Thanh đã khẳng định được chỗ đứng vững chắc trên thị
-                        trường văn phòng phẩm và đồ dùng học sinh Việt Nam và xuất khẩu đến một số
-                        quốc gia trên thế giới.
+            @foreach ($data as $key => $item)
+                @php
+                    $contentClass = '';
+                    $titleClass = '';
+                    $iconClass = '';
+                    $boxClass = '';
+
+                    switch ($key % 4) {
+                        case 0:
+                            $contentClass = 'content-big1';
+                            $titleClass = 'title1';
+                            $iconClass = 'icon-introduce1';
+                            $boxClass = 'box1';
+                            break;
+                        case 1:
+                            $contentClass = 'content-big2';
+                            $titleClass = 'title2';
+                            $iconClass = 'icon-introduce2';
+                            $boxClass = 'box2';
+                            break;
+                        case 2:
+                            $contentClass = 'content-big3';
+                            $titleClass = 'title3';
+                            $iconClass = 'icon-introduce1';
+                            $boxClass = 'box1';
+                            break;
+                        case 3:
+                            $contentClass = 'content-big4';
+                            $titleClass = 'title4';
+                            $iconClass = 'icon-introduce2';
+                            $boxClass = 'box2';
+                            break;
+                    }
+                @endphp
+
+                <div class="{{ $contentClass }}">
+                    <div class="{{ $boxClass }}">
+                        <img src="{{ asset('assets/images/box-introduce' . ($key % 2 + 1) . '.webp') }}" alt="" class="icon-content{{ $key % 2 + 1 }}">
+                        <div class="content{{ $key % 2 + 1 }}">
+                            {!! $item->contents !!}
+                        </div>
+                        <div class="{{ $titleClass }}">
+                            {{ $item->names }}
+                        </div>
                     </div>
-                    <div class="title1">
-                        1996 Thành lập Cơ sở sản xuất phấn Đức Thanh
-                    </div>
+                    <img src="{{ asset('assets/images/icon-introduce' . ($key % 2 + 1) . '.png') }}" alt="" class="{{ $iconClass }}">
                 </div>
 
-            </div>
-
-            <div class="content-big2">
-                <div class="box2">
-                    <img src="{{asset('assets/images/box-introduce2.webp')}}" alt="" class="icon-content2">
-                    <div class="content2">
-                        Bắt đầu từ năm 1996, Công ty TNHH Thiết bị giáo dục Đức Thanh đã chính thức xuất
-                        hiện trên thị trường thông qua sự ra đời của Cơ sở sản xuất phấn Đức Thanh.
-                        Ngày nay, thương hiệu Đức Thanh đã khẳng định được chỗ đứng vững chắc trên thị
-                        trường văn phòng phẩm và đồ dùng học sinh Việt Nam và xuất khẩu đến một số
-                        quốc gia trên thế giới.
-                    </div>
-                    <div class="title2">
-                        1996 Thành lập Cơ sở sản xuất phấn Đức Thanh
-                    </div>
-                </div>
-                <img src="{{asset('assets/images/icon-introduce2.png')}}" alt="" class="icon-introduce2">
-            </div>
-
-            <img src="{{asset('assets/images/line_introduce1.webp')}}" alt="" class="w-100 line-introduce2">
-
-            <div class="content-big3">
-                <img src="{{asset('assets/images/icon-introduce1.png')}}" alt="" class="icon-introduce1">
-                <div class="box1">
-                    <img src="{{asset('assets/images/box-introduce1.webp')}}" alt="" class="icon-content1">
-                    <div class="content1">
-                        Bắt đầu từ năm 1996, Công ty TNHH Thiết bị giáo dục Đức Thanh đã chính thức xuất
-                        hiện trên thị trường thông qua sự ra đời của Cơ sở sản xuất phấn Đức Thanh.
-                        Ngày nay, thương hiệu Đức Thanh đã khẳng định được chỗ đứng vững chắc trên thị
-                        trường văn phòng phẩm và đồ dùng học sinh Việt Nam và xuất khẩu đến một số
-                        quốc gia trên thế giới.
-                    </div>
-                    <div class="title3">
-                        Nhà máy 5.000m2, 300 con người,
-                        đồng hành cùng khách hàng
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="content-big4">
-                <div class="box2">
-                    <img src="{{asset('assets/images/box-introduce2.webp')}}" alt="" class="icon-content2">
-                    <div class="content2">
-                        Bắt đầu từ năm 1996, Công ty TNHH Thiết bị giáo dục Đức Thanh đã chính thức xuất
-                        hiện trên thị trường thông qua sự ra đời của Cơ sở sản xuất phấn Đức Thanh.
-                        Ngày nay, thương hiệu Đức Thanh đã khẳng định được chỗ đứng vững chắc trên thị
-                        trường văn phòng phẩm và đồ dùng học sinh Việt Nam và xuất khẩu đến một số
-                        quốc gia trên thế giới.
-                    </div>
-                    <div class="title4">
-                        Cảm ơn khách hàng!
-                        Đức Thanh
-                    </div>
-                </div>
-                <img src="{{asset('assets/images/icon-introduce2.png')}}" alt="" class="icon-introduce2">
-            </div>
+                @if ($key % 4 == 1)
+                    <img src="{{ asset('assets/images/line_introduce1.webp') }}" alt="" class="w-100 line-introduce2">
+                @endif
+            @endforeach
 
         </div>
     </div>
@@ -109,101 +88,42 @@
             <span style="color: #D23C36;margin-left: 4px">Giới thiệu về Đức Thanh</span>
         </div>
         <div class="box-big-content-introduce-mobile">
-
-            <div class="content-big-mobile1">
-                <img src="{{asset('assets/images/icon-introduce1.png')}}" alt="" class="icon-introduce-mobile1">
-                <div class="box-mobile1">
-                    <img src="{{asset('assets/images/box-introduce-mobile1.webp')}}" alt="" class="icon-content-mobile1 w-100">
-                    <div class="content-mobile1">
-                        Bắt đầu từ năm 1996, Công ty TNHH Thiết bị giáo dục Đức Thanh đã chính thức xuất
-                        hiện trên thị trường thông qua sự ra đời của Cơ sở sản xuất phấn Đức Thanh.
-                        Ngày nay, thương hiệu Đức Thanh đã khẳng định được chỗ đứng vững chắc trên thị
-                        trường văn phòng phẩm và đồ dùng học sinh Việt Nam và xuất khẩu đến một số
-                        quốc gia trên thế giới.
-                    </div>
-                    <div class="title-mobile1">
-                        1996 Thành lập Cơ sở sản xuất phấn Đức Thanh
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="content-big-mobile2">
-                <img src="{{asset('assets/images/icon-introduce2.png')}}" alt="" class="icon-introduce-mobile2">
-                <div class="box-mobile1">
-                    <img src="{{asset('assets/images/box-introduce-mobile2.webp')}}" alt="" class="icon-content-mobile1 w-100">
-                    <div class="content-mobile1">
-                        Với những mục tiêu và kế hoạch kinh doanh
-                        vững bền, Các sản phẩm của Đức Thanh đã
-                        được Quý Khách hàng, thầy cô giáo, học sinh,
-                        sinh viên yêu mến và tin dùng. Những sản
-                        phẩm tiêu biểu như Phấn Nét Hoa, Bút Phấn,
-                        Phấn màu mỹ thuật, Bút sáp màu, Sáp nặn,
-                        thuộc với người tiêu dùng. Thời gian tới, Công
-                        các loại Bảng… đã trở nên vô cùng quen
-                        ty TNHH Thiết bị giáo dục Đức Thanh sẽ tiếp
-                        tục đưa ra các sản phẩm mới, với thiết kế,
-                        hợp với người tiêu dùng trên thị trường Việt.
-                    </div>
-                    <div class="title-mobile2">
-                        Thế giới văn phòng
-                        phẩm đa dạng và
-                        chất lượng
+            @foreach ($data as $index => $item)
+                @php
+                    $contentMobileClass = '';
+                    $textMobileClass = '';
+                    switch ($index % 4) {
+                        case 0:
+                            $contentMobileClass = 'content-big-mobile1';
+                            $textMobileClass = 'content-mobile1';
+                            break;
+                        case 1:
+                            $contentMobileClass = 'content-big-mobile2';
+                            $textMobileClass = 'content-mobile2';
+                            break;
+                        case 2:
+                            $contentMobileClass = 'content-big-mobile3';
+                            $textMobileClass = 'content-mobile3';
+                            break;
+                        case 3:
+                            $contentMobileClass = 'content-big-mobile2 content-big-mobile4';
+                            $textMobileClass = 'content-mobile4';
+                            break;
+                    }
+                @endphp
+                <div class="{{ $contentMobileClass }}">
+                    <img src="{{ asset('assets/images/icon-introduce' . ($index % 2 + 1) . '.png') }}" alt="" class="icon-introduce-mobile{{ $index % 2 + 1 }}">
+                    <div class="box-mobile1">
+                        <img src="{{ asset('assets/images/box-introduce-mobile' . ($index % 2 + 1) . '.webp') }}" alt="" class="icon-content-mobile1 w-100">
+                        <div class="content-mobile1 {{$textMobileClass}}">
+                            {!! $item->contents !!}
+                        </div>
+                        <div class="title-mobile{{ $index % 2 + 1 }}">
+                            {{ $item->names }}
+                        </div>
                     </div>
                 </div>
-
-            </div>
-
-            <img src="{{asset('assets/images/line-introduce2.webp')}}" alt="" class="w-100 line-introduce-mobile2">
-
-            <div class="content-big-mobile3">
-                <img src="{{asset('assets/images/icon-introduce2.png')}}" alt="" class="icon-introduce-mobile1">
-                <div class="box-mobile1">
-                    <img src="{{asset('assets/images/box-introduce-mobile1.webp')}}" alt="" class="icon-content-mobile1 w-100">
-                    <div class="content-mobile1 content-mobile3">
-                        Công ty TNHH Thiết bị giáo dục Đức Thanh
-                        đang sản xuất kinh doanh tại nhà máy sản
-                        lao động. Đức Thanh hiện đang liên tục đầu
-                        xuất có diện tích 5.000m2 với quy mô 300
-                        tư máy móc, nhập khẩu các dây chuyền công
-                        nghệ sản xuất hiện đại để đáp ứng yêu cầu
-                        ngày càng cao của Quý Khách hàng.
-                    </div>
-                    <div class="title-mobile1" style="color: #D23C36">
-                        Nhà máy 5.000m2,
-                        300 con người,
-                        đồng hành cùng
-                        khách hàng
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="content-big-mobile2 content-big-mobile4">
-                <img src="{{asset('assets/images/icon-introduce2.png')}}" alt="" class="icon-introduce-mobile2">
-                <div class="box-mobile1">
-                    <img src="{{asset('assets/images/box-introduce-mobile2.webp')}}" alt="" class="icon-content-mobile1 w-100">
-                    <div class="content-mobile1">
-                        Với những mục tiêu và kế hoạch kinh doanh
-                        vững bền, Các sản phẩm của Đức Thanh đã
-                        được Quý Khách hàng, thầy cô giáo, học sinh,
-                        sinh viên yêu mến và tin dùng. Những sản
-                        phẩm tiêu biểu như Phấn Nét Hoa, Bút Phấn,
-                        Phấn màu mỹ thuật, Bút sáp màu, Sáp nặn,
-                        thuộc với người tiêu dùng. Thời gian tới, Công
-                        các loại Bảng… đã trở nên vô cùng quen
-                        ty TNHH Thiết bị giáo dục Đức Thanh sẽ tiếp
-                        tục đưa ra các sản phẩm mới, với thiết kế,
-                        hợp với người tiêu dùng trên thị trường Việt.
-                    </div>
-                    <div class="title-mobile2">
-                        Thế giới văn phòng
-                        phẩm đa dạng và
-                        chất lượng
-                    </div>
-                </div>
-
-            </div>
+            @endforeach
 
         </div>
     </div>
