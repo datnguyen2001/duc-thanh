@@ -8,7 +8,7 @@ use App\Models\ContactModel;
 use App\Models\IntroduceModel;
 use App\Models\CategoryModel;
 use App\Models\PolicyModel;
-use App\Models\ProductModel;
+use App\Models\ProductVideoModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -149,6 +149,7 @@ class HomeController extends Controller
 
     public function detailProduct()
     {
+        $videoProducts = ProductVideoModel::get();
 
         return view('web.product.index');
     }

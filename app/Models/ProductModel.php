@@ -25,4 +25,9 @@ class ProductModel extends Model
     {
         return $this->belongsTo(CategoryModel::class, 'category_id');
     }
+
+    public function videos()
+    {
+        return $this->hasMany(ProductVideoModel::class, 'product_id');
+    }
 }
