@@ -36,3 +36,20 @@ p, h1{
     font-size: 35px;
     color: #FAD6A5;
 }
+.loading {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    border-top-color: orange;
+    animation: loading 1s linear infinite;
+    position: absolute;
+    top: 61%;
+    right: 32%;
+    display: none;
+}
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}

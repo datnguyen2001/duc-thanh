@@ -29,5 +29,5 @@
 
 @stop
 @section('script_page')
-
+    <script src="{{asset('assets/web/js/contact.js')}}"></script>
 @stop

@@ -8,7 +8,7 @@
 @section('content')
     <div class="policy_desktop">
         <div class="position-relative header-sp-desktop">
-            <img src="{{asset('assets/images/banner-sp.webp')}}" alt="" class="w-100 img-banner-sp">
+            <img src="{{asset('assets/images/product/banner-desktop.webp')}}" alt="" class="w-100 img-banner-sp">
             <div class="title-banner-sp">Khám phá các sản phẩm
                 của Đức Thanh</div>
             <img src="{{asset('assets/images/line-sp.webp')}}" alt="" class="img-line-sp">
@@ -26,10 +26,7 @@
             </div>
             <div class="box-content-product">
                 <div class="content-left">
-                    <div class="header-content-product">
-                        <img src="{{asset('assets/images/box-tab.webp')}}" alt="" class="w-100">
-                        <span class="title-product">Bút sáp màu</span>
-                    </div>
+                    <span class="title-product background-title">Bút sáp màu</span>
                     <a href="" class="close-product-mobile">
                         <img src="{{asset('assets/images/close.webp')}}" alt="" class="btn-close-sp">
                     </a>
@@ -79,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <img src="{{asset('assets/images/line-product.webp')}}" alt="" class="w-100 img-line-sp">
+        <img src="{{asset('assets/images/line-product.webp')}}" alt="" class="w-100 line-sp-bottom">
     </div>
 @stop
 
