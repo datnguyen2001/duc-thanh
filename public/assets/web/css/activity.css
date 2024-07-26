@@ -246,6 +246,15 @@
     }
 }
 @media (max-width: 768px) {
+    .activity-page .activity-banner{
+        background: url("/assets/images/activity/background-mobile.webp") no-repeat center center;
+        background-size: cover;
+        height: 86vh;
+    }
+    .activity-page .activity-banner .activity-title{
+        margin: 0 auto;
+    }
+
     .activity-page .list-image h1 {
         font-size: 40px;
     }
@@ -295,11 +304,6 @@
     }
 }
 @media (max-width: 475px) {
-    .activity-page .activity-banner{
-        background: url("/assets/images/activity/background-mobile.webp") no-repeat center center;
-        background-size: cover;
-        height: 86vh;
-    }
     .activity-page .list-image .sub-title {
         font-size: 16px;
     }

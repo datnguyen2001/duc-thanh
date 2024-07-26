@@ -163,7 +163,7 @@ class ProductController extends Controller
         $titlePage = 'Danh sách video của sản phẩm: '.$product->name;
         $page_menu = 'product';
         $page_sub = null;
-        $listData = ProductVideoModel::orderBy('created_at', 'desc')->paginate(15);
+        $listData = ProductVideoModel::where('product_id', $product->id)->orderBy('created_at', 'desc')->paginate(15);
 
         return view('admin.product.video.index', compact('titlePage', 'page_menu', 'page_sub', 'listData','id'));
     }

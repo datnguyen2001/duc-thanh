@@ -18,13 +18,16 @@
                         <div class="col-lg-6 col-12 d-flex">
                             <div class="introduction col-6">
                                 <h5>Giới thiệu</h5>
-                                <p><a href="#">Chính sách bảo mật</a></p>
-                                <p><a href="#">Giới thiệu về Đức Thanh</a></p>
-                                <p><a href="#">Hoạt động</a></p>
-                                <p><a href="#">Liên hệ</a></p>
+                                <p><a href="{{route('policy')}}">Chính sách bảo mật</a></p>
+                                <p><a href="{{route('introduce')}}">Giới thiệu về Đức Thanh</a></p>
+                                <p><a href="{{route('activity')}}">Hoạt động</a></p>
+                                <p><a href="{{route('contact')}}">Liên hệ</a></p>
                             </div>
                             <div class="product col-6">
                                 <h5>Sản phẩm</h5>
+{{--                                @foreach($categories as $category)--}}
+{{--                                    <p><a href="#">{{$category->names}}</a></p>--}}
+{{--                                @endforeach--}}
                                 <p><a href="#">Phấn</a></p>
                                 <p><a href="#">Bảng</a></p>
                                 <p><a href="#">Bút Sáp Màu</a></p>

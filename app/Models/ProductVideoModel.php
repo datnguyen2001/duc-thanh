@@ -18,4 +18,9 @@ class ProductVideoModel extends Model
         'describe_en',
         'display',
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(ProductModel::class, 'product_id');
+    }
 }
