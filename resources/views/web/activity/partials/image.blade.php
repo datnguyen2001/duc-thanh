@@ -8,39 +8,19 @@
         </h1>
         <div class="swiper-container">
             <div class="list-product swiper-wrapper">
+                @foreach($image as $images)
                 <div class="swiper-slide">
                     <div class="product-image">
                         <img src="{{asset('assets/images/activity/frame-img.png')}}" alt="Frame" class="frame"/>
-                        <img src="{{asset('assets/images/activity/image-product.webp')}}" alt="Image" class="image"/>
+                        <img src="{{asset($images->src)}}" alt="Image" class="image"/>
                     </div>
                     <div class="product-text">
-                        <h5 class="product-title">Bút Sáp 12 Màu</h5>
-                        <p class="product-detail">Bút sáp 12 màu có bao bì đa dạng, nhiều nhân vật ngộ nghĩnh, đáng yêu phù hợp với các bạn nhỏ ...</p>
-                        <span><a href="#">Chi tiết -></a></span>
+                        <h5 class="product-title">{{$images->names}}</h5>
+                        <p class="product-detail">{{$images->describes}}</p>
+                        <span><a href="{{$images->link}}">Chi tiết -></a></span>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="product-image">
-                        <img src="{{asset('assets/images/activity/frame-img.png')}}" alt="Frame" class="frame"/>
-                        <img src="{{asset('assets/images/activity/image-product.webp')}}" alt="Image" class="image"/>
-                    </div>
-                    <div class="product-text">
-                        <h5 class="product-title">Bút Sáp 18 Màu</h5>
-                        <p class="product-detail">Bút sáp 18 màu có bao bì đa dạng, nhiều nhân vật ngộ nghĩnh, đáng yêu phù hợp với các bạn nhỏ ...</p>
-                        <span><a href="#">Chi tiết -></a></span>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-image">
-                        <img src="{{asset('assets/images/activity/frame-img.png')}}" alt="Frame" class="frame"/>
-                        <img src="{{asset('assets/images/activity/image-product.webp')}}" alt="Image" class="image"/>
-                    </div>
-                    <div class="product-text">
-                        <h5 class="product-title">Bút Sáp 24 Màu</h5>
-                        <p class="product-detail">Bút sáp 24 màu có bao bì đa dạng, nhiều nhân vật ngộ nghĩnh, đáng yêu phù hợp với các bạn nhỏ ...</p>
-                        <span><a href="#">Chi tiết -></a></span>
-                    </div>
-                </div>
+                    @endforeach
             </div>
             <!-- Add Navigation -->
             <div class="swiper-button-next"><img src="{{asset('assets/images/activity/next-btn.png')}}" alt="Next"/></div>

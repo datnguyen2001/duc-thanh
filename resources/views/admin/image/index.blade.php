@@ -68,7 +68,7 @@
 
                                 @else
                                     <tr>
-                                        <td colspan="4" class="text-center" style="color: red;font-size: 18px">Không có dữ liệu</td>
+                                        <td colspan="6" class="text-center" style="color: red;font-size: 18px">Không có dữ liệu</td>
                                     </tr>
                                 @endif
                                 </tbody>

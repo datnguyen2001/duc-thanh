@@ -1,6 +1,12 @@
 @extends('web.index')
 @section('title','Chi tiết sản phẩm')
-
+@section('meta')
+    <meta property="og:url" content="{{route('detail-product',$productDetails->slug)}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{@$productDetails->name}}"/>
+    <meta property="og:description" content="{{@$productDetails->describe}}"/>
+    <meta property="og:image" content="{{asset(@$productDetails->src)}}"/>
+@endsection
 @section('style_page')
     <link rel="stylesheet" href="{{ asset('assets/web/css/product.css') }}">
 @stop
@@ -59,7 +65,7 @@
                                                 <a href="{{$videoProduct->link ?? '#'}}" class="video-btn">Xem ngay</a>
                                             </div>
                                             <p>{{$videoProduct->channel_name ?? ''}}</p>
-                                            <p>{!! Illuminate\Support\Str::limit($videoProduct->describes ?? '', 100, '...') !!}</p>
+                                            <p class="content-describes">{{$videoProduct->describes}}</p>
                                         </div>
                                     </div>
                                 </div>

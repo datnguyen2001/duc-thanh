@@ -12,6 +12,7 @@ use \App\Http\Controllers\admin\CategoryController;
 use \App\Http\Controllers\admin\ProductController;
 use \App\Http\Controllers\admin\VideoController;
 use \App\Http\Controllers\admin\ImageController;
+use \App\Http\Controllers\admin\MetaController;
 
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
@@ -101,6 +102,15 @@ Route::middleware('check-admin-auth')->group(function () {
         Route::get('edit/{id}', [ImageController::class, 'edit']);
         Route::post('update/{id}', [ImageController::class, 'update'])->name('update');
         Route::get('delete/{id}', [ImageController::class, 'delete']);
+    });
+
+    Route::prefix('seo')->name('seo.')->group(function () {
+        Route::get('', [MetaController::class, 'index'])->name('index');
+        Route::get('create', [MetaController::class, 'create'])->name('create');
+        Route::post('store', [MetaController::class, 'store'])->name('store');
+        Route::get('delete/{id}', [MetaController::class, 'delete']);
+        Route::get('edit/{id}', [MetaController::class, 'edit'])->name('edit');
+        Route::post('update/{id}', [MetaController::class, 'update'])->name('update');
     });
 
 });

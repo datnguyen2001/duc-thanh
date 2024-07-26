@@ -5,11 +5,14 @@ namespace App\Http\Controllers\web;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormSubmitted;
 use App\Models\ContactModel;
+use App\Models\ImageModel;
 use App\Models\IntroduceModel;
 use App\Models\CategoryModel;
+use App\Models\MetaModel;
 use App\Models\PolicyModel;
 use App\Models\ProductModel;
 use App\Models\ProductVideoModel;
+use App\Models\VideoModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -37,18 +40,42 @@ class HomeController extends Controller
                 $category->names = $category->name_en;
             }
         }
+        $meta = MetaModel::where('type',2)->first();
 
-        return view('web.home.index', compact('categories'));
+        return view('web.home.index', compact('categories','meta'));
     }
 
     public function activity()
     {
-        return view('web.activity.index');
+        $image = ImageModel::where('display',1)->orderBy('created_at','desc')->get();
+        $currentLocale = app()->getLocale();
+        foreach ($image as $images){
+            if ($currentLocale == 'vi') {
+                $images->names = $images->name;
+                $images->describes = $images->describe;
+            } else if ($currentLocale == 'en') {
+                $images->names = $images->name_en;
+                $images->describes = $images->describe_en;
+            }
+        }
+        $video = VideoModel::where('display',1)->orderBy('created_at','desc')->get();
+        foreach ($video as $videos){
+            if ($currentLocale == 'vi') {
+                $videos->describes = $videos->describe;
+            } else if ($currentLocale == 'en') {
+                $videos->describes = $videos->describe_en;
+            }
+        }
+        $meta = MetaModel::where('type',3)->first();
+
+        return view('web.activity.index',compact('image','video','meta'));
     }
 
     public function contact()
     {
-        return view('web.contact.index');
+        $meta = MetaModel::where('type',6)->first();
+
+        return view('web.contact.index',compact('meta'));
     }
 
     public function saveContact(Request $request)
@@ -110,7 +137,9 @@ class HomeController extends Controller
                 }
             }
         }
-        return view('web.category.index', compact('categories'));
+        $meta = MetaModel::where('type',4)->first();
+
+        return view('web.category.index', compact('categories','meta'));
     }
 
     public function policy()
@@ -136,8 +165,9 @@ class HomeController extends Controller
                 $dataMobiles->contents = $datas->content_en;
             }
         }
+        $meta = MetaModel::where('type',1)->first();
 
-        return view('web.policy.index',compact('data','dataMobile'));
+        return view('web.policy.index',compact('data','dataMobile','meta'));
     }
 
     public function introduce()
@@ -153,8 +183,9 @@ class HomeController extends Controller
                 $datas->contents = $datas->content_en;
             }
         }
+        $meta = MetaModel::where('type',5)->first();
 
-        return view('web.introduce.index',compact('data'));
+        return view('web.introduce.index',compact('data','meta'));
     }
 
     public function detailProduct($slug)
