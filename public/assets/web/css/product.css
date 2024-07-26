@@ -166,6 +166,7 @@
     margin-top: 25px;
     margin-bottom: 10px;
     text-align: left;
+    min-width: 170px;
 }
 @media (max-width: 1592px) {
     .title-banner-sp{
