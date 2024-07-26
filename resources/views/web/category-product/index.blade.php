@@ -1,6 +1,12 @@
 @extends('web.index')
 @section('title','Sản phẩm')
-
+@section('meta')
+    <meta property="og:url" content="{{route('category-product',$categorySlug->slug)}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{@$categorySlug->name}}"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content="{{asset(@$categorySlug->src)}}"/>
+@endsection
 @section('style_page')
     <link rel="stylesheet" href="{{ asset('assets/web/css/category.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/web/css/product.css') }}">

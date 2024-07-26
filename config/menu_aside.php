@@ -85,5 +85,13 @@ return [
             ],
             'number' => 2
         ],
+        [
+            'name' => 'meta',
+            'title' => 'SEO',
+            'icon' => 'bi bi-grid',
+            'route' => 'admin.seo.index',
+            'submenu' => [],
+            'number' => 2
+        ],
 ]
 ];

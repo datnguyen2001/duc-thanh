@@ -84,6 +84,11 @@
     font-size: 18px;
     font-weight: 400;
     color: #231F20;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 .activity-page .list-product a{
     margin-top: 15px;
@@ -170,7 +175,7 @@
     top: 30%;
 }
 .activity-video .list-video .video-text{
-    width: 70%;
+    width: 75%;
     margin: 30px auto 0;
 }
 .activity-video .list-video .video-text p{

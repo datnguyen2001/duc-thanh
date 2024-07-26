@@ -1,6 +1,12 @@
 @extends('web.index')
 @section('title','Giới thiệu về Đức Thanh')
-
+@section('meta')
+    <meta property="og:url" content="{{route('introduce')}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{@$meta->title}}"/>
+    <meta property="og:description" content="{{@$meta->description}}"/>
+    <meta property="og:image" content="{{asset(@$meta->image)}}"/>
+@endsection
 @section('style_page')
     <link rel="stylesheet" href="{{ asset('assets/web/css/introduce.css') }}">
 @stop

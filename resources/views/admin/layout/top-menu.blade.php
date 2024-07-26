@@ -2,9 +2,8 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="{{'/admin'}}" class="logo d-flex align-items-center">
-            <img src="{{asset('assets/images/logo.png')}}" alt="" style="width: 50px;height: 50px;max-height: 50px">
-            <h5>Admin</h5>
+        <a href="{{'/admin'}}" class="logo d-flex align-items-center justify-content-center">
+            <img src="{{asset('assets/images/header/Logo.png')}}" alt="" style="object-fit: cover">
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
