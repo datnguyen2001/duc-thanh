@@ -143,6 +143,7 @@
         display: none;
     }
     .policy_mobile{
+        width: 100%;
         display: inline-block;
     }
     .title-banner-policy-mobile{

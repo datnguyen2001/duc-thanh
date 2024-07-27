@@ -15,19 +15,17 @@
     <div class="policy_desktop">
         <div class="position-relative header-sp-desktop">
             <img src="{{asset('assets/images/product/banner-desktop.webp')}}" alt="" class="w-100 img-banner-sp">
-            <div class="title-banner-sp">Khám phá các sản phẩm
-                của Đức Thanh</div>
+            <div class="title-banner-sp">{{__('product.title')}}</div>
             <img src="{{asset('assets/images/line-sp.webp')}}" alt="" class="img-line-sp">
         </div>
         <div class="position-relative header-sp-mobile">
             <img src="{{asset('assets/images/banner-sp-mobile.webp')}}" alt="" class="w-100 img-banner-sp">
-            <div class="title-banner-sp">Khám phá các sản phẩm
-                của Đức Thanh</div>
+            <div class="title-banner-sp">{{__('product.title')}}</div>
         </div>
         <div class="container box-big-content">
             <div class="line-header-product">
-                <span>Trang chủ > </span>
-                <span style="margin-left: 4px"> Sản phẩm > </span>
+                <span>{{__('product.home')}} > </span>
+                <span style="margin-left: 4px"> {{__('product.sub_home')}} > </span>
                 <span style="color: #D23C36;margin-left: 4px"> {{$productDetails->category->name ?? ''}}</span>
             </div>
             <div class="box-content-product">
@@ -46,7 +44,7 @@
                 <div class="content-right">
                     <div class="header-content-product">
                         <img src="{{asset('assets/images/box-tab.webp')}}" alt="" class="w-100">
-                        <span class="title-product">Video sản phẩm</span>
+                        <span class="title-product">{{__('product.video')}}</span>
                         <a href="" class="close-product">
                             <img src="{{asset('assets/images/close.webp')}}" alt="" class="btn-close-sp">
                         </a>
@@ -61,8 +59,8 @@
                                         </div>
                                         <div class="video-text">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <p class="d-flex align-items-center">Xem thêm các video ...</p>
-                                                <a href="{{$videoProduct->link ?? '#'}}" class="video-btn">Xem ngay</a>
+                                                <p class="d-flex align-items-center"> ...</p>
+                                                <a href="{{$videoProduct->link ?? '#'}}" class="video-btn">{{__('product.video_see_now')}}</a>
                                             </div>
                                             <p>{{$videoProduct->channel_name ?? ''}}</p>
                                             <p class="content-describes">{{$videoProduct->describes}}</p>

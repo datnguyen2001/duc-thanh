@@ -5,19 +5,19 @@
     </div>
     <div class="contact-form col-lg-6 col-12">
         <h5>
-            Nếu quý khách có góp ý hoặc câu hỏi nào dành cho Đức Thanh, vui lòng gửi thông tin theo biểu mẫu:
+            {{ __('home.contact_note') }}
         </h5>
         <form id="contact-form">
-            <label>Họ và tên *</label>
-            <input type="text" placeholder="Nhập họ và tên" name="name"/>
-            <label>Số điện thoại *</label>
-            <input type="text" placeholder="Nhập số điện thoại" name="phone"/>
+            <label>{{ __('home.contact_name') }} *</label>
+            <input type="text" placeholder="{{ __('home.contact_name_placeholder') }}" name="name"/>
+            <label>{{ __('home.contact_phone') }} *</label>
+            <input type="text" placeholder="{{ __('home.contact_phone_placeholder') }}" name="phone"/>
             <label>Email *</label>
-            <input type="text" placeholder="Nhập email" name="email"/>
-            <label>Lời nhắn</label>
-            <input type="text" placeholder="Nhập nội dung cần tư vấn" name="content"/>
+            <input type="text" placeholder="{{ __('home.contact_email_placeholder') }}" name="email"/>
+            <label>{{ __('home.contact_message') }}</label>
+            <input type="text" placeholder="{{ __('home.contact_message_placeholder') }}" name="content"/>
             <div class="position-relative">
-                <button type="submit" class="btn-save-contact">Gửi thông tin</button>
+                <button type="submit" class="btn-save-contact">{{ __('home.contact_button') }}</button>
                 <div class="loading"></div>
             </div>
         </form>

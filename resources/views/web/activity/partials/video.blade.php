@@ -1,7 +1,7 @@
 <div class="container">
     <div class="list-video">
-        <h5 class="sub-title">Video sản phẩm</h5>
-        <h1>Video ngắn giới thiệu sản phẩm</h1>
+        <h5 class="sub-title">{{__('activity.video')}}</h5>
+        <h1>{{__('activity.video_title')}}</h1>
         <div class="swiper-container">
             <div class="list-video-product swiper-wrapper">
                 @foreach($video as $videos)
@@ -13,8 +13,8 @@
                     </div>
                     <div class="video-text">
                         <div class="d-flex justify-content-between">
-                            <p class="d-flex align-items-center">Xem thêm các video ...</p>
-                            <a href="{{$videos->link}}" target="_blank" class="video-btn">Xem ngay</a>
+                            <p class="d-flex align-items-center">{{__('activity.video_see_more')}} ...</p>
+                            <a href="{{$videos->link}}" target="_blank" class="video-btn">{{__('activity.video_see_now')}}</a>
                         </div>
                         <p>{{$videos->channel_name}}</p>
                         <p class="content-describes">{{$videos->describes}}</p>

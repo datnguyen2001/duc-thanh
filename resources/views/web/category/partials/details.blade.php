@@ -13,7 +13,7 @@
                                 <div class="product-describe">
                                     <h5>{{ $product->names ?? '' }}</h5>
                                     <p>{{ $product->describes ?? '' }}</p>
-                                    <a href="{{ route('detail-product', ['slug' => $product->slug ?? '']) }}">Chi tiết -></a>
+                                    <a href="{{ route('detail-product', ['slug' => $product->slug ?? '']) }}">{{__('category.see_more')}} -></a>
                                 </div>
                             </div>
                         </div>

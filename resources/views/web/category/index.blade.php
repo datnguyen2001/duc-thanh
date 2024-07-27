@@ -15,20 +15,18 @@
 @section('content')
     <div class="position-relative header-sp-desktop">
         <img src="{{asset('assets/images/product/banner-desktop.webp')}}" alt="" class="w-100 img-banner-sp">
-        <div class="title-banner-sp">Khám phá các sản phẩm
-            của Đức Thanh</div>
+        <div class="title-banner-sp">{{__('category.title')}}</div>
         <img src="{{asset('assets/images/line-sp.webp')}}" alt="" class="img-line-sp">
     </div>
     <div class="position-relative header-sp-mobile">
         <img src="{{asset('assets/images/banner-sp-mobile.webp')}}" alt="" class="w-100 img-banner-sp">
-        <div class="title-banner-sp">Khám phá các sản phẩm
-            của Đức Thanh</div>
+        <div class="title-banner-sp">{{__('category.title')}}</div>
     </div>
     <div class="category-page">
         <div class="container">
             <div class="title-link">
-                <span class="home">Trang chủ > </span>
-                <span class="product">Sản phẩm</span>
+                <span class="home">{{__('category.home')}} > </span>
+                <span class="product">{{__('category.sub_home')}}</span>
             </div>
         </div>
         @include('web.category.partials.details')

@@ -16,18 +16,18 @@
     <div class="contact-page">
         <div class="position-relative header-sp-desktop">
             <img src="{{asset('assets/images/contact/banner-desktop.webp')}}" alt="" class="w-100 img-banner-sp">
-            <div class="title-banner-sp">Liên hệ với Đức Thanh để được hỗ trợ</div>
+            <div class="title-banner-sp">{{__('contact.title')}}</div>
             <img src="{{asset('assets/images/line-sp.webp')}}" alt="" class="img-line-sp">
         </div>
         <div class="position-relative header-sp-mobile">
             <img src="{{asset('assets/images/contact/banner-mobile.webp')}}" alt="" class="w-100 img-banner-sp">
-            <div class="title-banner-sp">Liên hệ với Đức Thanh để được hỗ trợ</div>
+            <div class="title-banner-sp">{{__('contact.title')}}</div>
         </div>
         <div class="home-contact">
             <div class="container">
                 <div class="title-link">
-                    <span class="home">Trang chủ > </span>
-                    <span class="contact">Liên hệ</span>
+                    <span class="home">{{__('contact.home')}} > </span>
+                    <span class="contact">{{__('contact.sub_home')}}</span>
                 </div>
                 @include('web.home.partials.contact')
             </div>

@@ -32,6 +32,9 @@ class HomeController extends Controller
     public function home()
     {
         $categories = CategoryModel::all();
+        $imageProduct = ImageModel::first();
+        $videoProduct = VideoModel::first();
+
         $currentLocale = app()->getLocale();
         foreach ($categories as $category){
             if ($currentLocale == 'vi') {
@@ -42,7 +45,7 @@ class HomeController extends Controller
         }
         $meta = MetaModel::where('type',2)->first();
 
-        return view('web.home.index', compact('categories','meta'));
+        return view('web.home.index', compact('categories','meta', 'imageProduct', 'videoProduct'));
     }
 
     public function activity()
@@ -120,6 +123,10 @@ class HomeController extends Controller
     public function category()
     {
         $categories = CategoryModel::with('products')->get();
+        $categories = $categories->filter(function($category) {
+            return $category->products->isNotEmpty();
+        });
+
         $currentLocale = app()->getLocale();
         foreach ($categories as $category){
             if ($currentLocale == 'vi') {
@@ -233,4 +240,53 @@ class HomeController extends Controller
         return view('web.category-product.index', compact('categoryProducts', 'categorySlug'));
     }
 
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        $currentLocale = app()->getLocale();
+
+        if ($currentLocale == 'vi') {
+            $categoryProducts = ProductModel::where('name', 'LIKE', '%' . $keyword . '%')->get();
+            $image = ImageModel::where('name', 'LIKE', '%' . $keyword . '%')->get();
+            $video = VideoModel::where('channel_name', 'LIKE', '%' . $keyword . '%')->get();
+        } else if ($currentLocale == 'en') {
+            $categoryProducts = ProductModel::where('name_en', 'LIKE', '%' . $keyword . '%')->get();
+            $image = ImageModel::where('name_en', 'LIKE', '%' . $keyword . '%')->get();
+            $video = VideoModel::where('channel_name', 'LIKE', '%' . $keyword . '%')->get();
+        } else {
+            $categoryProducts = collect();
+            $image = collect();
+            $video = collect();
+        }
+
+        foreach ($categoryProducts as $categoryProduct){
+            if ($currentLocale == 'vi') {
+                $categoryProduct->names = $categoryProduct->name;
+                $categoryProduct->describes = $categoryProduct->describe;
+            } else if ($currentLocale == 'en') {
+                $categoryProduct->names = $categoryProduct->name_en;
+                $categoryProduct->describes = $categoryProduct->describe_en;
+            }
+        }
+
+        foreach ($image as $images){
+            if ($currentLocale == 'vi') {
+                $images->names = $images->name;
+                $images->describes = $images->describe;
+            } else if ($currentLocale == 'en') {
+                $images->names = $images->name_en;
+                $images->describes = $images->describe_en;
+            }
+        }
+
+        foreach ($video as $videos){
+            if ($currentLocale == 'vi') {
+                $videos->describes = $videos->describe;
+            } else if ($currentLocale == 'en') {
+                $videos->describes = $videos->describe_en;
+            }
+        }
+
+        return view('web.search.index', compact('categoryProducts', 'image', 'video'));
+    }
 }

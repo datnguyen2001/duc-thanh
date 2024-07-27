@@ -16,13 +16,13 @@
         <div class="position-relative">
             <img src="{{asset('assets/images/banner-introduce.webp')}}" alt="" class="w-100 img-banner-introduce">
             <div class="box-title-banner">
-                <div class="title-banner-introduce">Chính sách bảo mật</div>
+                <div class="title-banner-introduce">{{__('about.title')}}</div>
             </div>
         </div>
         <img src="{{asset('assets/images/line_introduce1.webp')}}" alt="" class="w-100 line-introduce1">
         <div class="container line-header-introduce">
-            <span>Về Đức Thanh > </span>
-            <span style="color: #D23C36;margin-left: 4px">Giới thiệu về Đức Thanh</span>
+            <span>{{__('about.about')}} > </span>
+            <span style="color: #D23C36;margin-left: 4px">{{__('about.introduce')}}</span>
         </div>
         <div class="box-big-content-introduce">
             @foreach ($data as $key => $item)
@@ -85,13 +85,13 @@
         <div class="position-relative">
             <img src="{{asset('assets/images/banner-introduce2.webp')}}" alt="" class="w-100 img-banner-introduce">
             <div class="box-title-banner-mobile">
-                <div class="title-banner-introduce-mobile">Chính sách bảo mật</div>
+                <div class="title-banner-introduce-mobile">{{__('about.title')}}</div>
             </div>
         </div>
         <img src="{{asset('assets/images/line-introduce2.webp')}}" alt="" class="w-100 line-introduce-mobile">
         <div class="container line-header-introduce-mobile">
-            <span>Về Đức Thanh > </span>
-            <span style="color: #D23C36;margin-left: 4px">Giới thiệu về Đức Thanh</span>
+            <span>{{__('about.about')}} > </span>
+            <span style="color: #D23C36;margin-left: 4px">{{__('about.introduce')}}</span>
         </div>
         <div class="box-big-content-introduce-mobile">
             @foreach ($data as $index => $item)

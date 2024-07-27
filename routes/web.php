@@ -23,4 +23,5 @@ Route::get('/lien-he', [HomeController::class, 'contact'])->name('contact');
 Route::post('/save-contact', [HomeController::class, 'saveContact'])->name('save-contact');
 Route::get('/danh-muc', [HomeController::class, 'category'])->name('category');
 Route::get('/danh-muc/{slug}', [HomeController::class, 'categoryProduct'])->name('category-product');
+Route::get('/tim-kiem', [HomeController::class, 'search'])->name('search');
 
