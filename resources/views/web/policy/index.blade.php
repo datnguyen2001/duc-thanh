@@ -16,16 +16,16 @@
         <div class="position-relative">
             <img src="{{asset('assets/images/banner_policy.webp')}}" alt="" class="w-100 img-banner-policy">
             <div class="box-title-banner">
-                <div class="title-banner-policy">Chính sách bảo mật</div>
+                <div class="title-banner-policy">{{__('policy.title')}}</div>
                 <img src="{{asset('assets/images/line.webp')}}" alt="">
             </div>
         </div>
         <div class="container">
             <div class="line-header-policy">
-                <span>Về Đức Thanh > </span>
-                <span style="color: #D23C36;margin-left: 4px">Chính sách bảo mật</span>
+                <span>{{__('policy.home')}} > </span>
+                <span style="color: #D23C36;margin-left: 4px">{{__('policy.sub_home')}}</span>
             </div>
-            <p class="title-policy">Chính sách bảo mật thông tin</p>
+            <p class="title-policy">{{__('policy.sub_title')}}</p>
             <div class="box-content-policy">
                 <img src="{{asset('assets/images/content_policy.webp')}}" alt="" class="w-100 img-content-policy">
                 <div class="box-content-child-policy">
@@ -43,15 +43,15 @@
     <div class="policy_mobile">
         <div class="position-relative">
             <img src="{{asset('assets/images/banner_policy_mobile.webp')}}" alt="" class="w-100 img-banner-policy_mobile">
-            <div class="title-banner-policy-mobile">Chính sách bảo mật</div>
+            <div class="title-banner-policy-mobile">{{__('policy.title')}}</div>
         </div>
         <div class="container">
             <div class="position-relative" style="overflow: hidden;">
                 <div class="line-header-policy-mobile">
-                    <span>Về Đức Thanh > </span>
-                    <span style="color: #D23C36;margin-left: 4px">Chính sách bảo mật</span>
+                    <span>{{__('policy.home')}} > </span>
+                    <span style="color: #D23C36;margin-left: 4px">{{__('policy.sub_home')}}</span>
                 </div>
-                <p class="title-policy-mobile">Chính sách bảo mật thông tin</p>
+                <p class="title-policy-mobile">{{__('policy.sub_title')}}</p>
                 <img src="{{asset('assets/images/content-mobile.webp')}}" alt="" class="img-content-policy-mobile w-100">
                 @foreach($dataMobile as $item)
                 <div class="box-content-child-policy-mobile">

@@ -1,10 +1,10 @@
 <div class="container" style="padding-top: 215px">
-    <span class="home">Trang chủ</span>
-    <span class="activity">Hoạt động</span>
+    <span class="home">{{__('activity.home')}}</span>
+    <span class="activity">{{__('activity.sub_home')}}</span>
     <div class="list-image">
-        <h5 class="sub-title">Hình ảnh</h5>
+        <h5 class="sub-title">{{__('activity.image')}}</h5>
         <h1>
-            Hình ảnh trải nghiệm sản phẩm cùng Đức Thanh
+            {{__('activity.image_title')}}
         </h1>
         <div class="swiper-container">
             <div class="list-product swiper-wrapper">
@@ -17,7 +17,7 @@
                     <div class="product-text">
                         <h5 class="product-title">{{$images->names}}</h5>
                         <p class="product-detail">{{$images->describes}}</p>
-                        <span><a href="{{$images->link}}">Chi tiết -></a></span>
+                        <span><a href="{{$images->link}}">{{__('activity.image_details')}} -></a></span>
                     </div>
                 </div>
                     @endforeach

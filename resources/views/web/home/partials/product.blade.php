@@ -1,79 +1,43 @@
 <div class="home-product">
-    <h5>Sản phẩm</h5>
+    <h5>{{__('home.product')}}</h5>
     <h1>
-        Các dòng sản phẩm tự hào của <br>
-        ĐỨC THANH
+        {{__('home.product_title_1')}} <br>
+        {{__('home.product_title_2')}}
     </h1>
     <div class="list-product-desktop">
         <div class="d-flex flex-wrap">
+            @foreach($categories as $category)
+                <div class="col-3">
+                    <a href="{{route('category-product', [$category->slug])}}">
+                        <img src="{{ $category->src }}" alt="Product 1" class="product-img">
+                        <span class="product-title">{{$category->names ?? ''}}</span>
+                    </a>
+                </div>
+            @endforeach
             <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/product-1.webp') }}" alt="Product 1" class="product-img">
-                <span class="product-title">PHẤN</span>
-            </div>
-            <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/product-2.webp') }}" alt="Product 2" class="product-img">
-                <span class="product-title">BẢNG</span>
-            </div>
-            <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/product-3.webp') }}" alt="Product 3" class="product-img">
-                <span class="product-title">BÚT SÁP MÀU</span>
-            </div>
-            <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/product-4.webp') }}" alt="Product 4" class="product-img">
-                <span class="product-title">SÁP NẶN</span>
-            </div>
-            <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/product-5.webp') }}" alt="Product 5" class="product-img">
-                <span class="product-title">MỰC VÀ BÚT MÁY</span>
-            </div>
-            <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/product-6.webp') }}" alt="Product 6" class="product-img">
-                <span class="product-title">MÀU NƯỚC</span>
-            </div>
-            <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/product-7.webp') }}" alt="Product 7" class="product-img">
-                <span class="product-title">SẢN PHẨM KHÁC</span>
-            </div>
-            <div class="col-3">
-                <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" class="product-img">
-                <span class="product-title">XEM TẤT CẢ</span>
+                <a href="{{route('category')}}">
+                    <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" class="product-img">
+                    <span class="product-title">{{__('home.product_see_all')}}</span>
+                </a>
             </div>
         </div>
     </div>
     <div class="swiper-wrapper-container">
         <div class="swiper-container list-product-mobile">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="{{ asset('assets/images/home/product/product-1.webp') }}" alt="Product 1" class="product-img">
-                    <span class="product-title">PHẤN</span>
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('assets/images/home/product/product-2.webp') }}" alt="Product 2" class="product-img">
-                    <span class="product-title">BẢNG</span>
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('assets/images/home/product/product-3.webp') }}" alt="Product 3" class="product-img">
-                    <span class="product-title">BÚT SÁP MÀU</span>
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('assets/images/home/product/product-4.webp') }}" alt="Product 4" class="product-img">
-                    <span class="product-title">SÁP NẶN</span>
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('assets/images/home/product/product-5.webp') }}" alt="Product 5" class="product-img">
-                    <span class="product-title">MỰC VÀ BÚT MÁY</span>
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('assets/images/home/product/product-6.webp') }}" alt="Product 6" class="product-img">
-                    <span class="product-title">MÀU NƯỚC</span>
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('assets/images/home/product/product-7.webp') }}" alt="Product 7" class="product-img">
-                    <span class="product-title">SẢN PHẨM KHÁC</span>
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" class="product-img">
-                    <span class="product-title">XEM TẤT CẢ</span>
+                @foreach($categories as $category)
+                    <div class="col-3">
+                        <a href="{{route('category-product', [$category->slug])}}">
+                            <img src="{{ $category->src }}" alt="Product 1" class="product-img">
+                            <span class="product-title">{{$category->names ?? ''}}</span>
+                        </a>
+                    </div>
+                @endforeach
+                <div class="col-3">
+                    <a href="{{route('category')}}">
+                        <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" class="product-img">
+                        <span class="product-title">{{__('home.product_see_all')}}</span>
+                    </a>
                 </div>
             </div>
             <!-- Add Pagination -->
