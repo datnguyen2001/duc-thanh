@@ -323,6 +323,9 @@
     .background-title {
         min-width: 39%;
     }
+    .btn-close-sp {
+        right: -70px;
+    }
 }
 @media (max-width: 500px) {
     .title-banner-sp {
@@ -339,11 +342,17 @@
     .background-title {
         min-width: 44%;
     }
+    .btn-close-sp {
+        right: -60px;
+    }
 }
 @media (max-width: 420px) {
     .title-banner-sp {
         left: 22%;
         bottom: 200px;
+    }
+    .btn-close-sp {
+        right: -50px;
     }
 }
 @media (max-width: 400px) {
@@ -355,5 +364,8 @@
     }
     .background-title {
         min-width: 51%;
+    }
+    .btn-close-sp {
+        right: -45px;
     }
 }

@@ -25,6 +25,7 @@
     margin-bottom: 30px;
 }
 .list-category .list-product-swiper .col-image{
+    margin: 0 auto;
     width: 90%;
 }
 .list-category .product-image{
