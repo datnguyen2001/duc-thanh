@@ -1,21 +1,17 @@
 <div id="imageCarousel" class="carousel slide slider" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#imageCarousel" data-slide-to="1"></li>
-        <li data-target="#imageCarousel" data-slide-to="2"></li>
+        @foreach($banners as $index => $banner)
+            <li data-target="#imageCarousel" data-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}"></li>
+        @endforeach
     </ol>
 
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="{{asset('assets/images/home/banner.webp')}}" alt="Slide 1">
-        </div>
-        <div class="carousel-item">
-            <img src="{{asset('assets/images/home/banner.webp')}}" alt="Slide 2">
-        </div>
-        <div class="carousel-item">
-            <img src="{{asset('assets/images/home/banner.webp')}}" alt="Slide 3">
-        </div>
+        @foreach($banners as $index => $banner)
+            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                <img src="{{ $banner->src }}" alt="Slide {{ $index + 1 }}">
+            </div>
+        @endforeach
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
