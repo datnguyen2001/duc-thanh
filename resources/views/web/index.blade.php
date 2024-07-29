@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>@yield('title')</title>
     @yield('meta')
-    <link href="{{asset('assets/images/header/Logo.png')}}" rel="icon">
-    <link href="{{asset('assets/images/header/Logo.png')}}" rel="apple-touch-icon">
+    <link href="{{asset($setting->logo??'assets/images/header/Logo.png')}}" rel="icon">
+    <link href="{{asset($setting->logo??'assets/images/header/Logo.png')}}" rel="apple-touch-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">

@@ -9,7 +9,7 @@
                     <div class="row information-content">
                         <div class="col-lg-6 col-12">
                             <div class="contact-content">
-                                <img class="logo" src="{{asset('assets/images/header/Logo.png')}}" alt="logo" />
+                                <img class="logo w-100" src="{{asset($setting->logo??'assets/images/header/Logo.png')}}" alt="logo" style="max-width: 292px" />
                                 <div class="contact-info">
                                     <p><strong>{{__('footer.address')}} </strong> {{$setting->address ?? ''}}</p>
                                     <p><strong>{{__('footer.phone')}} </strong>{{$setting->phone ?? ''}}</p>
