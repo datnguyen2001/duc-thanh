@@ -4,6 +4,7 @@ namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormSubmitted;
+use App\Models\BannerModel;
 use App\Models\ContactModel;
 use App\Models\ImageModel;
 use App\Models\IntroduceModel;
@@ -31,6 +32,7 @@ class HomeController extends Controller
 
     public function home()
     {
+        $banners = BannerModel::all();
         $categories = CategoryModel::all();
         $imageProduct = ImageModel::first();
         $videoProduct = VideoModel::first();
@@ -45,7 +47,7 @@ class HomeController extends Controller
         }
         $meta = MetaModel::where('type',2)->first();
 
-        return view('web.home.index', compact('categories','meta', 'imageProduct', 'videoProduct'));
+        return view('web.home.index', compact('categories','meta', 'imageProduct', 'videoProduct', 'banners'));
     }
 
     public function activity()
