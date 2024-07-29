@@ -15,7 +15,7 @@ return [
 
     'activity' => 'Activities',
     'activity_title_1' => 'Product experience activities',
-    'activity_title_2' => 'ơ',
+    'activity_title_2' => '',
     'activity_title_3' => 'A journey to explore the colorful world ',
     'activity_title_4' => 'of art with Duc Thanh.',
     'activity_more' => 'Details',
