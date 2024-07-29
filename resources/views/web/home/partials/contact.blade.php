@@ -1,7 +1,11 @@
 <div class="row">
+    @php
+        $dataMap = App\Models\SettingModel::first();
+    @endphp
     <div class="contact-map col-lg-6 col-12">
-        <img src="{{asset('assets/images/home/frame3.png')}}" alt="Frame 3" class="map-frame"/>
-        <img src="{{asset('assets/images/home/map.png')}}" alt="Map" class="map-image"/>
+        <div class="box-map">
+            {!! $dataMap->map!!}
+        </div>
     </div>
     <div class="contact-form col-lg-6 col-12">
         <h5>
