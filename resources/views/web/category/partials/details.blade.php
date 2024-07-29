@@ -8,10 +8,14 @@
                         <div class="swiper-slide">
                             <div class="col-image">
                                 <div class="product-image">
-                                    <img src="{{ $product->src }}" alt="Image"/>
+                                    <a href="{{ route('detail-product', ['slug' => $product->slug ?? '']) }}">
+                                        <img src="{{ $product->src }}" alt="Image"/>
+                                    </a>
                                 </div>
                                 <div class="product-describe">
-                                    <h5>{{ $product->names ?? '' }}</h5>
+                                    <a href="{{ route('detail-product', ['slug' => $product->slug ?? '']) }}">
+                                        <h5>{{ $product->names ?? '' }}</h5>
+                                    </a>
                                     <p>{{ $product->describes ?? '' }}</p>
                                     <a href="{{ route('detail-product', ['slug' => $product->slug ?? '']) }}">{{__('category.see_more')}} -></a>
                                 </div>
