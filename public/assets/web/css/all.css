@@ -60,3 +60,26 @@ p, h1{
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+.box-map{
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid #FF6663;
+    padding: 25px;
+}
+.box-map iframe{
+    width: 100%;
+    border-radius: 100px;
+}
+@media (max-width: 768px) {
+    .box-map{
+        width: 100%;
+        border-radius: 50px;
+        border: 1px solid #FF6663;
+        padding: 10px;
+    }
+    .box-map iframe{
+        width: 100%;
+        border-radius: 50px;
+        height: 320px;
+    }
+}

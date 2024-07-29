@@ -174,7 +174,7 @@ header .search-icon{
     border-radius: 20px;
     left: 7%;
     top: 70px;
-    width: 65%;
+    width: 86%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
@@ -234,7 +234,7 @@ header .search-icon{
 
 .language-change.menu-item-language {
     top: 444%;
-    right: 28%;
+    right: 9%;
 }
 @media (max-width: 1400px) {
     header{

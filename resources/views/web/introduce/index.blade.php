@@ -70,7 +70,7 @@
                             {{ $item->names }}
                         </div>
                     </div>
-                    <img src="{{ asset('assets/images/icon-introduce' . ($key % 2 + 1) . '.png') }}" alt="" class="{{ $iconClass }}">
+                    <img src="{{ asset($item->src) }}" alt="" class="{{ $iconClass }}">
                 </div>
 
                 @if ($key % 4 == 1)
