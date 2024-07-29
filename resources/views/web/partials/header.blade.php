@@ -11,27 +11,27 @@
                 alt="border-left"
             />
         </div>
-        <div class="nav small separator">
+        <div class="nav small separator @if($is_active == 1) active @endif">
             <span>
                 <a href="{{route('introduce')}}">{{__('header.about')}}</a>
             </span>
         </div>
-        <div class="nav medium separator active">
+        <div class="nav medium separator @if($is_active == 2) active @endif">
             <span>
                 <a href="{{route('category')}}">{{__('header.product')}} + </a>
             </span>
         </div>
         <div class="nav large separator">
             <a href="{{route('home')}}" class="w-100 text-center">
-                <img class="logo" src="{{asset('assets/images/header/Logo.png')}}" alt="logo" />
+                <img class="logo" src="{{asset($setting->logo??'assets/images/header/Logo.png')}}" alt="logo" />
             </a>
         </div>
-        <div class="nav medium separator">
+        <div class="nav medium separator  @if($is_active == 4) active @endif">
             <span>
                 <a href="{{route('activity')}}">{{__('header.activity')}} +</a>
             </span>
         </div>
-        <div class="nav small separator">
+        <div class="nav small separator @if($is_active == 5) active @endif">
             <span>
                 <a href="{{route('contact')}}">{{__('header.contact')}}</a>
             </span>

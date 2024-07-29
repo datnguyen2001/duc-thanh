@@ -44,8 +44,9 @@ class HomeController extends Controller
             }
         }
         $meta = MetaModel::where('type',2)->first();
+        $is_active = 7;
 
-        return view('web.home.index', compact('categories','meta', 'imageProduct', 'videoProduct'));
+        return view('web.home.index', compact('categories','meta', 'imageProduct', 'videoProduct','is_active'));
     }
 
     public function activity()
@@ -70,33 +71,55 @@ class HomeController extends Controller
             }
         }
         $meta = MetaModel::where('type',3)->first();
+        $is_active = 4;
 
-        return view('web.activity.index',compact('image','video','meta'));
+        return view('web.activity.index',compact('image','video','meta','is_active'));
     }
 
     public function contact()
     {
         $meta = MetaModel::where('type',6)->first();
+        $is_active = 6;
 
-        return view('web.contact.index',compact('meta'));
+        return view('web.contact.index',compact('meta','is_active'));
     }
 
     public function saveContact(Request $request)
     {
-        $messages = [
-            'required' => ':attribute là bắt buộc.',
-            'string' => ':attribute phải là chuỗi ký tự.',
-            'max' => ':attribute không được vượt quá :max ký tự.',
-            'min' => ':attribute phải có ít nhất :min ký tự.',
-            'email' => ':attribute phải là một địa chỉ email hợp lệ.',
-            'regex' => ':attribute không đúng định dạng.',
-        ];
+        $currentLocale = app()->getLocale();
+        if ($currentLocale == 'vi') {
+                $messages = [
+                    'name.required' => 'Họ và tên là bắt buộc.',
+                    'phone.required' => 'Số điện thoại là bắt buộc.',
+                    'phone.regex' => 'Số điện thoại không đúng định dạng.',
+                    'phone.min' => 'Số điện thoại phải có ít nhất 10 ký tự.',
+                    'phone.max' => 'Số điện thoại không được vượt quá 11 ký tự.',
+                    'email.required' => 'Email là bắt buộc.',
+                    'email.email' => 'Email phải là một địa chỉ email hợp lệ.',
+                    'content.required' => 'Lời nhắn là bắt buộc.',
+                    'content.string' => 'Tin nhắn phải là chuỗi ký tự.',
+                    'content.max' => 'Tin nhắn không được vượt quá 3000 ký tự.',
+                ];
+        }else if ($currentLocale == 'en') {
+            $messages = [
+                'name.required' => 'Name are required.',
+                'phone.required' => 'Phone are required.',
+                'phone.regex' => 'The phone number is not in the correct format.',
+                'phone.min' => 'Phone number must be at least 10 characters.',
+                'phone.max' => 'Phone number must not exceed 11 characters.',
+                'email.required' => 'Email are required.',
+                'email.email' => 'Email must be a valid email address.',
+                'content.required' => 'Message are required.',
+                'content.string' => 'The message must be a string of characters.',
+                'content.max' => 'Messages must not exceed 3000 characters.',
+            ];
+        }
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'phone' => ['required', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'min:10', 'max:15'],
             'email' => 'required|email',
-            'message' => 'nullable|string|max:3000',
+            'content' => 'required|nullable|string|max:3000',
         ], $messages);
 
         if ($validator->fails()) {
@@ -113,11 +136,17 @@ class HomeController extends Controller
         $contact->content = $request->get('content');
         $contact->save();
         Mail::to($request->get('email'))->send(new ContactFormSubmitted($contact));
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Gửi thông tin liên hệ thành công',
-        ], 200);
+        if ($currentLocale == 'vi') {
+            return response()->json([
+                'success' => true,
+                'message' => 'Gửi thông tin liên hệ thành công',
+            ], 200);
+        }else if ($currentLocale == 'en') {
+            return response()->json([
+                'success' => true,
+                'message' => 'Contact information sent successfully',
+            ], 200);
+        }
     }
 
     public function category()
@@ -145,8 +174,9 @@ class HomeController extends Controller
             }
         }
         $meta = MetaModel::where('type',4)->first();
+        $is_active = 2;
 
-        return view('web.category.index', compact('categories','meta'));
+        return view('web.category.index', compact('categories','meta','is_active'));
     }
 
     public function policy()
@@ -173,8 +203,9 @@ class HomeController extends Controller
             }
         }
         $meta = MetaModel::where('type',1)->first();
+        $is_active = 8;
 
-        return view('web.policy.index',compact('data','dataMobile','meta'));
+        return view('web.policy.index',compact('data','dataMobile','meta','is_active'));
     }
 
     public function introduce()
@@ -191,8 +222,9 @@ class HomeController extends Controller
             }
         }
         $meta = MetaModel::where('type',5)->first();
+        $is_active = 1;
 
-        return view('web.introduce.index',compact('data','meta'));
+        return view('web.introduce.index',compact('data','meta','is_active'));
     }
 
     public function detailProduct($slug)
@@ -214,7 +246,9 @@ class HomeController extends Controller
                 $videoProduct->describes = $videoProduct->describe_en;
             }
         }
-        return view('web.product.index', compact('productDetails','videoProducts'));
+        $is_active = 2;
+
+        return view('web.product.index', compact('productDetails','videoProducts','is_active'));
     }
 
     public function categoryProduct($slug){
@@ -237,7 +271,9 @@ class HomeController extends Controller
                 $categoryProduct->describes = $categoryProduct->describe_en;
             }
         }
-        return view('web.category-product.index', compact('categoryProducts', 'categorySlug'));
+        $is_active = 2;
+
+        return view('web.category-product.index', compact('categoryProducts', 'categorySlug','is_active'));
     }
 
     public function search(Request $request)
@@ -286,7 +322,8 @@ class HomeController extends Controller
                 $videos->describes = $videos->describe_en;
             }
         }
+        $is_active = 3;
 
-        return view('web.search.index', compact('categoryProducts', 'image', 'video'));
+        return view('web.search.index', compact('categoryProducts', 'image', 'video','is_active'));
     }
 }
