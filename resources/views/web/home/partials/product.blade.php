@@ -26,14 +26,14 @@
         <div class="swiper-container list-product-mobile">
             <div class="swiper-wrapper">
                 @foreach($categories as $category)
-                    <div class="col-3">
+                    <div class="swiper-slide">
                         <a href="{{route('category-product', [$category->slug])}}">
                             <img src="{{ $category->src }}" alt="Product 1" class="product-img">
                             <span class="product-title">{{$category->names ?? ''}}</span>
                         </a>
                     </div>
                 @endforeach
-                <div class="col-3">
+                <div class="swiper-slide">
                     <a href="{{route('category')}}">
                         <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" class="product-img">
                         <span class="product-title">{{__('home.product_see_all')}}</span>
