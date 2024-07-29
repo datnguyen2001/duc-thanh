@@ -6,7 +6,7 @@
             {{__('home.activity_title_2')}}
         </h1>
         <img src="{{asset('assets/images/home/underlined.png')}}" alt="Activity" style="margin-bottom: 25px"/>
-        <h1>
+        <h1 class="sub-title-activity">
             {{__('home.activity_title_3')}} <br>
             {{__('home.activity_title_4')}}
         </h1>

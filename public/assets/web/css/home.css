@@ -435,6 +435,9 @@
         margin-top: 9%;
         width: 37%;
     }
+    .home-activity .sub-title-activity{
+        font-size: 40px;
+    }
 }
 @media (max-width: 425px) {
     .home-about h1{
