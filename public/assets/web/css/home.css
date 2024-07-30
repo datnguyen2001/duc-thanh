@@ -1,18 +1,11 @@
 .carousel-item {
     position: relative;
     overflow: hidden;
-    height: 1230px;
 }
 
 .carousel-item img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-height: 100%;
-    min-width: 100%;
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
 }
 
 .carousel-indicators {
@@ -112,6 +105,7 @@
     width: 80%;
     height: 260px;
     margin: 20px auto 15px;
+    object-fit: contain;
 }
 .home-product .product-title{
     font-size: 24px;
@@ -348,6 +342,9 @@
     .home-contact .map-image {
         top: 4%;
     }
+    .home-about{
+        margin-top: -325px;
+    }
 }
 @media (max-width: 1200px){
     .home-activity-product .frame-2 {
@@ -373,21 +370,24 @@
         left: 5%;
     }
     .home-about h1{
-        font-size: 50px;
+        font-size: 40px;
     }
     .home-about h5 {
-        font-size: 20px;
+        font-size: 18px;
         padding: 18px 15px 10px;
     }
     .home-about a, .home-about p {
-        font-size: 18px;
+        font-size: 17px;
+    }
+    .home-about {
+        margin-top: -300px;
     }
     .home-product h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
     .home-product h5{
         padding: 18px 23px 10px 22px;
-        font-size: 20px;
+        font-size: 18px;
     }
     .home-product .list-product-desktop {
         display: none;
@@ -396,7 +396,7 @@
         display: block;
     }
     .home-activity h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
     .home-activity-product{
         display: block;
@@ -413,14 +413,31 @@
         left: 40%;
     }
     .home-contact .title {
-        font-size: 20px;
+        font-size: 18px;
         padding: 10px 20px 10px;
     }
     .home-contact h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
     .home-contact .contact-map{
         margin-bottom: 50px;
+    }
+    .home-about .container {
+        padding-bottom: 25px;
+    }
+    .home-activity h5 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .home-activity a{
+        font-size: 17px;
+        margin-top: 15px;
+    }
+    .home-contact .contact-form h5{
+        font-size: 18px;
+    }
+    .box-home-hd-video{
+        margin-top: -360px!important;
     }
 }
 @media (max-width: 768px) {
@@ -435,11 +452,33 @@
         margin-top: 9%;
         width: 37%;
     }
+    .home-about h1, .home-product h1, .home-activity h5,.home-contact h1,.home-activity h1 {
+        font-size: 30px;
+    }
+
+    .home-about a, .home-about p,.home-activity a {
+        font-size: 16px;
+    }
+   .home-activity h5 {
+        font-size: 18px;
+    }
+    .home-product .product-title {
+        font-size: 20px;
+    }
+    #contact-form button[type="submit"] {
+        font-size: 18px;
+    }
+    .box-home-hd-video {
+        margin-top: -435px !important;
+    }
+    .acts-video{
+        margin-top: 30px;
+    }
+    .home-about {
+        margin-top: -270px;
+    }
 }
 @media (max-width: 425px) {
-    .home-about h1{
-        font-size: 40px;
-    }
     .home-about h5 {
         font-size: 16px;
         padding: 15px 18px 7px;
@@ -447,15 +486,9 @@
     .home-about a, .home-about p {
         font-size: 16px;
     }
-    .home-product h1 {
-        font-size: 40px;
-    }
     .home-product h5{
         padding: 19px 16px 10px 15px;
         font-size: 16px;
-    }
-    .home-activity h1 {
-        font-size: 40px;
     }
     .home-activity-product .frame-2 {
         height: 325px;
@@ -471,9 +504,7 @@
     .home-contact .title {
         font-size: 16px;
     }
-    .home-contact h1 {
-        font-size: 40px;
-    }
+
     .home-contact .contact-form h5 {
         font-size: 20px;
     }

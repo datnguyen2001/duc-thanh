@@ -190,8 +190,8 @@
         max-height: 100%;
         overflow-y: auto;
         padding: 10px 10px;
-        height: 540px;
-        bottom: 105px;
+        height: 675px;
+        bottom: 90px;
     }
     .content-child-policy{
         font-size: 16px;
@@ -199,17 +199,35 @@
     .title-child-policy{
         font-size: 18px;
     }
+    .title-policy-mobile {
+        top: 80px;
+    }
 }
-
-@media (max-width: 455px) {
+@media (max-width: 525px) {
+    .box-content-child-policy-mobile {
+        height: 615px;
+    }
+}
+@media (max-width: 495px) {
+    .box-content-child-policy-mobile {
+        height: 590px;
+    }
+}
+@media (max-width: 470px) {
     .box-content-child-policy-mobile{
-        bottom: 65px;
+        bottom: 75px;
+        height: 535px;
     }
     .title-banner-policy-mobile {
         top: 140px;
     }
     .footer {
         margin-top: 35px;
+    }
+    .title-policy-mobile {
+        font-size: 24px;
+        width: 100%;
+        top: 90px;
     }
 }
 @media (max-width: 420px) {
@@ -224,19 +242,15 @@
     }
     }
 @media (max-width: 400px) {
-    .title-policy-mobile{
-        width: 60%;
-        font-size: 30px;
-    }
     .box-content-child-policy-mobile{
-        height: 470px;
-        bottom: 60px;
+        height: 480px;
+        bottom: 75px;
     }
     .title-banner-policy-mobile{
         font-size: 30px;
     }
 }
-@media (max-width: 375px) {
+@media (max-width: 380px) {
     .line-header-policy-mobile{
         font-size: 16px;
     }
@@ -247,7 +261,12 @@
         font-size: 14px;
     }
     .box-content-child-policy-mobile {
-        height: 445px;
+        height: 450px;
+        bottom: 70px;
+    }
+    .title-policy-mobile {
+        font-size: 20px;
+        top: 77px;
     }
 }
 
