@@ -208,18 +208,33 @@ header .search-icon{
     top: 103%;
 }
 .lang-vn{
-    background: url("/assets/images/header/lang-vn.png") no-repeat center center;
-    background-size: cover;
+    /*background: url("/assets/images/header/lang-vn.png") no-repeat center center;*/
+    /*background-size: cover;*/
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid red;
+    background: red;
 }
 .lang-vn a{
     font-size: 18px;
-    font-weight: 700;
     color: #FFFFFF;
     padding: 0 10px;
 }
 .lang-en{
-    background: url("/assets/images/header/lang-en.png") no-repeat center center;
-    background-size: cover;
+    /*background: url("/assets/images/header/lang-en.png") no-repeat center center;*/
+    /*background-size: cover;*/
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: white;
 }
 .lang-en a{
     font-size: 18px;
@@ -281,7 +296,23 @@ header .search-icon{
         right: 0;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    header{
+        width: calc(100vw - 10vw);
+    }
+    header .nav span a {
+        font-size: 16px;
+    }
+    .lang-vn a,.lang-en a{
+        font-size: 16px;
+    }
+    .lang-vn,.lang-en{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 845px) {
     .header {
         width: 100%;
         height: 70px;
@@ -358,6 +389,13 @@ header .search-icon{
     }
 }
 @media (max-width: 550px) {
+    .header {
+        height: 55px;
+    }
+    header .logo {
+        height: 45px;
+        object-fit: contain;
+    }
     #home-icon-mobile{
         top: 0;
         right: 25%;
@@ -368,13 +406,13 @@ header .search-icon{
     }
     header .border-side.right {
         width: 70px;
-        height: 70px;
+        height: 55px;
         object-fit: cover;
         object-position: right;
     }
     header .border-side.left {
         width: 70px;
-        height: 70px;
+        height: 55px;
         object-fit: cover;
         object-position: left;
     }
@@ -390,6 +428,10 @@ header .search-icon{
     }
     .language-change.menu-item-language {
         top: 438%;
+    }
+    .language-change.search-language {
+        top: 195%;
+        right: 8%;
     }
 }
 @media (max-width: 475px) {

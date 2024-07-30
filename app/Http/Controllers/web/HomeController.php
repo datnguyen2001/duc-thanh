@@ -197,11 +197,11 @@ class HomeController extends Controller
         $dataMobile = PolicyModel::orderBy('index','asc')->paginate(1);
         foreach ($dataMobile as $dataMobiles){
             if ($currentLocale == 'vi') {
-                $dataMobiles->names = $datas->name;
-                $dataMobiles->contents = $datas->content;
+                $dataMobiles->names = $dataMobiles->name;
+                $dataMobiles->contents = $dataMobiles->content;
             } else if ($currentLocale == 'en') {
-                $dataMobiles->names = $datas->name_en;
-                $dataMobiles->contents = $datas->content_en;
+                $dataMobiles->names = $dataMobiles->name_en;
+                $dataMobiles->contents = $dataMobiles->content_en;
             }
         }
         $meta = MetaModel::where('type',1)->first();

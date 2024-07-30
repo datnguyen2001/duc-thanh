@@ -5,7 +5,7 @@
                     $currentLocale = app()->getLocale();
                     $setting = App\Models\SettingModel::first();
                 @endphp
-                <div class="information col-lg-7 col-12">
+                <div class="information col-lg-8 col-12">
                     <div class="row information-content">
                         <div class="col-lg-6 col-12">
                             <div class="contact-content">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-12 text-center">
+                <div class="col-lg-4 col-12 text-center">
                     <div class="social-icons" id="social-icon-desktop">
                         <div class="col-12">
                             <a href="https://zalo.me/{{$setting->zalo ?? ''}}"><img src="{{asset('assets/images/footer/zalo.png')}}" alt="Zalo"></a>

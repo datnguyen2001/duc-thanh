@@ -62,9 +62,10 @@ p, h1{
 }
 .box-map{
     width: 100%;
-    border-radius: 100px;
+    border-radius: 60px;
     border: 1px solid #FF6663;
     padding: 25px;
+    padding-bottom: 20px;
 }
 .box-map iframe{
     width: 100%;
@@ -81,5 +82,8 @@ p, h1{
         width: 100%;
         border-radius: 50px;
         height: 320px;
+    }
+    #contact-form button[type="submit"] {
+        font-size: 18px;
     }
 }

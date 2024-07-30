@@ -13,7 +13,7 @@
         <span><a href="{{route('activity')}}">{{__('home.activity_more')}} -></a></span>
     </div>
 </div>
-<div class="container" style="margin-top: -200px;">
+<div class="container box-home-hd-video" style="margin-top: -200px;">
     <div class="home-activity-product">
         <div class="acts-image col-lg-8 col-12">
             <div class="frame-container">
