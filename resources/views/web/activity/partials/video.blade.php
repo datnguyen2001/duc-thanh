@@ -7,9 +7,11 @@
                 @foreach($video as $videos)
                 <div class="swiper-slide">
                     <div class="video-image">
-                        <img src="{{asset('assets/images/activity/frame-video.png')}}" alt="Frame" class="frame"/>
-                        <img src="{{asset($videos->src)}}" alt="Image" class="video"/>
-{{--                        <img src="{{asset('assets/images/activity/tiktok.png')}}" alt="TikTok" class="tiktok"/>--}}
+                        <a href="{{$videos->link}}">
+                            <img src="{{asset('assets/images/activity/frame-video.png')}}" alt="Frame" class="frame"/>
+                            <img src="{{asset($videos->src)}}" alt="Image" class="video"/>
+    {{--                        <img src="{{asset('assets/images/activity/tiktok.png')}}" alt="TikTok" class="tiktok"/>--}}
+                        </a>
                     </div>
                     <div class="video-text">
                         <div class="d-flex justify-content-between">

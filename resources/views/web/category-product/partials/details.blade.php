@@ -7,10 +7,14 @@
                     <div class="col-lg-4 col-md-6 col-12" >
                         <div class="col-image" style="margin: 30px auto 0">
                             <div class="product-image">
-                                <img src="{{ $categoryProduct->src }}" alt="Image"/>
+                                <a href="{{ route('detail-product', ['slug' => $categoryProduct->slug ?? '']) }}">
+                                    <img src="{{ $categoryProduct->src }}" alt="Image"/>
+                                </a>
                             </div>
                             <div class="product-describe">
-                                <h5>{{ $categoryProduct->names ?? '' }}</h5>
+                                <a href="{{ route('detail-product', ['slug' => $categoryProduct->slug ?? '']) }}">
+                                    <h5>{{ $categoryProduct->names ?? '' }}</h5>
+                                </a>
                                 <p>{{ $categoryProduct->describes ?? '' }}</p>
                                 <a href="{{ route('detail-product', ['slug' => $categoryProduct->slug ?? '']) }}">{{__('category_product.see_more')}} -></a>
                             </div>

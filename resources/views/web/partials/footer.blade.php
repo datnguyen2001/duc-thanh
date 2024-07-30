@@ -50,12 +50,12 @@
                 <div class="col-lg-4 col-12 text-center">
                     <div class="social-icons" id="social-icon-desktop">
                         <div class="col-12">
-                            <a href="https://zalo.me/{{$setting->zalo}}"><img src="{{asset('assets/images/footer/zalo.png')}}" alt="Zalo"></a>
-                            <a href="{{$setting->tiktok}}"><img src="{{asset('assets/images/footer/tiktok.png')}}" alt="TikTok"></a>
+                            <a href="https://zalo.me/{{$setting->zalo ?? ''}}"><img src="{{asset('assets/images/footer/zalo.png')}}" alt="Zalo"></a>
+                            <a href="{{$setting->tiktok ?? '#'}}"><img src="{{asset('assets/images/footer/tiktok.png')}}" alt="TikTok"></a>
                         </div>
                         <div class="col-12">
-                            <a href="{{$setting->facebook}}"><img src="{{asset('assets/images/footer/fb.png')}}" alt="Facebook"></a>
-                            <a href="{{$setting->youtube}}"><img src="{{asset('assets/images/footer/youtube.png')}}" alt="Youtube"></a>
+                            <a href="{{$setting->facebook ?? '#'}}"><img src="{{asset('assets/images/footer/fb.png')}}" alt="Facebook"></a>
+                            <a href="{{$setting->youtube ?? '#'}}"><img src="{{asset('assets/images/footer/youtube.png')}}" alt="Youtube"></a>
                         </div>
                     </div>
                     <div class="social-icons" id="social-icon-mobile">

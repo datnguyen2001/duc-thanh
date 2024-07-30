@@ -11,10 +11,14 @@
                 @foreach($image as $images)
                 <div class="swiper-slide">
                     <div class="product-image product-image-hd">
-                        <img src="{{asset($images->src)}}" alt="Image" class="image-hd"/>
+                        <a href="{{$images->link}}">
+                            <img src="{{asset($images->src)}}" alt="Image" class="image-hd"/>
+                        </a>
                     </div>
                     <div class="product-text">
-                        <h5 class="product-title">{{$images->names}}</h5>
+                        <a href="{{$images->link}}">
+                            <h5 class="product-title">{{$images->names}}</h5>
+                        </a>
                         <p class="product-detail">{{$images->describes}}</p>
                         <span><a href="{{$images->link}}">{{__('activity.image_details')}} -></a></span>
                     </div>

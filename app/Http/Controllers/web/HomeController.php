@@ -104,15 +104,15 @@ class HomeController extends Controller
                 ];
         }else if ($currentLocale == 'en') {
             $messages = [
-                'name.required' => 'Name are required.',
-                'phone.required' => 'Phone are required.',
-                'phone.regex' => 'The phone number is not in the correct format.',
+                'name.required' => 'Name is required.',
+                'phone.required' => 'Phone is required.',
+                'phone.regex' => 'Phone number format is incorrect.',
                 'phone.min' => 'Phone number must be at least 10 characters.',
                 'phone.max' => 'Phone number must not exceed 11 characters.',
-                'email.required' => 'Email are required.',
+                'email.required' => 'Email is required.',
                 'email.email' => 'Email must be a valid email address.',
-                'content.required' => 'Message are required.',
-                'content.string' => 'The message must be a string of characters.',
+                'content.required' => 'Message is required.',
+                'content.string' => 'Message must be text.',
                 'content.max' => 'Messages must not exceed 3000 characters.',
             ];
         }

@@ -452,6 +452,7 @@
         margin-top: 9%;
         width: 37%;
     }
+
     .home-about h1, .home-product h1, .home-activity h5,.home-contact h1,.home-activity h1 {
         font-size: 30px;
     }
@@ -476,6 +477,9 @@
     }
     .home-about {
         margin-top: -270px;
+    }
+    .home-activity .sub-title-activity{
+        font-size: 30px;
     }
 }
 @media (max-width: 425px) {

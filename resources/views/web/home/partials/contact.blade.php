@@ -4,7 +4,7 @@
     @endphp
     <div class="contact-map col-lg-6 col-12">
         <div class="box-map">
-            {!! $dataMap->map!!}
+            {!! $dataMap->map ?? ''!!}
         </div>
     </div>
     <div class="contact-form col-lg-6 col-12">
