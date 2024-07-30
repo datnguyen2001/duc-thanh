@@ -41,11 +41,11 @@
 .activity-page .list-image .sub-title{
     position: absolute;
     background: url("/assets/images/activity/image.png") no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     font-size: 22px;
     font-weight: 700;
     color: #FFFBF6;
-    padding: 15px 50px 11px 50px;
+    padding: 15px 30px 11px 30px;
     width: max-content;
 }
 .activity-page .list-image h1{
@@ -154,7 +154,7 @@
 .activity-video .list-video .sub-title{
     position: absolute;
     background: url("/assets/images/activity/image.png") no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     font-size: 22px;
     font-weight: 700;
     color: #FFFBF6;
@@ -325,6 +325,15 @@
     }
 }
 @media (max-width: 475px) {
+    .activity-page .list-image h1 {
+        font-size: 32px;
+    }
+    .activity-page .list-video h1 {
+        font-size: 32px;
+    }
+    .activity-video .list-video-product {
+        padding: 30px 0;
+    }
     .activity-page .list-image .sub-title {
         font-size: 16px;
     }

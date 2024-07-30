@@ -6,11 +6,11 @@
 }
 .search-activity .list-image .sub-title{
     background: url("/assets/images/activity/image.png") no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     font-size: 22px;
     font-weight: 700;
     color: #FFFBF6;
-    padding: 15px 50px 11px 50px;
+    padding: 15px 30px 11px 30px;
     width: max-content;
 }
 .search-activity .list-image h1{
@@ -71,11 +71,11 @@
 }
 .search-activity .list-video .sub-title{
     background: url("/assets/images/activity/image.png") no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     font-size: 22px;
     font-weight: 700;
     color: #FFFBF6;
-    padding: 17px 24px 15px 21px;
+    padding: 15px 21px;
     width: max-content;
 }
 .search-activity .list-video h1{
