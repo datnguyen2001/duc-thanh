@@ -59,7 +59,7 @@
                                         </div>
                                         <div class="video-text">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <p class="d-flex align-items-center"> ...</p>
+                                                <p class="d-flex align-items-center">{{__('product.video_see_more')}} ...</p>
                                                 <a href="{{$videoProduct->link ?? '#'}}" class="video-btn">{{__('product.video_see_now')}}</a>
                                             </div>
                                             <p>{{$videoProduct->channel_name ?? ''}}</p>
