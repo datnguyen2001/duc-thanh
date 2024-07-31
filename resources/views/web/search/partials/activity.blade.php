@@ -7,7 +7,7 @@
                     @foreach($image as $images)
                         <div class="swiper-slide">
                             <div class="product-image">
-                                <img src="{{asset('assets/images/activity/frame-img.png')}}" alt="Frame" class="frame"/>
+{{--                                <img src="{{asset('assets/images/activity/frame-img.png')}}" alt="Frame" class="frame"/>--}}
                                 <img src="{{asset($images->src)}}" alt="Image" class="image"/>
                             </div>
                             <div class="product-text">
