@@ -251,6 +251,9 @@ header .search-icon{
     top: 444%;
     right: 9%;
 }
+header .nav:hover {
+    background-color: #fad6a5 !important;
+}
 @media (max-width: 1400px) {
     header{
         height: 63px;
