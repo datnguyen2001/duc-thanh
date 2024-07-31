@@ -36,7 +36,7 @@
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
 <script>
     AOS.init({
-        duration: 800,
+        duration: 1000,
         once: true
     });
 </script>
