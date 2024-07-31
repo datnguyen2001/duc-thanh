@@ -59,10 +59,10 @@
                         </div>
                     </div>
                     <div class="social-icons" id="social-icon-mobile">
-                        <img src="{{asset('assets/images/footer/zalo.png')}}" alt="Zalo">
-                        <img src="{{asset('assets/images/footer/tiktok.png')}}" alt="TikTok">
-                        <img src="{{asset('assets/images/footer/fb.png')}}" alt="Facebook">
-                        <img src="{{asset('assets/images/footer/youtube.png')}}" alt="Youtube">
+                        <a href="https://zalo.me/{{$setting->zalo ?? ''}}"><img src="{{asset('assets/images/footer/zalo.png')}}" alt="Zalo"></a>
+                        <a href="{{$setting->tiktok ?? '#'}}"><img src="{{asset('assets/images/footer/tiktok.png')}}" alt="TikTok"></a>
+                        <a href="{{$setting->facebook ?? '#'}}"><img src="{{asset('assets/images/footer/fb.png')}}" alt="Facebook"></a>
+                        <a href="{{$setting->youtube ?? '#'}}"><img src="{{asset('assets/images/footer/youtube.png')}}" alt="Youtube"></a>
                     </div>
                     <div class="copyright-desktop">
                         Copyright 2024 © Ducthanh. All rights reserved

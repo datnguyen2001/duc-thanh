@@ -7,14 +7,14 @@
     <div class="list-product-desktop">
         <div class="d-flex flex-wrap">
             @foreach($categories as $category)
-                <div class="col-3">
+                <div class="col-3" data-aos="fade-up">
                     <a href="{{route('category-product', [$category->slug])}}">
                         <img src="{{ $category->src }}" alt="Product 1" class="product-img">
                         <span class="product-title">{{$category->names ?? ''}}</span>
                     </a>
                 </div>
             @endforeach
-            <div class="col-3">
+            <div class="col-3" data-aos="fade-up">
                 <a href="{{route('category')}}">
                     <img src="{{ asset('assets/images/home/product/seemore.png') }}" alt="See More" class="product-img">
                     <span class="product-title">{{__('home.product_see_all')}}</span>
@@ -75,5 +75,13 @@
                 spaceBetween: 10,
             }
         }
+    });
+</script>
+<link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
     });
 </script>
