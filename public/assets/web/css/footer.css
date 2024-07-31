@@ -42,7 +42,7 @@ footer .copyright-desktop{
     text-align: center;
 }
 .footer .social-icons img {
-    max-width: 40px;
+    width: 40px;
     margin: 10px;
 }
 .footer .contact-content,
@@ -53,6 +53,15 @@ footer .copyright-desktop{
 }
 #social-icon-mobile {
     display: none;
+}
+.footer .introduction p a:hover,
+.footer .product p a:hover{
+    color: #E6262B;
+    font-weight: 600;
+}
+.footer .social-icons img:hover{
+    width: 45px;
+    height: 45px;
 }
 @media (max-width: 1400px) {
     .footer{
