@@ -56,7 +56,7 @@ header .nav.separator {
 
 header .nav.side {
     position: relative;
-    width: 130px;
+    width: 100px;
 }
 
 header .nav.side.left {
@@ -288,6 +288,16 @@ header .nav.separator:hover {
 }
 header .nav:hover {
     background-color: #fad6a5 !important;
+}
+@media (min-width: 1855px) {
+    header{
+        width: calc(100vw - 14vw);
+    }
+}
+@media (max-width: 1600px) {
+    header .nav.side {
+        width: 120px;
+    }
 }
 @media (max-width: 1400px) {
     header{
