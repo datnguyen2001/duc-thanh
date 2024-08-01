@@ -9,7 +9,8 @@
     <div class="carousel-inner">
         @foreach($banners as $index => $banner)
             <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                <img src="{{ $banner->src }}" alt="Slide {{ $index + 1 }}">
+                <img src="{{ $banner->src }}" alt="Slide {{ $index + 1 }}" class="banner-home-desktop">
+                <img src="{{ $banner->src_mobile }}" alt="Slide {{ $index + 1 }}" class="banner-home-mobile">
             </div>
         @endforeach
     </div>

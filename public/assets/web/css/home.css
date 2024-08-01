@@ -10,7 +10,7 @@
 
 .carousel-indicators {
     position: absolute;
-    bottom: 15%;
+    bottom: 4%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -48,10 +48,10 @@
     background: url("/assets/images/home/background-1.webp") no-repeat center center;
     background-size: cover;
     text-align: center;
-    margin-top: -345px;
+    margin-top: -120px;
 }
 .home-about .container{
-    padding-top: 270px;
+    padding-top: 190px;
     padding-bottom: 100px;
 }
 .home-about h5{
@@ -90,7 +90,7 @@
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 700;
-    color: #F9D5A4;
+    color: white;
     width: max-content;
     margin: 0 auto;
     padding: 25px 30px 10px 23px;
@@ -334,7 +334,21 @@
 #contact-form button[type="submit"]:hover {
     background-color: #e43e3e;
 }
-
+.home-about h5:hover,.home-product h5:hover,.home-activity-product .acts-image h5:hover,.home-activity-product .acts-video h5:hover,.home-contact .title:hover,.home-activity h5:hover{
+    color: #F9D5A4;
+}
+.product-img,.home-activity-img,.home-activity-video {
+    transition: transform 0.3s ease;
+}
+.col-3:hover .product-img:hover{
+    transform: scale(1.1);
+}
+.home-activity-img:hover,.home-activity-video:hover {
+    transform: scale(1.05);
+}
+.banner-home-mobile{
+    display: none;
+}
 @media (max-width: 1400px){
     .home-activity-product .frame-2 {
         height: 600px;
@@ -343,7 +357,7 @@
         top: 4%;
     }
     .home-about{
-        margin-top: -325px;
+        margin-top: -130px;
     }
 }
 @media (max-width: 1200px){
@@ -380,7 +394,7 @@
         font-size: 17px;
     }
     .home-about {
-        margin-top: -300px;
+        margin-top: -150px;
     }
     .home-product h1 {
         font-size: 40px;
@@ -476,12 +490,24 @@
         margin-top: 30px;
     }
     .home-about {
-        margin-top: -270px;
+        margin-top: -155px;
     }
     .home-activity .sub-title-activity{
         font-size: 30px;
     }
 }
+@media (max-width: 600px) {
+    .banner-home-desktop{
+        display: none;
+    }
+    .banner-home-mobile{
+        display: inline-block;
+    }
+    .carousel-indicators {
+        bottom: 1%;
+    }
+}
+
 @media (max-width: 425px) {
     .home-about h5 {
         font-size: 16px;
