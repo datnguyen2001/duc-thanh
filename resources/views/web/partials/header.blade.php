@@ -1,3 +1,6 @@
+@php
+    $currentLocale = app()->getLocale();
+@endphp
 <div class="header-container">
     <header class="header">
         <div class="nav side left">
@@ -5,11 +8,6 @@
                 <img class="icon home-icon" src="{{asset('assets/images/header/home-icon.png')}}" id="home-icon-desktop" alt="home-icon" />
             </a>
             <img class="icon home-icon" src="{{asset('assets/images/header/mobile-icon.png')}}" id="home-icon-mobile" alt="mobile-icon" />
-            <img
-                class="border-side left"
-                src="{{asset('assets/images/header/left-side.svg')}}"
-                alt="border-left"
-            />
         </div>
         <div class="nav small separator @if($is_active == 1) active @endif">
             <span>
@@ -38,11 +36,6 @@
         </div>
         <div class="nav side right">
             <img class="icon search-icon" src="{{asset('assets/images/header/Search.png')}}" alt="search-icon" />
-            <img
-                class="border-side right"
-                src="{{asset('assets/images/header/right-side.svg')}}"
-                alt="border-right"
-            />
         </div>
         <div class="search-input">
             <input type="text" placeholder="{{__('home.search_placeholder')}}" name="keyword" id="searchKeyword">
@@ -61,8 +54,8 @@
             <img src="{{asset('assets/images/header/underlined-mobile.png')}}" alt="underlined">
         </div>
         <div class="language-change d-flex">
-            <div class="lang-vn"><a href="{{route('language', ['vi'])}}">VN</a></div>
-            <div class="lang-en"><a href="{{route('language', ['en'])}}">EN</a></div>
+            <div class="lang-vn lang-item {{ $currentLocale == 'vi' ? 'lang-item-active' : '' }}"><a href="{{route('language', ['vi'])}}">VN</a></div>
+            <div class="lang-en lang-item {{ $currentLocale == 'en' ? 'lang-item-active' : '' }}"><a href="{{route('language', ['en'])}}">EN</a></div>
         </div>
     </header>
 </div>

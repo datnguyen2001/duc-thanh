@@ -71,6 +71,12 @@ p, h1{
     width: 100%;
     border-radius: 30px;
 }
+.product-image img,.video-image img{
+    transition: transform 0.3s ease;
+}
+.product-image img:hover,.video-image img:hover{
+    transform: scale(1.05);
+}
 @media (max-width: 768px) {
     .box-map{
         width: 100%;
