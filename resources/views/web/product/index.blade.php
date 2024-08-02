@@ -29,19 +29,19 @@
                 <span style="color: #D23C36;margin-left: 4px"> {{$productDetails->category->name ?? ''}}</span>
             </div>
             <div class="box-content-product">
-                <div class="content-left">
+                <div class="content-left" data-aos="fade-up">
                     <span class="title-product background-title">{{$productDetails->category->name ?? ''}}</span>
                     <a href="" class="close-product-mobile">
                         <img src="{{asset('assets/images/close.webp')}}" alt="" class="btn-close-sp">
                     </a>
                     <div class="box-border-sp">
-                        <img src="{{$productDetails->src}}" class="w-100" style="object-fit: cover">
+                        <img src="{{$productDetails->src}}" class="w-100 product-details-img" style="object-fit: cover">
                     </div>
                     <div class="content-detai-sp">
                         {!! $productDetails->contents ?? '' !!}
                     </div>
                 </div>
-                <div class="content-right">
+                <div class="content-right" data-aos="fade-up">
                     <div class="header-content-product">
                         <img src="{{asset('assets/images/box-tab.webp')}}" alt="" class="w-100">
                         <span class="title-product">{{__('product.video')}}</span>
@@ -55,7 +55,7 @@
                                 <div class="swiper-slide">
                                     <div class="col-video">
                                         <div class="video-image">
-                                            <img src="{{$videoProduct->src}}" alt="Image" class="w-100" style="object-fit: cover"/>
+                                            <img src="{{$videoProduct->src}}" alt="Image" class="w-100 product-details-video" style="object-fit: cover"/>
                                         </div>
                                         <div class="video-text">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -91,5 +91,13 @@
             },
         });
 
+    </script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
     </script>
 @stop

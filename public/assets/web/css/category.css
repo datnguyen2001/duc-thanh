@@ -78,6 +78,7 @@
     background-size: cover;
     padding: 72px 0;
     margin: 0;
+    background-repeat: round;
 }
 .category-page .image-bg-3 {
     background: url('/assets/images/category/background-3.webp') no-repeat center center;
@@ -86,5 +87,8 @@
 @media (max-width: 992px) {
     .list-category .product-image img{
         height: 275px;
+    }
+    .category-page .image-bg-2 {
+        background-repeat: no-repeat;
     }
 }

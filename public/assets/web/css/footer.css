@@ -5,6 +5,7 @@
     background-size: cover;
     margin-top: 50px;
     padding: 125px 0 80px 0;
+    background-repeat: round;
 }
 .footer .contact-content .logo{
     margin-bottom: 25px;
@@ -58,9 +59,21 @@ footer .copyright-desktop{
 .footer .product p a:hover{
     color: #E6262B;
 }
-.footer .social-icons img:hover{
-    width: 45px;
-    height: 45px;
+.footer-zalo:hover img {
+    content: url("/assets/images/footer/zalo-hover.png");
+    border-radius: 50%;
+}
+.footer-tiktok:hover img {
+    content: url("/assets/images/footer/tiktok-hover.png");
+    border-radius: 50%;
+}
+.footer-facebook:hover img {
+    content: url("/assets/images/footer/fb-hover.jpg");
+    border-radius: 50%;
+}
+.footer-youtube:hover img {
+    content: url("/assets/images/footer/youtube-hover.png");
+    border-radius: 50%;
 }
 @media (max-width: 1400px) {
     .footer{
@@ -71,6 +84,7 @@ footer .copyright-desktop{
 @media (max-width: 992px) {
     .footer{
         padding: 70px 0 0 0;
+        background-repeat: no-repeat;
     }
     footer .information-content{
         flex-direction: column-reverse;
