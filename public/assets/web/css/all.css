@@ -77,6 +77,9 @@ p, h1{
 .product-image img:hover,.video-image img:hover{
     transform: scale(1.05);
 }
+.product-describe a:hover,.product-describe h5:hover{
+    color: #F9D5A4!important;
+}
 @media (max-width: 768px) {
     .box-map{
         width: 100%;

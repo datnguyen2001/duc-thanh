@@ -51,8 +51,6 @@
     padding: 10px 10px;
     height: 910px;
     margin-top: 45px;
-    scrollbar-width: thin;
-    scrollbar-color: #dadada #f1f1f1;
 }
 .title-child-policy{
     color: #D23C36;
@@ -70,21 +68,18 @@
     margin-bottom: 16px;
 }
 .box-content-child-policy::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
+    background-color: white;
 }
 
 .box-content-child-policy::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    border: 3px solid white;
+    background-color: #faefd5;
 }
 
 .box-content-child-policy::-webkit-scrollbar-thumb {
-    background-color: #dfdfdf;
-    border-radius: 4px;
-    border: 2px solid #f1f1f1;
-}
-
-.box-content-child-policy::-webkit-scrollbar-thumb:hover {
-    background-color: #dfdfdf;
+    background-color: #D23C36;
+    border-radius: 10px;
 }
 .policy_mobile{
     display: none;
@@ -118,7 +113,7 @@
 @media (max-width: 1024px) {
     .box-content-child-policy{
         height: 495px;
-        margin-top:15px;
+        margin-top:26px;
     }
     .title-banner-policy, .title-policy{
         font-size: 20px;
@@ -216,7 +211,7 @@
 @media (max-width: 470px) {
     .box-content-child-policy-mobile{
         bottom: 75px;
-        height: 535px;
+        height: 526px;
     }
     .title-banner-policy-mobile {
         top: 140px;

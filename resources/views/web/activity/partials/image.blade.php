@@ -1,5 +1,5 @@
 <div class="container" style="padding-top: 215px">
-    <span class="home">{{__('activity.home')}}</span>
+    <span class="home">{{__('activity.home')}} ></span>
     <span class="activity">{{__('activity.sub_home')}}</span>
     <div class="list-image">
         <h5 class="sub-title">{{__('activity.image')}}</h5>
@@ -49,6 +49,10 @@
                 768: {
                     slidesPerView: 1,
                     spaceBetween: 5,
+                },
+                300: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
                 },
             },
         });

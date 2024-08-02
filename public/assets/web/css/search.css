@@ -28,7 +28,7 @@
 .search-activity .list-product .product-image{
     border: 1px solid #FF6663;
     border-radius: 20px;
-    padding: 10px;
+    padding: 30px;
 }
 .search-activity .list-product .frame{
     width: 90%;
@@ -142,8 +142,8 @@
 }
 .search-activity .swiper-button-next img{
     position: relative;
-    right: -50px;
-    width: 60px;
+    right: 40px;
+    width: 45px;
     height: auto;
 }
 .search-activity .swiper-button-prev img{
@@ -177,6 +177,14 @@
     border: 1px solid;
     padding: 3px 10px;
     font-size: 16px;
+}
+.search-activity .list-product .product-title:hover,.search-activity .list-product a:hover{
+    color: #F9D5A4;
+}
+@media (max-width: 1400px) {
+    .footer {
+        padding: 100px 0 80px 0;
+    }
 }
 @media (max-width: 1200px){
     .search-activity .list-image h1 {
@@ -217,12 +225,22 @@
     }
     .search-activity .swiper-button-next img{
         width: 50px;
-        right: -30px;
+        right: 25px;
         top: 70%;
     }
     .search-activity .swiper-button-prev img{
         width: 50px;
-        left: -30px;
+        left: 20px;
+        top: 70%;
+    }
+    .list-video .swiper-button-next img{
+        width: 50px;
+        right: 35px;
+        top: 70%;
+    }
+    .list-video .swiper-button-prev img{
+        width: 50px;
+        left: 40px;
         top: 70%;
     }
 }
@@ -252,28 +270,41 @@
     }
     .search-activity .swiper-button-next img{
         width: 45px;
-        right: -40px;
+        right: 30px;
         top: 100%;
     }
     .search-activity .swiper-button-prev img{
         width: 45px;
-        left: -40px;
+        left: 25px;
         top: 100%;
+    }
+    .list-video .swiper-button-next img{
+        right: 70px;
+    }
+    .list-video .swiper-button-prev img{
+        left: 65px;
     }
 }
 @media (max-width: 620px) {
+   .search-activity .swiper-container-image {
+        width: 80%;
+       margin: 0 auto;
+    }
     .search-activity .swiper-slide{
         width: 100% !important;
     }
     .search-activity .swiper-button-next img{
         width: 45px;
-        right: -10px;
+        right: 30px;
         top: 100%;
     }
     .search-activity .swiper-button-prev img{
         width: 45px;
-        left: -10px;
+        left: 25px;
         top: 100%;
+    }
+    .list-video .swiper-button-prev img{
+        left: 35px;
     }
 }
 @media (max-width: 475px) {
@@ -289,5 +320,19 @@
     .search-activity .list-video .sub-title {
         font-size: 16px;
         padding: 10px 16px 10px 13px;
+    }
+    .search-activity .swiper-button-next img {
+        width: 35px;
+        right: 6px;
+    }
+    .search-activity .swiper-button-prev img {
+        width: 35px;
+        left: 4px;
+    }
+    .list-video .swiper-button-next img {
+        right: 25px;
+    }
+    .list-video .swiper-button-prev img {
+        left: 25px;
     }
 }

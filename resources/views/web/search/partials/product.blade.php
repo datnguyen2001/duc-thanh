@@ -11,7 +11,9 @@
                                     <img src="{{ $categoryProduct->src }}" alt="Image"/>
                                 </div>
                                 <div class="product-describe">
+                                    <a href="{{ route('detail-product', ['slug' => $categoryProduct->slug ?? '']) }}">
                                     <h5>{{ $categoryProduct->names ?? '' }}</h5>
+                                    </a>
                                     <p>{{ $categoryProduct->describes ?? '' }}</p>
                                     <a href="{{ route('detail-product', ['slug' => $categoryProduct->slug ?? '']) }}">{{__('category_product.see_more')}} -></a>
                                 </div>
