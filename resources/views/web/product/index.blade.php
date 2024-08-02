@@ -31,7 +31,7 @@
             <div class="box-content-product">
                 <div class="content-left" data-aos="fade-up">
                     <span class="title-product background-title">{{$productDetails->category->name ?? ''}}</span>
-                    <a href="" class="close-product-mobile">
+                    <a href="{{route('category')}}" class="close-product-mobile">
                         <img src="{{asset('assets/images/close.webp')}}" alt="" class="btn-close-sp">
                     </a>
                     <div class="box-border-sp">
@@ -45,7 +45,7 @@
                     <div class="header-content-product">
                         <img src="{{asset('assets/images/box-tab.webp')}}" alt="" class="w-100">
                         <span class="title-product">{{__('product.video')}}</span>
-                        <a href="" class="close-product">
+                        <a href="{{route('category')}}" class="close-product">
                             <img src="{{asset('assets/images/close.webp')}}" alt="" class="btn-close-sp">
                         </a>
                     </div>
