@@ -11,7 +11,9 @@
                                 <img src="{{asset($images->src)}}" alt="Image" class="image"/>
                             </div>
                             <div class="product-text">
+                                <a href="{{$images->link}}">
                                 <h5 class="product-title">{{$images->names}}</h5>
+                                </a>
                                 <p class="product-detail">{{$images->describes}}</p>
                                 <span><a href="{{$images->link}}">{{__('activity.image_details')}} -></a></span>
                             </div>
@@ -101,7 +103,7 @@
             breakpoints: {
                 992: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
+                    spaceBetween: 15,
                 },
                 768: {
                     slidesPerView: 1,

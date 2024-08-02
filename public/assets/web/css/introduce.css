@@ -59,23 +59,24 @@
     font-weight: 400;
     line-height: normal;
     height: 195px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .content1::-webkit-scrollbar-track
 {
-    -webkit-box-shadow: inset 0 0 6px #D6EAFF;
     background-color: #F5F5F5;
+    border: 3px solid #D6EaFF;
 }
 
 .content1::-webkit-scrollbar
 {
-    width: 6px;
+    width: 10px;
     background-color: #F5F5F5;
 }
 
 .content1::-webkit-scrollbar-thumb
 {
-    background-color: #bbe3ff;
+    background-color: #D23C36;
+    border-radius: 10px;
 }
 .title1{
     position: absolute;
@@ -123,19 +124,20 @@
 }
 .content2::-webkit-scrollbar-track
 {
-    -webkit-box-shadow: inset 0 0 6px #FAD6A5;
-    background-color: #F5F5F5;
+    border: 3px solid #FAD6A5;
+    background-color: #faefd5;
 }
 
 .content2::-webkit-scrollbar
 {
-    width: 6px;
-    background-color: #F5F5F5;
+    width: 10px;
+    background-color: #FAD6A5;
 }
 
 .content2::-webkit-scrollbar-thumb
 {
-    background-color: #faf58a;
+    background-color: #D23C36;
+    border-radius: 10px;
 }
 .title2{
     position: absolute;
@@ -272,6 +274,8 @@
     .content1{
         width: 65%;
         left: 54%;
+        height: 165px;
+        top: 100px;
     }
     .title1{
         max-width: 425px;
@@ -293,6 +297,7 @@
         left: 39%;
         width: 70%;
         top: 95px;
+        height: 150px;
     }
     .icon-introduce2{
         width: 245px;
@@ -328,7 +333,7 @@
     }
     .content1 {
         top: 95px;
-        height: 170px;
+        height: 165px;
     }
     .content1{
         height: 147px;
@@ -442,7 +447,7 @@
         margin-bottom: 90px;
     }
     }
-@media (max-width: 900px) {
+@media (max-width: 992px) {
     .line-introduce1 {
         margin-top: -150px;
     }
@@ -462,7 +467,7 @@
         font-size: 15px;
         left: 57%;
         top: 60px;
-        height: 125px;
+        height: 130px;
     }
     .icon-introduce1 {
         width: 170px;

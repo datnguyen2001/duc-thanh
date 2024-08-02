@@ -110,13 +110,25 @@
 .activity-page .swiper-button-next img{
     position: relative;
     right: -50px;
-    width: 60px;
+    width: 40px;
     height: auto;
 }
 .activity-page .swiper-button-prev img{
     position: relative;
-    left: -50px;
-    width: 60px;
+    left: -55px;
+    width: 40px;
+    height: auto;
+}
+.activity-video .swiper-button-next img{
+    position: relative;
+    right: -50px;
+    width: 40px;
+    height: auto;
+}
+.activity-video .swiper-button-prev img{
+    position: relative;
+    left: -40px;
+    width: 40px;
     height: auto;
 }
 .activity-page .swiper-button-next::after,
@@ -214,7 +226,11 @@
     overflow: hidden;
     margin-bottom: -420px;
 }
-
+@media (max-width: 1400px){
+    .footer {
+         padding: 125px 0 55px 0;
+    }
+}
 @media (max-width: 1200px){
     .activity-page .list-image h1 {
         font-size: 45px;
@@ -222,7 +238,7 @@
 }
 @media (max-width: 992px) {
     .activity-page .activity-banner h1 {
-        font-size: 45px;
+        font-size: 35px;
     }
     .activity-page .list-image .sub-title {
         background-size: contain;
@@ -231,7 +247,7 @@
         padding: 11px 30px 11px 30px;
     }
     .activity-page .list-image h1{
-        padding-top: 65px;
+        padding-top: 35px;
         width: 100%;
     }
     .activity-video .list-video .sub-title {
@@ -242,21 +258,27 @@
     }
     .activity-video .list-video h1 {
         width: 100%;
-        font-size: 45px;
+        font-size: 35px;
         padding-top: 65px;
     }
     .activity-page .swiper-slide{
         width: 50% !important;
     }
     .activity-page .swiper-button-next img{
-        width: 50px;
-        right: -30px;
+        width: 40px;
+        right: -50px;
         top: 70%;
     }
     .activity-page .swiper-button-prev img{
-        width: 50px;
-        left: -30px;
+        width: 40px;
+        left: -50px;
         top: 70%;
+    }
+    .activity-video .swiper-button-next img{
+        right: -40px;
+    }
+    .activity-video .swiper-button-prev img{
+        left: -35px;
     }
     .activity-video .list-video .video-text p {
         font-size: 14px;
@@ -277,22 +299,23 @@
     }
 
     .activity-page .list-image h1 {
-        font-size: 40px;
+        font-size: 30px;
+        padding-top: 55px;
     }
     .activity-page .list-video h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .activity-page .swiper-slide{
         width: 100% !important;
     }
     .activity-page .swiper-button-next img{
-        width: 45px;
+        width: 40px;
         right: -40px;
         top: 100%;
     }
     .activity-page .swiper-button-prev img{
-        width: 45px;
-        left: -40px;
+        width: 40px;
+        left: -55px;
         top: 100%;
     }
     .activity-video .list-video-product .frame {
@@ -310,26 +333,36 @@
     }
 }
 @media (max-width: 620px) {
+    .activity-image .swiper-container{
+        width: 75%;
+        margin: 0 auto;
+    }
     .activity-page .swiper-slide{
         width: 100% !important;
     }
     .activity-page .swiper-button-next img{
         width: 45px;
-        right: -10px;
+        right: 15px;
         top: 100%;
     }
     .activity-page .swiper-button-prev img{
         width: 45px;
-        left: -10px;
+        left: 5px;
         top: 100%;
+    }
+    .activity-video .swiper-button-prev img{
+        left: 20px;
+    }
+    .activity-video .swiper-button-next img {
+        right: 20px;
     }
 }
 @media (max-width: 475px) {
     .activity-page .list-image h1 {
-        font-size: 32px;
+        font-size: 26px;
     }
     .activity-page .list-video h1 {
-        font-size: 32px;
+        font-size: 26px;
     }
     .activity-video .list-video-product {
         padding: 30px 0;
@@ -355,5 +388,22 @@
     }
     .activity-banner .activity-title img {
         width: 70%;
+    }
+    .activity-page .swiper-button-next img {
+        right: 5px;
+        width: 35px;
+    }
+    .activity-image .swiper-button-prev img {
+        left: 0px;
+        width: 35px;
+    }
+    .activity-video .swiper-button-prev img {
+        left: 15px;
+        width: 35px;
+    }
+}
+@media (max-width: 400px) {
+    .product-image-hd{
+        padding: 15px;
     }
 }

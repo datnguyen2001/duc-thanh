@@ -31,7 +31,7 @@
 .list-category .product-image{
     border: 1px solid #FF6663;
     border-radius: 20px;
-    padding: 10px;
+    padding: 40px;
 }
 .list-category .product-image img{
     object-fit: contain;

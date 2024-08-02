@@ -60,7 +60,7 @@
                     }
                 @endphp
 
-                <div class="{{ $contentClass }}">
+                <div class="{{ $contentClass }}" data-aos="fade-up">
                     <div class="{{ $boxClass }}">
                         <img src="{{ asset('assets/images/box-introduce' . ($key % 2 + 1) . '.webp') }}" alt="" class="icon-content{{ $key % 2 + 1 }}">
                         <div class="content{{ $key % 2 + 1 }}">
