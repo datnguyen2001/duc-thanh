@@ -156,6 +156,7 @@
 .activity-video{
     background: url("/assets/images/activity/background-3.webp") no-repeat center center;
     background-size: cover;
+    background-repeat: round;
     margin-top: 50px;
 }
 .activity-video .list-video{
@@ -249,6 +250,9 @@
     .activity-page .list-image h1{
         padding-top: 35px;
         width: 100%;
+    }
+    .activity-video{
+        background-repeat: no-repeat;
     }
     .activity-video .list-video .sub-title {
         background-size: contain;

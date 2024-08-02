@@ -114,11 +114,11 @@
 }
 .btn-close-sp{
     position: absolute;
-    right: -190px;
+    right: -200px;
     object-fit: cover;
-    top: -20px;
+    top: 0;
     cursor: pointer;
-    width: 65px;
+    width: 50px;
 }
 .video-btn:hover{
     color: white;
@@ -168,6 +168,9 @@
     text-align: center;
     min-width: 170px;
 }
+.product-details-img:hover, .product-details-video:hover{
+    transform: scale(1.05);
+}
 @media (max-width: 1592px) {
     .title-banner-sp{
         left: 9%;
@@ -183,7 +186,8 @@
         left: 13%;
     }
     .btn-close-sp {
-        right: -140px;
+        width: 45px;
+        right: -120px;
     }
     .box-big-content {
         padding-left: 0px;
@@ -236,7 +240,8 @@
     }
     .btn-close-sp {
         right: -90px;
-        width: 50px;
+        width: 40px;
+        top: 6px;
     }
     .box-border-sp{
         padding: 25px;
@@ -297,6 +302,9 @@
     }
     .background-title {
         min-width: 31%;
+    }
+    .btn-close-sp {
+        top: -20px;
     }
 }
 @media (max-width: 700px) {
