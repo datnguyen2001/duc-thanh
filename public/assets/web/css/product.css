@@ -168,7 +168,8 @@
     text-align: center;
     min-width: 170px;
 }
-.product-details-img:hover, .product-details-video:hover{
+.product-details-img:hover,
+.product-details-video:hover{
     transform: scale(1.05);
 }
 @media (max-width: 1592px) {

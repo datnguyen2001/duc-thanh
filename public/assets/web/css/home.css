@@ -359,7 +359,7 @@
 .product-img-x,.home-activity-img,.home-activity-video {
     transition: transform 0.3s ease;
 }
-.col-3:hover .product-img-x:hover{
+.product-img-x:hover{
     transform: scale(1.1);
 }
 .home-activity-img:hover,.home-activity-video:hover {
