@@ -35,7 +35,7 @@
                         <img src="{{asset('assets/images/close.webp')}}" alt="" class="btn-close-sp">
                     </a>
                     <div class="box-border-sp">
-                        <img src="{{$productDetails->src}}" class="w-100 product-details-img" style="object-fit: cover">
+                        <img src="{{$productDetails->src}}" class="product-details-img">
                     </div>
                     <div class="content-detai-sp">
                         {!! $productDetails->contents ?? '' !!}
@@ -55,7 +55,7 @@
                                 <div class="swiper-slide">
                                     <div class="col-video">
                                         <div class="video-image">
-                                            <img src="{{$videoProduct->src}}" alt="Image" class="w-100 product-details-video" style="object-fit: cover"/>
+                                            <img src="{{$videoProduct->src}}" alt="Image" class="product-details-video"/>
                                         </div>
                                         <div class="video-text">
                                             <div class="d-flex justify-content-between align-items-center">

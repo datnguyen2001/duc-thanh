@@ -156,7 +156,7 @@
 .activity-video{
     background: url("/assets/images/activity/background-3.webp") no-repeat center center;
     background-size: cover;
-    background-repeat: round;
+    /*background-repeat: round;*/
     margin-top: 50px;
 }
 .activity-video .list-video{

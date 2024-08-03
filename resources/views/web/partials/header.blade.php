@@ -40,7 +40,7 @@
         <div class="search-input">
             <input type="text" placeholder="{{__('home.search_placeholder')}}" name="keyword" id="searchKeyword">
             <div class="btn-search-field d-flex" >
-                <button class="clear-search-button"></button>
+                <img src="{{asset('assets/images/close.webp')}}" alt="" class="clear-search-button">
 {{--                <button class="search-button-icon" onclick="submitSearch()"><i class="fas fa-search"></i></button>--}}
             </div>
         </div>

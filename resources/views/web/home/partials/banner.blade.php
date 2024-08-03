@@ -18,3 +18,12 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Ensure immediate slide change on indicator click
+        $('.carousel-indicators li').on('click', function() {
+            var index = $(this).data('slide-to');
+            $('#imageCarousel').carousel(index);
+        });
+    });
+</script>
