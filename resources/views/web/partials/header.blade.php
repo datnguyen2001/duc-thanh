@@ -41,7 +41,7 @@
             <input type="text" placeholder="{{__('home.search_placeholder')}}" name="keyword" id="searchKeyword">
             <div class="btn-search-field d-flex" >
                 <button class="clear-search-button"></button>
-                <button class="search-button-icon" onclick="submitSearch()"><i class="fas fa-search"></i></button>
+{{--                <button class="search-button-icon" onclick="submitSearch()"><i class="fas fa-search"></i></button>--}}
             </div>
         </div>
         <div class="mobile-menu-item">

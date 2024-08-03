@@ -66,6 +66,7 @@
 .search-activity .list-video{
     background: url(/assets/images/activity/background-3.webp) no-repeat center center;
     background-size: cover;
+    background-repeat: round;
     position: relative;
     padding-top: 100px;
     text-align: center;
@@ -192,6 +193,9 @@
     }
 }
 @media (max-width: 992px) {
+    .search-activity .list-video{
+        background-repeat: no-repeat;
+    }
     .search-activity .list-image .sub-title {
         background-size: contain;
         font-weight: 600;

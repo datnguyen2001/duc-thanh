@@ -1,6 +1,7 @@
 .carousel-item {
     position: relative;
     overflow: hidden;
+    transition: transform .5s ease-in-out;
 }
 
 .carousel-item img {
@@ -24,8 +25,8 @@
 .carousel-indicators li {
     box-sizing: content-box;
     flex: 0 1 auto;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin-right: 10px;
     margin-left: 10px;
     text-indent: -999px;
@@ -93,19 +94,35 @@
     color: white;
     width: max-content;
     margin: 0 auto;
-    padding: 25px 30px 10px 23px;
+    padding: 25px 35px 12px 35px;
 }
 .home-product h1{
     font-size: 60px;
     font-weight: 600;
     color: #E6252B;
 }
-.home-product .product-img {
+.home-product .product-img-seemore{
     display: block;
-    width: 80%;
-    height: 260px;
-    margin: 20px auto 15px;
+    height: 220px;
     object-fit: contain;
+    width: 85%;
+    margin: 0 auto 20px;
+}
+.home-product .product-img-wrapper {
+    width: 80%;
+    position: relative;
+    margin: 0 auto 20px;
+    height: 220px;
+}
+.home-product .background-image{
+    width: 100%;
+    height: 220px;
+}
+.home-product .product-img-x{
+    width: 85%;
+    position: absolute;
+    left: 7%;
+    top: 13%
 }
 .home-product .product-title{
     font-size: 24px;
@@ -151,6 +168,7 @@
     text-align: center;
     padding-top: 82px;
     height: 875px;
+    background-repeat: round;
 }
 .home-activity h5{
     background: url("/assets/images/home/activity.png") no-repeat center center;
@@ -161,7 +179,7 @@
     color: #FFFBF6;
     width: max-content;
     margin: 0 auto;
-    padding: 15px 20px 10px;
+    padding: 15px 30px 10px;
 }
 .home-activity h1{
     font-size: 60px;
@@ -229,7 +247,7 @@
     color: #FFFBF6;
     width: max-content;
     margin: 0 auto;
-    padding: 18px 18px 10px;
+    padding: 18px 20px 10px;
 }
 .home-activity-product .acts-video h5{
     position: absolute;
@@ -242,7 +260,7 @@
     color: #FFFBF6;
     width: max-content;
     margin: 0 auto;
-    padding: 13px 15px 10px 21px;
+    padding: 15px 15px 15px 21px;
 }
 
 /*Contact*/
@@ -253,14 +271,14 @@
 }
 .home-contact .title{
     background: url("/assets/images/home/contact.png") no-repeat center center;
-    background-size: contain;
+    background-size: cover;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #FFFBF6;
     width: max-content;
     margin: 0 auto;
-    padding: 15px 20px 10px;
+    padding: 15px 42px 10px;
 }
 .home-contact h1{
     font-size: 60px;
@@ -324,7 +342,7 @@
     border: none;
     border-radius: 25px;
     background-color: #E6262B;
-    color: #F9D5A4;
+    color: white;
     font-size: 21px;
     font-weight: 700;
     cursor: pointer;
@@ -332,15 +350,16 @@
 }
 
 #contact-form button[type="submit"]:hover {
+    color: #F9D5A4;
     background-color: #e43e3e;
 }
 .home-about h5:hover,.home-product h5:hover,.home-activity-product .acts-image h5:hover,.home-activity-product .acts-video h5:hover,.home-contact .title:hover,.home-activity h5:hover{
     color: #F9D5A4;
 }
-.product-img,.home-activity-img,.home-activity-video {
+.product-img-x,.home-activity-img,.home-activity-video {
     transition: transform 0.3s ease;
 }
-.col-3:hover .product-img:hover{
+.product-img-x:hover{
     transform: scale(1.1);
 }
 .home-activity-img:hover,.home-activity-video:hover {
@@ -359,13 +378,35 @@
     .home-about{
         margin-top: -130px;
     }
+    .home-product .product-img-x {
+        top: 16%;
+    }
 }
 @media (max-width: 1200px){
+    .home-about h1,
+    .home-product h1,
+    .home-activity h1,
+    .home-contact h1{
+        font-size: 50px;
+    }
+    .home-about h5{
+        font-size: 22px;
+        padding: 22px 16px 12px;
+    }
     .home-activity-product .frame-2 {
         height: 500px;
     }
     .home-product .product-img {
         height: 225px;
+    }
+    .home-product .product-img-wrapper {
+        height: 200px;
+    }
+    .home-product .background-image {
+        height: 200px;
+    }
+    .home-product .product-img-x {
+        top: 20%;
     }
     .home-contact .map-image {
         top: 3%;
@@ -400,7 +441,7 @@
         font-size: 40px;
     }
     .home-product h5{
-        padding: 18px 23px 10px 22px;
+        padding: 15px 32px 6px 32px;
         font-size: 18px;
     }
     .home-product .list-product-desktop {
@@ -408,6 +449,15 @@
     }
     .home-product .list-product-mobile {
         display: block;
+    }
+    .list-product-mobile .product-img-wrapper {
+        width: 100%;
+    }
+    .home-product .list-product-mobile .product-img-x {
+        top: 13%;
+    }
+    .home-activity{
+        background-repeat: no-repeat;
     }
     .home-activity h1 {
         font-size: 40px;
@@ -428,7 +478,7 @@
     }
     .home-contact .title {
         font-size: 18px;
-        padding: 10px 20px 10px;
+        padding: 10px 35px 10px;
     }
     .home-contact h1 {
         font-size: 40px;
