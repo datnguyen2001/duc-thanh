@@ -68,13 +68,13 @@
     margin-bottom: 16px;
 }
 .box-content-child-policy::-webkit-scrollbar {
-    width: 10px;
-    background-color: white;
+    width: 5px;
+    background-color: transparent;
 }
 
 .box-content-child-policy::-webkit-scrollbar-track {
-    border: 3px solid white;
-    background-color: #faefd5;
+    border: 3px solid transparent;
+    background-color: transparent;
 }
 
 .box-content-child-policy::-webkit-scrollbar-thumb {
