@@ -54,12 +54,12 @@
     left: 60%;
     transform: translateX(-50%);
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    height: 195px;
-    overflow-y: auto;
+    line-height: 1.5;
+    /*height: 195px;*/
+    /*overflow-y: auto;*/
 }
 .content1::-webkit-scrollbar-track
 {
@@ -84,10 +84,10 @@
     left: 15%;
     background: #FFC600;
     width: 100%;
-    max-width: 528px;
+    max-width: 390px;
     text-align: center;
     color: #D23C36;
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -108,19 +108,23 @@
     z-index: 1;
     right: -120px;
 }
+.icon-introduce4{
+    top: -55px;
+    right: -100px;
+}
 .content2{
     position: absolute;
-   top: 105px;
+   top: 95px;
     width: 75%;
     left: 43%;
     transform: translateX(-50%);
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    height: 165px;
-    overflow-y: auto;
+    line-height: 1.5;
+    /*height: 165px;*/
+    /*overflow-y: auto;*/
 }
 .content2::-webkit-scrollbar-track
 {
@@ -145,10 +149,10 @@
     right: 13%;
     background: #FF6D00;
     width: 100%;
-    max-width: 475px;
+    max-width: 370px;
     text-align: center;
     color: white;
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -171,10 +175,10 @@
     left: 15%;
     background: #FF2939;
     width: 100%;
-    max-width: 528px;
+    max-width: 440px;
     text-align: center;
     color: white;
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -193,10 +197,10 @@
     right: 12%;
     background: #D23C36;
     width: 100%;
-    max-width: 470px;
+    max-width: 370px;
     text-align: center;
     color: white;
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -278,8 +282,8 @@
         top: 100px;
     }
     .title1{
-        max-width: 425px;
-        font-size: 28px;
+        max-width: 340px;
+        font-size: 25px;
         padding: 10px 40px;
     }
     .box2{
@@ -289,14 +293,14 @@
         margin-top: 120px;
     }
     .title2{
-        font-size: 28px;
+        font-size: 25px;
         right: 20%;
-        max-width: 435px;
+        max-width: 360px;
     }
     .content2{
         left: 39%;
         width: 70%;
-        top: 95px;
+        top: 85px;
         height: 150px;
     }
     .icon-introduce2{
@@ -304,15 +308,15 @@
         right: -30px;
     }
     .title3{
-        font-size: 28px;
-        max-width: 500px;
+        font-size: 25px;
+        max-width: 455px;
         left: 14%;
     }
     .content-big3 {
         margin-top: -380px;
     }
     .title4 {
-        font-size: 28px;
+        font-size: 25px;
         right: 21%;
     }
 }
@@ -384,17 +388,14 @@
         object-fit: cover;
     }
     .title1 {
-        max-width: 339px;
+        max-width: 335px;
         font-size: 20px;
         padding: 10px 20px;
         left: 20%;
     }
     .icon-introduce2 {
         width: 200px;
-        right: -30px;
-    }
-    .icon-content2 {
-        width: 70%;
+        right: 20px;
     }
     .content-big1, .content-big2 {
         margin-bottom: 45px;
@@ -403,18 +404,18 @@
         right: 0px;
     }
     .icon-content2{
-        width: 75%;
+        width: 83%;
         margin-left: 60px;
     }
     .title2 {
         font-size: 20px;
-        right: 26%;
+        right: 20%;
         max-width: 325px;
     }
     .content2{
-        width: 56%;
+        width: 62%;
         font-size: 16px;
-        left: 40%;
+        left: 42%;
         top: 65px;
         height: 130px;
     }
@@ -458,8 +459,8 @@
         margin-top: 80px;
     }
     .title1 {
-        max-width: 320px;
-        font-size: 18px;
+        max-width: 270px;
+        font-size: 17px;
         margin-left: -4%;
         padding: 10px 25px;
     }
@@ -468,22 +469,27 @@
         left: 57%;
         top: 60px;
         height: 130px;
+        line-height: 1.3;
     }
     .icon-introduce1 {
-        width: 170px;
+        width: 160px;
         left: 40px;
     }
     .icon-introduce2 {
-        width: 170px;
+        width: 160px;
+        right: 20px;
     }
     .content2 {
+        width: 64%;
         font-size: 15px;
         bottom: 10px;
-        top: 46px;
+        top: 44px;
         height: 115px;
+        left: 44%;
+        line-height: 1.3;
     }
     .title2 {
-        font-size: 18px;
+        font-size: 17px;
         max-width: 310px;
         top: -38px;
     }
@@ -495,9 +501,14 @@
         margin-bottom: 75px;
     }
     .title3{
-        font-size: 18px;
-        max-width: 365px;
+        font-size: 17px;
+        max-width: 320px;
         left: 17%;
+    }
+    .title4 {
+        font-size: 17px;
+        max-width: 290px;
+        right: 20%;
     }
     .content-big4 {
         margin-bottom: 75px;
@@ -514,6 +525,9 @@
     }
     .title4{
         top: -45px;
+    }
+    .icon-introduce4 {
+        top: -12px;
     }
 }
 @media (max-width: 768px) {
@@ -591,12 +605,12 @@
         border-radius: 85px;
         padding: 10px;
         color: #D23C36;
-        font-size: 22px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         text-align: center;
-        width: 300px;
+        width: 270px;
         padding-top: 40px;
         left: 50%;
         transform: translateX(-50%);
@@ -604,7 +618,7 @@
     }
     .content-mobile1{
         color: #000;
-        font-size: 18px;
+        font-size: 17px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -615,13 +629,14 @@
         top: 70px;
         text-align: center;
         height: 252px;
-        overflow: auto;
-        scrollbar-width: thin;
+        /*overflow: auto;*/
+        /*scrollbar-width: thin;*/
     }
     .content-mobile2{
-        height: 320px;
-        overflow: auto;
-        scrollbar-width: thin;
+        height: 330px;
+        top: 60px;
+        /*overflow: auto;*/
+        /*scrollbar-width: thin;*/
     }
     .content-big-mobile2{
         position: relative;
@@ -629,7 +644,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 105px;
+        margin-top: 70px;
     }
     .title-mobile2{
         position: absolute;
@@ -637,7 +652,7 @@
         border-radius: 85px;
         padding: 10px;
         color: white;
-        font-size: 22px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -646,13 +661,13 @@
         padding-top: 40px;
         left: 50%;
         transform: translateX(-50%);
-        top: -95px;
+        top: -58px;
     }
     .icon-introduce-mobile2 {
         width: 150px;
         position: relative;
         z-index: 1;
-        top: -65px;
+        top: -26px;
         object-fit: cover;
     }
     .line-introduce-mobile2{
@@ -667,7 +682,7 @@
         top: 80px;
     }
     .content-mobile3{
-        top: 105px;
+        top: 90px;
         height: 220px;
     }
     .content-big-mobile4{
@@ -675,10 +690,10 @@
         margin-bottom: 100px;
     }
     .content-big-mobile4 .title-mobile2{
-        top: -70px;
+        top: -57px;
     }
     .content-big-mobile4 .icon-introduce-mobile2 {
-        top: -35px;
+        top: -20px;
     }
     .content-mobile4{
         height: 320px;
@@ -758,7 +773,7 @@
         width: 280px;
     }
     .content-mobile1{
-        font-size: 17px;
+        font-size: 16px;
     }
     .icon-introduce-mobile1,.icon-introduce-mobile2 {
         width: 130px;

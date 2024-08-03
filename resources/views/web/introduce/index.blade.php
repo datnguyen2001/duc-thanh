@@ -54,7 +54,7 @@
                         case 3:
                             $contentClass = 'content-big4';
                             $titleClass = 'title4';
-                            $iconClass = 'icon-introduce2';
+                            $iconClass = 'icon-introduce2 icon-introduce4';
                             $boxClass = 'box2';
                             break;
                     }
