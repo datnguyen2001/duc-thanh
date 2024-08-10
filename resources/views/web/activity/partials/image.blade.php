@@ -20,7 +20,7 @@
                             <h5 class="product-title">{{$images->names}}</h5>
                         </a>
                         <p class="product-detail">{{$images->describes}}</p>
-                        <span><a href="{{$images->link}}">{{__('activity.image_details')}} -></a></span>
+                        <span><a href="{{$images->link}}" class="link-hover">{{__('activity.image_details')}} -></a></span>
                     </div>
                 </div>
                     @endforeach

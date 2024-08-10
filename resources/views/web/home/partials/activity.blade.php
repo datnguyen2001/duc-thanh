@@ -10,7 +10,7 @@
             {{__('home.activity_title_3')}} <br>
             {{__('home.activity_title_4')}}
         </h1>
-        <span><a href="{{route('activity')}}">{{__('home.activity_more')}} -></a></span>
+        <span><a href="{{route('activity')}}" class="link-hover">{{__('home.activity_more')}} -></a></span>
     </div>
 </div>
 <div class="container box-home-hd-video" style="margin-top: -350px;">

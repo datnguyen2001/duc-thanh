@@ -2,7 +2,7 @@
     <div class="container">
         <h5>{{__('home.about')}}</h5>
         <h1>{{__('home.about_title')}}</h1>
-        <p><a href="{{route('introduce')}}">{{__('home.about_more')}} -></a></p>
+        <p><a href="{{route('introduce')}}" class="link-hover">{{__('home.about_more')}} -></a></p>
         <img class="underline" src="{{asset('assets/images/home/about-underlined.png')}}" alt="Underlined">
         <p>
             {{__('home.about_text_1')}} <br>
