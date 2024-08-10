@@ -209,7 +209,7 @@ header .search-icon{
 }
 .language-change{
     position: absolute;
-    right: 0px;
+    right: 20px;
     top: 105%;
 }
 .lang-vn{
@@ -251,7 +251,7 @@ header .search-icon{
 }
 .language-change.search-language {
     top: 130%;
-    right: 0%;
+    right: 20px;
 }
 
 .language-change.menu-item-language {
@@ -304,6 +304,9 @@ header .nav:hover {
     .search-input{
         width: 86%;
     }
+    .language-change,.language-change.search-language{
+        right: 17px;
+    }
 }
 @media (max-width: 1400px) {
     header{
@@ -330,6 +333,14 @@ header .nav:hover {
     .search-input input{
         height: 63px;
     }
+    .language-change,.language-change.search-language{
+        right: 12px;
+    }
+}
+@media (max-width: 1270px) {
+    .language-change,.language-change.search-language{
+        right: 10px;
+    }
 }
 @media (max-width: 1200px) {
     header{
@@ -353,11 +364,11 @@ header .nav:hover {
     }
     .language-change.search-language {
         top: 126%;
-        right: 0;
+        right: 7px;
     }
     .language-change {
         top: 107%;
-        right: 0;
+        right: 7px;
     }
     .search-input {
         width: 85%;
@@ -385,6 +396,9 @@ header .nav:hover {
     }
     .header .right{
         padding-left: 0px;
+    }
+    .language-change,.language-change.search-language{
+        right: 0px;
     }
 }
 
@@ -452,12 +466,12 @@ header .nav:hover {
         height: 60px;
     }
     .language-change{
-        right: 10%;
+        right: 11.5%;
         top: 106%;
     }
     .language-change.search-language {
         top: 131%;
-        right: 11%;
+        right: 11.5%;
     }
     .mobile-menu-item{
         width: 75%;
@@ -475,15 +489,18 @@ header .nav:hover {
         transform: unset;
         width: 69%;
     }
+    .language-change,.language-change.search-language {
+        right: 10.4%;
+    }
 }
 @media (max-width: 650px) {
     .language-change {
-        right: 8%;
+        right: 9%;
         top: 106%;
     }
     .language-change.search-language {
         top: 131%;
-        right: 8%;
+        right: 9%;
     }
     .language-change.menu-item-language {
         top: 447%;
@@ -540,7 +557,7 @@ header .nav:hover {
     }
     .language-change.search-language {
         top: 125%;
-        right: 5%;
+        right: 7%;
     }
     .language-change.menu-item-language {
         top: 550%;
@@ -550,17 +567,20 @@ header .nav:hover {
         width: 87%;
         top: 60px;
     }
+    .language-change{
+        right: 7%;
+    }
 }
 @media (max-width: 475px) {
     header .logo {
         width: 100%;
     }
     .search-input {
-        width: 75%;
+        width: 78%;
         left: 2%;
     }
-    .language-change {
-        right: 3%;
+    .language-change,.language-change.search-language {
+        right: 4%;
     }
 }
 @media (max-width: 425px) {
@@ -574,9 +594,14 @@ header .nav:hover {
     }
     .language-change.search-language {
         top: 208%;
-        right: 20px;
+        right: 15px;
     }
     .language-change.menu-item-language {
         top: 542%;
+    }
+}
+@media (max-width: 400px) {
+    .language-change{
+        right: 2%;
     }
 }

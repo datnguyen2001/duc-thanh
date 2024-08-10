@@ -37,8 +37,10 @@
                     <div class="box-border-sp">
                         <img src="{{$productDetails->src}}" class="product-details-img">
                     </div>
-                    <div class="content-detai-sp">
-                        {!! $productDetails->contents ?? '' !!}
+                    <div class="box-content-detai-sp">
+                        <div class="content-detai-sp">
+                            {!! $productDetails->contents ?? '' !!}
+                        </div>
                     </div>
                 </div>
                 <div class="content-right" data-aos="fade-up">
@@ -62,7 +64,7 @@
                                                 <p class="d-flex align-items-center">{{__('product.video_see_more')}} ...</p>
                                                 <a href="{{$videoProduct->link ?? '#'}}" class="video-btn">{{__('product.video_see_now')}}</a>
                                             </div>
-                                            <p>{{$videoProduct->channel_name ?? ''}}</p>
+                                            <p class="title-channel_name">{{$videoProduct->channel_name ?? ''}}</p>
                                             <p class="content-describes">{{$videoProduct->describes}}</p>
                                         </div>
                                     </div>

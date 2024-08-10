@@ -96,3 +96,6 @@ p, h1{
         font-size: 18px;
     }
 }
+.link-hover:hover,.product-title:hover,.video-btn:hover,.title-channel_name:hover{
+    color: #F9D5A4!important;
+}
