@@ -116,6 +116,7 @@
 .product-details-img{
     object-fit: cover;
     height: 100%;
+    width: 100%;
 }
 .product-details-video{
     object-fit: cover;
