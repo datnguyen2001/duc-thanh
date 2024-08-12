@@ -34,7 +34,6 @@
     padding: 20px 40px;
 }
 .list-category .product-image img{
-    object-fit: contain;
     width: 100%;
     height: 250px;
 }
