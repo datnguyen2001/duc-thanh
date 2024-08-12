@@ -91,12 +91,12 @@
 }
 @media (max-width: 1200px) {
     .list-category .product-image img{
-        height: 200px;
+        height: 170px;
     }
 }
 @media (max-width: 992px) {
     .list-category .product-image img{
-        height: 275px;
+        height: 230px;
     }
     .category-page .image-bg-2 {
         background-repeat: no-repeat;
