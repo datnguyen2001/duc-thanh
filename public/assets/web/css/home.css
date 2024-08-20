@@ -634,9 +634,6 @@
     .home-activity-product .frame-1-mobile{
         display: block;
     }
-    .home-activity-product .home-activity-img {
-        border-radius: 50%;
-    }
 }
 @media (max-width: 475px) {
     .home-activity-product .acts-image h5 {
