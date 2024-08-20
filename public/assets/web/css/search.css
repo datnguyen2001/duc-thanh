@@ -247,7 +247,16 @@
         left: 40px;
         top: 70%;
     }
-}
+    .search-activity .list-product .image{
+        height: 241px;
+    }
+    .search-activity .list-video {
+        padding-top: 60px;
+    }
+    .search-activity .list-video-product {
+        width: 100%!important;
+    }
+    }
 
 @media (max-width: 768px) {
     .search-activity .list-image h1 {
@@ -337,6 +346,6 @@
         right: 25px;
     }
     .list-video .swiper-button-prev img {
-        left: 25px;
+        left: 35px;
     }
 }

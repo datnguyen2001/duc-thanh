@@ -634,13 +634,19 @@
     .home-activity-product .frame-1-mobile{
         display: block;
     }
+    .box-home-hd-video {
+        margin-top: -475px !important;
+    }
 }
 @media (max-width: 475px) {
     .home-activity-product .acts-image h5 {
         left: 30%;
     }
     .home-activity-product .home-activity-video {
-        width: 47%;
+        left: 24%;
+        width: 230px;
+        object-fit: cover;
+        height: 375px;
     }
 }
 @media (max-width: 425px) {
@@ -667,7 +673,10 @@
         padding: 10px 15px 10px 21px;
     }
     .home-activity-product .home-activity-video {
-        width: 38%;
+        height: 280px;
+        width: 200px;
+        left: 27%;
+        margin-top: 7%;
     }
     .home-contact .title {
         font-size: 16px;
@@ -689,6 +698,7 @@
 }
 @media (max-width: 380px) {
     .home-activity-product .home-activity-video {
-        width: 44%;
+        width: 187px;
+        left: 26%;
     }
 }
