@@ -363,6 +363,9 @@
     .activity-page .activity-banner .container {
         padding-top: 100px;
     }
+    .footer{
+        height: 640px;
+    }
 }
 @media (max-width: 475px) {
     .activity-page .list-image h1 {
