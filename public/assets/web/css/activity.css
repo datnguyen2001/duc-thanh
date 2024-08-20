@@ -314,12 +314,12 @@
     }
     .activity-page .swiper-button-next img{
         width: 40px;
-        right: -40px;
+        right: 0;
         top: 100%;
     }
     .activity-page .swiper-button-prev img{
         width: 40px;
-        left: -55px;
+        left: -22px;
         top: 100%;
     }
     .activity-video .list-video-product .frame {
@@ -346,12 +346,12 @@
     }
     .activity-page .swiper-button-next img{
         width: 45px;
-        right: 15px;
+        right: 45px;
         top: 100%;
     }
     .activity-page .swiper-button-prev img{
         width: 45px;
-        left: 5px;
+        left: 35px;
         top: 100%;
     }
     .activity-video .swiper-button-prev img{
@@ -393,8 +393,14 @@
     .activity-banner .activity-title img {
         width: 70%;
     }
+    .activity-image .swiper-container {
+        width: 95%;
+    }
+    .activity-image .swiper-slide{
+        margin-left: 10px;
+    }
     .activity-page .swiper-button-next img {
-        right: 5px;
+        right: -10px;
         width: 35px;
     }
     .activity-image .swiper-button-prev img {

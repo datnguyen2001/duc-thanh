@@ -15,7 +15,7 @@
     <section>
         @include('web.home.partials.about')
     </section>
-    <div class="container" style="padding-bottom: 50px;">
+    <div class="home_product container">
         <section>
             @include('web.home.partials.product')
         </section>

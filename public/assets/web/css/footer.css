@@ -104,11 +104,23 @@ footer .copyright-desktop{
         display: none;
     }
     .copyright-mobile{
-        display: block;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         padding-top: 0;
         font-weight: 400;
         color: #FFFFFF;
         background-color: #E6262B;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        background: url("/assets/images/footer/footer-background-mobile.png") no-repeat center center;
+        background-size: cover;
+        margin-top: 0;
+        height: 550px;
     }
 }
