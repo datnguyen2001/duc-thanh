@@ -17,8 +17,10 @@
     <div class="home-activity-product">
         <div class="acts-image col-lg-8 col-12" data-aos="fade-up">
             <div class="frame-container">
-                <img src="{{asset('assets/images/home/frame1.png')}}" alt="Frame1" class="frame-1">
                 <img src="{{$imageProduct->src ?? ''}}" alt="Image Activity" class="home-activity-img">
+                <img src="{{asset('assets/images/home/frame1.png')}}" alt="Frame1" class="frame-1 frame-1-desktop">
+                <img src="{{asset('assets/images/home/frame1-mobile.png')}}" alt="Frame1" class="frame-1 frame-1-mobile">
+
             </div>
             <h5>{{__('home.activity_image')}}</h5>
         </div>

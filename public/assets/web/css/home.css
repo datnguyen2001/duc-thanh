@@ -85,6 +85,9 @@
     margin-bottom: 20px;
 }
 /*Product*/
+.home_product{
+    padding-bottom: 50px;
+}
 .home-product{
     text-align: center;
 }
@@ -224,7 +227,9 @@
     width: 100%;
     height: 700px;
 }
-
+.home-activity-product .frame-1-mobile{
+    display: none;
+}
 .home-activity-product .home-activity-img{
     position: absolute;
     left: 12%;
@@ -417,6 +422,7 @@
         height: 200px;
     }
     .home-product .background-image {
+        width: 225px;
         height: 200px;
     }
     .home-product .product-img-x {
@@ -554,8 +560,11 @@
    .home-activity h5 {
         font-size: 18px;
     }
+   .home_product{
+       padding-bottom: 20px;
+   }
     .home-product .product-title {
-        font-size: 20px;
+        font-size: 24px;
     }
     #contact-form button[type="submit"] {
         font-size: 18px;
@@ -568,6 +577,9 @@
     }
     .home-about {
         margin-top: -155px;
+    }
+    .home-activity{
+        padding-top: 60px;
     }
     .home-activity .sub-title-activity{
         font-size: 30px;
@@ -590,13 +602,40 @@
     .carousel-indicators {
         bottom: 1%;
     }
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
     #contact-form button[type="submit"] {
         width: 40%;
+    }
+    .home-about .container{
+        padding-bottom: 5px;
+    }
+}
+@media(max-width: 550px) {
+    .home-activity {
+        background: url("/assets/images/home/background-2-mobile.png") no-repeat center center;
+        background-size: cover;
+    }
+    .home-activity-product .frame-1-desktop{
+        display: none;
+    }
+    .home-activity-product .frame-1-mobile{
+        display: block;
+    }
+    .home-activity-product .home-activity-img {
+        border-radius: 50%;
     }
 }
 @media (max-width: 475px) {
     .home-activity-product .acts-image h5 {
         left: 30%;
+    }
+    .home-activity-product .home-activity-video {
+        width: 47%;
     }
 }
 @media (max-width: 425px) {
@@ -622,6 +661,9 @@
         font-size: 15px;
         padding: 10px 15px 10px 21px;
     }
+    .home-activity-product .home-activity-video {
+        width: 38%;
+    }
     .home-contact .title {
         font-size: 16px;
     }
@@ -631,5 +673,10 @@
     }
     #contact-form button[type="submit"] {
         font-size: 18px;
+    }
+}
+@media (max-width: 380px) {
+    .home-activity-product .home-activity-video {
+        width: 44%;
     }
 }

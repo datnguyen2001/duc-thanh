@@ -106,4 +106,7 @@
     .list-category .product-image img{
         height: auto;
     }
+    .category-page .list-category {
+        margin-top: 10px;
+    }
 }

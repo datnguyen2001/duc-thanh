@@ -760,6 +760,9 @@
     .box-title-banner-mobile {
         width: 241px;
     }
+    .content-mobile1 {
+        padding: 0 10px;
+    }
 }
 @media (max-width: 400px) {
     .line-introduce-mobile{
@@ -785,5 +788,8 @@
     }
     .box-title-banner-mobile {
         top: 125px;
+    }
+    .icon-introduce-mobile2 {
+        top: -50px;
     }
 }
