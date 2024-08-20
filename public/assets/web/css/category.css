@@ -27,6 +27,9 @@
 .list-category .title-sub-note {
     padding: 10px 8px;
 }
+.list-category .title-sub-note2 {
+    padding: 10px 22px;
+}
 .list-category .list-product-swiper .col-image{
     margin: 0 auto;
     width: 90%;

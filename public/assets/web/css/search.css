@@ -319,6 +319,9 @@
     .list-video .swiper-button-prev img{
         left: 35px;
     }
+    .footer{
+        padding-top: 70px;
+    }
 }
 @media (max-width: 475px) {
     .search-activity .list-image .sub-title {
