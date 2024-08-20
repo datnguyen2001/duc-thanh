@@ -24,6 +24,9 @@
     width: max-content;
     margin-bottom: 30px;
 }
+.list-category .title-sub-note {
+    padding: 10px 8px;
+}
 .list-category .list-product-swiper .col-image{
     margin: 0 auto;
     width: 90%;

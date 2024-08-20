@@ -360,6 +360,9 @@
     .activity-video .swiper-button-next img {
         right: 20px;
     }
+    .activity-page .activity-banner .container {
+        padding-top: 100px;
+    }
 }
 @media (max-width: 475px) {
     .activity-page .list-image h1 {
@@ -404,12 +407,21 @@
         width: 35px;
     }
     .activity-image .swiper-button-prev img {
-        left: 0px;
+        left: -8px;
         width: 35px;
     }
     .activity-video .swiper-button-prev img {
         left: 15px;
         width: 35px;
+    }
+    .activity-video .list-video{
+        padding-top: 65px;
+    }
+    .activity-page .list-video-product{
+        width: 100%!important;
+    }
+    .activity-page .next-video img{
+        right: 5px;
     }
 }
 @media (max-width: 400px) {

@@ -24,8 +24,8 @@
                 </div>
                 @endforeach
             </div>
-            <div class="swiper-button-next"><img src="{{asset('assets/images/activity/next-btn.png')}}" alt="Next"/></div>
-            <div class="swiper-button-prev" style="position: absolute; left: 0">
+            <div class="swiper-button-next next-video"><img src="{{asset('assets/images/activity/next-btn.png')}}"  alt="Next"/></div>
+            <div class="swiper-button-prev prev-video" style="position: absolute; left: 0">
                 <img src="{{asset('assets/images/activity/prev-btn.png')}}" alt="Prev"/>
             </div>
         </div>
