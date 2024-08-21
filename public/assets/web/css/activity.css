@@ -323,12 +323,13 @@
         top: 100%;
     }
     .activity-video .list-video-product .frame {
-        width: 70%;
+        width: 83%;
     }
     .activity-video .list-video-product .video {
-        width: 57%;
-        top: 5%;
-        left: 21%;
+        width: 72%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
     .activity-video .list-video .tiktok {
         width: 30%;
