@@ -858,7 +858,7 @@
     }
     .home-product .product-img-x{
         top: 50%!important;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%) !important;
     }
 }
 @media (max-width: 380px) {
