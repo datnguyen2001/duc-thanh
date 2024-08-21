@@ -370,7 +370,7 @@
         padding: 0 10px;
     }
     .col-video {
-        width: 90% !important;
+        width: 100% !important;
     }
     .title-banner-sp {
         left: 24%;
@@ -378,6 +378,16 @@
     }
     .background-title {
         min-width: 33%;
+    }
+    .video-image{
+        padding: 25px;
+        height: auto;
+    }
+    .product-details-video{
+        object-fit: cover;
+    }
+    .box-content-detai-sp{
+        padding: 20px 25px;
     }
 }
 @media (max-width: 548px) {
