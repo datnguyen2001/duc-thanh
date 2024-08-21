@@ -1,5 +1,5 @@
 <div class="home-product">
-    <h5>{{__('home.product')}}</h5>
+    <h5 class="title-big-home-sp">{{__('home.product')}}</h5>
     <h1>
         {{__('home.product_title_1')}} <br>
         {{__('home.product_title_2')}}
@@ -79,12 +79,8 @@
                 slidesPerView: 2,
                 spaceBetween: 15,
             },
-            425: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
             325: {
-                slidesPerView: 1,
+                slidesPerView: 1.5,
                 spaceBetween: 10,
             }
         }
