@@ -323,10 +323,10 @@
         top: 100%;
     }
     .activity-video .list-video-product .frame {
-        width: 83%;
+        width: 89%;
     }
     .activity-video .list-video-product .video {
-        width: 72%;
+        width: 77%;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -415,7 +415,7 @@
         width: 35px;
     }
     .activity-video .swiper-button-prev img {
-        left: 15px;
+        left: 9px;
         width: 35px;
     }
     .activity-video .list-video{
@@ -425,7 +425,7 @@
         width: 100%!important;
     }
     .activity-page .next-video img{
-        right: 5px;
+        right: -3px;
     }
 }
 @media (max-width: 400px) {
