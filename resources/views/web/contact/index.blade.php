@@ -15,12 +15,20 @@
 @section('content')
     <div class="contact-page">
         <div class="position-relative header-sp-desktop">
-            <img src="{{asset('assets/images/contact/banner-desktop.webp')}}" alt="" class="w-100 img-banner-sp">
+            @if($banner)
+                <img src="{{$banner->src}}" alt="" class="w-100 img-banner-sp">
+            @else
+                <img src="{{asset('assets/images/contact/banner-desktop.webp')}}" alt="" class="w-100 img-banner-sp">
+            @endif
             <div class="title-banner-sp">{{__('contact.title')}}</div>
             <img src="{{asset('assets/images/line-sp.webp')}}" alt="" class="img-line-sp">
         </div>
         <div class="position-relative header-sp-mobile">
-            <img src="{{asset('assets/images/contact/banner-mobile.webp')}}" alt="" class="w-100 img-banner-sp">
+            @if($banner)
+                <img src="{{$banner->src_mobile}}" alt="" class="w-100 img-banner-sp">
+            @else
+                <img src="{{asset('assets/images/contact/banner-mobile.webp')}}" alt="" class="w-100 img-banner-sp">
+            @endif
             <div class="title-banner-sp">{{__('contact.title')}}</div>
         </div>
         <div class="home-contact">

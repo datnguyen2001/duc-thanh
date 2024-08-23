@@ -32,7 +32,7 @@ class HomeController extends Controller
 
     public function home()
     {
-        $banners = BannerModel::all();
+        $banners = BannerModel::where('page', 'home')->get();
         $categories = CategoryModel::orderBy('index','asc')->get();
         $imageProduct = ImageModel::first();
         $videoProduct = VideoModel::first();
@@ -54,6 +54,7 @@ class HomeController extends Controller
     public function activity()
     {
         $image = ImageModel::where('display',1)->orderBy('created_at','desc')->get();
+        $banner = BannerModel::where('page', 'activities')->first();
         $currentLocale = app()->getLocale();
         foreach ($image as $images){
             if ($currentLocale == 'vi') {
@@ -75,15 +76,17 @@ class HomeController extends Controller
         $meta = MetaModel::where('type',3)->first();
         $is_active = 4;
 
-        return view('web.activity.index',compact('image','video','meta','is_active'));
+        return view('web.activity.index',compact('image','video','meta','is_active', 'banner'));
     }
 
     public function contact()
     {
         $meta = MetaModel::where('type',6)->first();
+        $banner = BannerModel::where('page', 'contact')->first();
+
         $is_active = 6;
 
-        return view('web.contact.index',compact('meta','is_active'));
+        return view('web.contact.index',compact('meta','is_active', 'banner'));
     }
 
     public function saveContact(Request $request)
@@ -154,6 +157,7 @@ class HomeController extends Controller
     public function category()
     {
         $categories = CategoryModel::with('products')->get();
+        $banner = BannerModel::where('page', 'products')->first();
         $categories = $categories->filter(function($category) {
             return $category->products->isNotEmpty();
         });
@@ -178,12 +182,13 @@ class HomeController extends Controller
         $meta = MetaModel::where('type',4)->first();
         $is_active = 2;
 
-        return view('web.category.index', compact('categories','meta','is_active'));
+        return view('web.category.index', compact('categories','meta','is_active', 'banner'));
     }
 
     public function policy()
     {
         $data = PolicyModel::orderBy('index','asc')->get();
+        $banner = BannerModel::where('page', 'privacy')->first();
         $currentLocale = app()->getLocale();
         foreach ($data as $datas){
             if ($currentLocale == 'vi') {
@@ -207,12 +212,13 @@ class HomeController extends Controller
         $meta = MetaModel::where('type',1)->first();
         $is_active = 8;
 
-        return view('web.policy.index',compact('data','dataMobile','meta','is_active'));
+        return view('web.policy.index',compact('data','dataMobile','meta','is_active', 'banner'));
     }
 
     public function introduce()
     {
         $data = IntroduceModel::orderBy('index','asc')->get();
+        $banner = BannerModel::where('page', 'about')->first();
         $currentLocale = app()->getLocale();
         foreach ($data as $datas){
             if ($currentLocale == 'vi') {
@@ -226,13 +232,13 @@ class HomeController extends Controller
         $meta = MetaModel::where('type',5)->first();
         $is_active = 1;
 
-        return view('web.introduce.index',compact('data','meta','is_active'));
+        return view('web.introduce.index',compact('data','meta','is_active', 'banner'));
     }
 
     public function detailProduct($slug)
     {
         $productDetails = ProductModel::where('slug',$slug)->first();
-
+        $banner = BannerModel::where('page', 'products')->first();
         $currentLocale = app()->getLocale();
         if($currentLocale == 'vi'){
             $productDetails->contents = $productDetails->content;
@@ -250,11 +256,12 @@ class HomeController extends Controller
         }
         $is_active = 2;
 
-        return view('web.product.index', compact('productDetails','videoProducts','is_active'));
+        return view('web.product.index', compact('productDetails','videoProducts','is_active', 'banner'));
     }
 
     public function categoryProduct($slug){
         $categorySlug = CategoryModel::where('slug',$slug)->first();
+        $banner = BannerModel::where('page', 'products')->first();
 
         $currentLocale = app()->getLocale();
         if ($currentLocale == 'vi') {
@@ -275,13 +282,14 @@ class HomeController extends Controller
         }
         $is_active = 2;
 
-        return view('web.category-product.index', compact('categoryProducts', 'categorySlug','is_active'));
+        return view('web.category-product.index', compact('categoryProducts', 'categorySlug','is_active', 'banner'));
     }
 
     public function search(Request $request)
     {
         $keyword = $request->input('keyword');
         $currentLocale = app()->getLocale();
+        $banner = BannerModel::where('page', 'products')->first();
 
         if ($currentLocale == 'vi') {
             $categoryProducts = ProductModel::where('name', 'LIKE', '%' . $keyword . '%')->get();
@@ -326,6 +334,6 @@ class HomeController extends Controller
         }
         $is_active = 3;
 
-        return view('web.search.index', compact('categoryProducts', 'image', 'video','is_active'));
+        return view('web.search.index', compact('categoryProducts', 'image', 'video','is_active', 'banner'));
     }
 }

@@ -7,7 +7,7 @@
         </div><!-- End Page Title -->
         <section class="section dashboard">
             <div class="bg-white p-4">
-                <form action="{{route('admin.banner.store')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('admin.banner.store', ['page' => $page])}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="row mt-3">
                         <div class="col-3">Hình ảnh desktop:</div>
@@ -49,7 +49,7 @@
                         <div class="col-3"></div>
                         <div class="col-8 ">
                             <button type="submit" class="btn btn-primary">Tạo</button>
-                            <a href="{{route('admin.banner.index')}}" class="btn btn-danger">Hủy</a>
+                            <a href="{{route('admin.banner.index', ['page' => $page])}}" class="btn btn-danger">Hủy</a>
                         </div>
                     <input type="file" name="file" accept="image/x-png,image/gif,image/jpeg" hidden>
                         <input type="file" name="file_mobile" accept="image/x-png,image/gif,image/jpeg" hidden>

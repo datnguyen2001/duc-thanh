@@ -14,7 +14,11 @@
 @section('content')
     <div class="introduce_desktop">
         <div class="position-relative">
-            <img src="{{asset('assets/images/banner-introduce.webp')}}" alt="" class="w-100 img-banner-introduce">
+            @if($banner)
+                <img src="{{$banner->src}}" alt="" class="w-100 img-banner-introduce">
+            @else
+                <img src="{{asset('assets/images/banner-introduce.webp')}}" alt="" class="w-100 img-banner-introduce">
+            @endif
             <div class="box-title-banner">
                 <div class="title-banner-introduce">{{__('about.title')}}</div>
             </div>
@@ -83,7 +87,11 @@
 
     <div class="introduce_mobile">
         <div class="position-relative">
-            <img src="{{asset('assets/images/banner-introduce2.webp')}}" alt="" class="w-100 img-banner-introduce">
+            @if($banner)
+                <img src="{{$banner->src_mobile}}" alt="" class="w-100 img-banner-introduce">
+            @else
+                <img src="{{asset('assets/images/banner-introduce2.webp')}}" alt="" class="w-100 img-banner-introduce">
+            @endif
             <div class="box-title-banner-mobile">
                 <div class="title-banner-introduce-mobile">{{__('about.title')}}</div>
             </div>
