@@ -33,7 +33,7 @@ class HomeController extends Controller
     public function home()
     {
         $banners = BannerModel::all();
-        $categories = CategoryModel::all();
+        $categories = CategoryModel::orderBy('index','asc')->get();
         $imageProduct = ImageModel::first();
         $videoProduct = VideoModel::first();
 
