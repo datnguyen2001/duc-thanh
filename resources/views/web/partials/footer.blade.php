@@ -31,7 +31,7 @@
                                 <h5>{{__('footer.product')}}</h5>
                                 @php
                                     $currentLocale = app()->getLocale();
-                                    $categories = App\Models\CategoryModel::all();
+                                    $categories = App\Models\CategoryModel::orderBy('index','asc')->get();
                                 @endphp
                                 @foreach($categories as $category)
                                     @php

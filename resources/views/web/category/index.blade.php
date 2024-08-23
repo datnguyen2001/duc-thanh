@@ -52,6 +52,7 @@
                 },
                 pagination: {
                     el: ".swiper-pagination-video",
+                    clickable: true,
                 },
                 breakpoints: {
                     767: {
