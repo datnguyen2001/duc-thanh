@@ -23,12 +23,12 @@ Route::middleware('check-admin-auth')->group(function () {
     Route::get('', [DashboardController::class, 'index'])->name('index');
 
     Route::prefix('banner')->name('banner.')->group(function () {
-        Route::get('/', [BannerController::class, 'index'])->name('index');
-        Route::get('create', [BannerController::class, 'create'])->name('create');
-        Route::post('store', [BannerController::class, 'store'])->name('store');
-        Route::get('delete/{id}', [BannerController::class, 'delete']);
-        Route::get('edit/{id}', [BannerController::class, 'edit']);
-        Route::post('update/{id}', [BannerController::class, 'update']);
+        Route::get('{page}', [BannerController::class, 'index'])->name('index');
+        Route::get('{page}/create', [BannerController::class, 'create'])->name('create');
+        Route::post('{page}/store', [BannerController::class, 'store'])->name('store');
+        Route::get('{page}/delete/{id}', [BannerController::class, 'delete']);
+        Route::get('{page}/edit/{id}', [BannerController::class, 'edit']);
+        Route::post('{page}/update/{id}', [BannerController::class, 'update']);
     });
 
     Route::prefix('policy')->name('policy.')->group(function () {

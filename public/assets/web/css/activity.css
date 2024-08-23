@@ -1,7 +1,6 @@
 .activity-page .activity-banner{
     position: relative;
     z-index: 100;
-    background: url("/assets/images/activity/background.webp") no-repeat center center;
     background-size: cover;
     height: 475px;
 }
@@ -294,8 +293,6 @@
 }
 @media (max-width: 768px) {
     .activity-page .activity-banner{
-        background: url("/assets/images/activity/background-mobile.webp") no-repeat center center;
-        background-size: cover;
         height: 86vh;
     }
     .activity-page .activity-banner .activity-title{

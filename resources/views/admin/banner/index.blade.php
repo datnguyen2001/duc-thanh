@@ -9,7 +9,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <h5 class="card-title">{{$titlePage}}</h5>
                                 <a class="btn btn-success"
-                                   href="{{route('admin.banner.create')}}">Thêm banner</a>
+                                   href="{{ route('admin.banner.create', ['page' => $page]) }}">Thêm banner</a>
                             </div>
                             <table class="table">
                                 <thead class="thead-dark">
@@ -36,13 +36,13 @@
                                             </td>
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="{{url('admin/banner/edit/'.$value->id)}}"
+                                                    <a href="{{ url('admin/banner/'.$value->page.'/edit/'.$value->id) }}"
                                                        class="btn btn-icon btn-light btn-hover-success btn-sm"
                                                        data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                        data-bs-original-title="Cập nhật">
                                                         <i class="bi bi-pencil-square "></i>
                                                     </a>
-                                                    <a href="{{url('admin/banner/delete/'.$value->id)}}"
+                                                    <a href="{{ url('admin/banner/'.$value->page.'/delete/'.$value->id) }}"
                                                        class="btn btn-delete btn-icon btn-light btn-sm"
                                                        data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                        data-bs-original-title="Xóa">

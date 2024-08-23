@@ -9,29 +9,30 @@ use Illuminate\Support\Facades\Storage;
 
 class BannerController extends Controller
 {
-    public function index()
+    public function index($page)
     {
         $titlePage = 'Danh sách banner';
         $page_menu = 'banner';
         $page_sub = null;
-        $listData = BannerModel::orderBy('index', 'asc')->paginate(10);
+        $listData = BannerModel::where('page', $page)->orderBy('index', 'asc')->paginate(10);
 
-        return view('admin.banner.index', compact('titlePage', 'page_menu', 'page_sub', 'listData'));
+        return view('admin.banner.index', compact('titlePage', 'page_menu', 'page_sub', 'listData', 'page'));
     }
 
-    public function create ()
+    public function create ($page)
     {
         try{
             $titlePage = 'Thêm banner';
             $page_menu = 'banner';
             $page_sub = null;
-            return view('admin.banner.create', compact('titlePage', 'page_menu', 'page_sub'));
+
+            return view('admin.banner.create', compact('titlePage', 'page_menu', 'page_sub', 'page'));
         }catch (\Exception $e){
             return back()->with(['error' => $e->getMessage()]);
         }
     }
 
-    public function store (Request $request)
+    public function store (Request $request, $page)
     {
         try{
             if ($request->hasFile('file')) {
@@ -56,47 +57,54 @@ class BannerController extends Controller
                 'src_mobile' => $imagePathMobile,
                 'display' => $display,
                 'index' => $request->get('index'),
+                'page' => $page,
             ]);
             $banner->save();
-            return redirect()->route('admin.banner.index')->with(['success' => 'Tạo banner thành công']);
+            return redirect()->route('admin.banner.index', ['page' => $page])->with(['success' => 'Tạo banner thành công']);
         }catch (\Exception $exception){
             return back()->with(['error' => $exception->getMessage()]);
         }
     }
 
-    public function delete ($id)
+    public function delete($page, $id)
     {
-        $banner = BannerModel::find($id);
-        if (isset($banner->src) && Storage::exists(str_replace('/storage', 'public', $banner->src))) {
-            Storage::delete(str_replace('/storage', 'public', $banner->src));
+        $banner = BannerModel::where('id', $id)->where('page', $page)->first();
+
+        if ($banner) {
+            if (isset($banner->src) && Storage::exists(str_replace('/storage', 'public', $banner->src))) {
+                Storage::delete(str_replace('/storage', 'public', $banner->src));
+            }
+            if (isset($banner->src_mobile) && Storage::exists(str_replace('/storage', 'public', $banner->src_mobile))) {
+                Storage::delete(str_replace('/storage', 'public', $banner->src_mobile));
+            }
+            $banner->delete();
+            return redirect()->route('admin.banner.index', ['page' => $page])->with(['success' => "Xóa dữ liệu thành công"]);
         }
-        if (isset($banner->src_mobile) && Storage::exists(str_replace('/storage', 'public', $banner->src_mobile))) {
-            Storage::delete(str_replace('/storage', 'public', $banner->src_mobile));
-        }
-        $banner->delete();
-        return redirect()->route('admin.banner.index')->with(['success'=>"Xóa dữ liệu thành công"]);
+
+        return redirect()->route('admin.banner.index', ['page' => $page])->with(['error' => "Banner không tồn tại hoặc không thuộc về trang này"]);
     }
 
-    public function edit ($id)
+
+    public function edit($page, $id)
     {
-        try{
-            $banner = BannerModel::find($id);
+        try {
+            $banner = BannerModel::where('id', $id)->where('page', $page)->first();
             if (empty($banner)) {
                 return back()->with(['error' => 'Banner không tồn tại']);
             }
             $titlePage = 'Sửa banner';
             $page_menu = 'banner';
             $page_sub = null;
-            return view('admin.banner.edit', compact('titlePage', 'page_menu', 'page_sub', 'banner'));
-        }catch (\Exception $exception){
+            return view('admin.banner.edit', compact('titlePage', 'page_menu', 'page_sub', 'banner', 'page'));
+        } catch (\Exception $exception) {
             return back()->with(['error' => $exception->getMessage()]);
         }
     }
 
-    public function update ($id, Request $request)
+    public function update ($page, $id, Request $request)
     {
         try{
-            $banner = BannerModel::find($id);
+            $banner = BannerModel::where('id', $id)->where('page', $page)->first();
             if (empty($banner)){
                 return back()->with(['error' => 'Banner không tồn tại']);
             }
@@ -124,7 +132,7 @@ class BannerController extends Controller
             $banner->index = $request->get('index');
             $banner->display = $display;
             $banner->save();
-            return redirect()->route('admin.banner.index')->with(['success' => 'Cập nhật banner thành công']);
+            return redirect()->route('admin.banner.index', ['page' => $page])->with(['success' => 'Cập nhật banner thành công']);
         }catch (\Exception $e){
             return back()->with(['error' => $e->getMessage()]);
         }

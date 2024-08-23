@@ -13,6 +13,7 @@ class BannerModel extends Model
         'src',
         'src_mobile',
         'index',
-        'display'
+        'display',
+        'page'
     ];
 }
