@@ -15,7 +15,45 @@ return [
             'title' => 'Banner hình ảnh',
             'icon' => 'bi bi-grid',
             'route' => 'admin.banner.index',
-            'submenu' => [],
+            'params' => ['page' => 'home'],
+            'submenu' => [
+                [
+                    'name' => 'home',
+                    'title' => 'Trang chủ',
+                    'route' => 'admin.banner.index',
+                    'params' => ['page' => 'home']
+                ],
+                [
+                    'name' => 'about',
+                    'title' => 'Về Đức Thanh',
+                    'route' => 'admin.banner.index',
+                    'params' => ['page' => 'about']
+                ],
+                [
+                    'name' => 'products',
+                    'title' => 'Sản phẩm',
+                    'route' => 'admin.banner.index',
+                    'params' => ['page' => 'products']
+                ],
+                [
+                    'name' => 'activities',
+                    'title' => 'Hoạt động',
+                    'route' => 'admin.banner.index',
+                    'params' => ['page' => 'activities']
+                ],
+                [
+                    'name' => 'contact',
+                    'title' => 'Liên hệ',
+                    'route' => 'admin.banner.index',
+                    'params' => ['page' => 'contact']
+                ],
+                [
+                    'name' => 'privacy',
+                    'title' => 'Chính sách bảo mật',
+                    'route' => 'admin.banner.index',
+                    'params' => ['page' => 'privacy']
+                ]
+            ],
             'number' => 2
         ],
         [

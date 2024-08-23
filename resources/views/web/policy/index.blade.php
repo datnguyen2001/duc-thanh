@@ -14,7 +14,11 @@
 @section('content')
     <div class="policy_desktop">
         <div class="position-relative">
-            <img src="{{asset('assets/images/banner_policy.webp')}}" alt="" class="w-100 img-banner-policy">
+            @if($banner)
+                <img src="{{$banner->src}}" alt="" class="w-100 img-banner-policy">
+            @else
+                <img src="{{asset('assets/images/banner_policy.webp')}}" alt="" class="w-100 img-banner-policy">
+            @endif
             <div class="box-title-banner">
                 <div class="title-banner-policy">{{__('policy.title')}}</div>
                 <img src="{{asset('assets/images/line.webp')}}" alt="">
@@ -42,7 +46,11 @@
 
     <div class="policy_mobile">
         <div class="position-relative">
-            <img src="{{asset('assets/images/banner_policy_mobile.webp')}}" alt="" class="w-100 img-banner-policy_mobile">
+            @if($banner)
+                <img src="{{$banner->src_mobile}}" alt="" class="w-100 img-banner-policy_mobile">
+            @else
+                <img src="{{asset('assets/images/banner_policy_mobile.webp')}}" alt="" class="w-100 img-banner-policy_mobile">
+            @endif
             <div class="title-banner-policy-mobile">{{__('policy.title')}}</div>
         </div>
         <div class="container">

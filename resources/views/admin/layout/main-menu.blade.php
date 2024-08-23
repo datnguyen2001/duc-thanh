@@ -10,14 +10,14 @@
                             class="bi bi-chevron-down ms-auto"></i>
                     </a>
                     <ul id="forms-{{ $menu['name'] }}"
-                        class="nav-content @if (isset($page_menu) && $menu['name'] != $page_menu) collapse @else show @endif "
+                        class="nav-content @if (isset($page_menu) && $menu['name'] != $page_menu) collapse @else show @endif"
                         data-bs-parent="#sidebar-nav">
                         @foreach ($menu['submenu'] as $submenu)
                             <li>
-                                <a @if (!empty($submenu['parameters'])) href="{{ route($submenu['route'], $submenu['parameters']) }}" @else href="{{ route($submenu['route']) }}" @endif
-                                    class="@if (isset($page_sub) && $submenu['name'] == $page_sub) active @endif">
+                                <a href="{{ route($submenu['route'], $submenu['params'] ?? []) }}"
+                                   class="@if (isset($page_sub) && $submenu['name'] == $page_sub) active @endif">
                                     <i style="{{ isset($submenu['icon']) && $submenu['icon'] ? 'font-size: 13px' : '' }}"
-                                        class="{{ isset($submenu['icon']) && $submenu['icon'] ? $submenu['icon'] : 'bi bi-circle' }}"></i><span>{{ $submenu['title'] }}</span>
+                                       class="{{ isset($submenu['icon']) && $submenu['icon'] ? $submenu['icon'] : 'bi bi-circle' }}"></i><span>{{ $submenu['title'] }}</span>
                                 </a>
                             </li>
                         @endforeach

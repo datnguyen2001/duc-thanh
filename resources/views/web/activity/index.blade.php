@@ -9,6 +9,33 @@
 @endsection
 @section('style_page')
     <link rel="stylesheet" href="{{ asset('assets/web/css/activity.css') }}">
+    <style>
+        @if ($banner)
+            /* Desktop background */
+        .activity-page .activity-banner {
+            background: url('{{ asset($banner->src) }}') no-repeat center center;
+        }
+
+        /* Mobile background */
+        @media (max-width: 768px) {
+            .activity-page .activity-banner {
+                background: url('{{ asset($banner->src_mobile) }}') no-repeat center center;
+                background-size: cover;
+            }
+        }
+        @else
+        .activity-page .activity-banner {
+            background: url("/assets/images/activity/background.webp") no-repeat center center;
+        }
+
+        @media (max-width: 768px) {
+            .activity-page .activity-banner {
+                background: url("/assets/images/activity/background-mobile.webp") no-repeat center center;
+                background-size: cover;
+            }
+        }
+        @endif
+    </style>
 @stop
 {{--content of page--}}
 @section('content')
