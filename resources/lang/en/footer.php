@@ -6,7 +6,7 @@ return [
 
     'introduce' => 'Introduction',
     'policy' => 'Privacy Policy',
-    'about' => 'Introduce about Duc Thanh',
+    'about' => 'About Duc Thanh',
     'activity' => 'Activities',
     'contact' => 'Contact',
     'product' => 'Products'

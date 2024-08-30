@@ -6,7 +6,7 @@ return [
 
     'introduce' => 'Giới thiệu',
     'policy' => 'Chính sách bảo mật',
-    'about' => 'Giới thiệu về Đức Thanh',
+    'about' => 'Về Đức Thanh',
     'activity' => 'Hoạt động',
     'contact' => 'Liên hệ',
     'product' => 'Sản phẩm'
