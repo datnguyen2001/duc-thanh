@@ -25,7 +25,7 @@ return [
     'contact' => 'Contact',
     'contact_title_1' => 'Contact Duc Thanh',
     'contact_title_2' => 'for support',
-    'contact_note' => 'If you have any feedback or questions for Duc Thanh, please send your information via the form:',
+    'contact_note' => 'You have any feedback or questions for Duc Thanh, please send your information via the form:',
     'contact_name' => 'Full Name',
     'contact_name_placeholder' => 'Enter full name',
     'contact_phone' => 'Phone Number',

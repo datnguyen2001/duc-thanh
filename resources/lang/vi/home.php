@@ -25,7 +25,7 @@ return [
     'contact' => 'Liên hệ',
     'contact_title_1' => 'Liên hệ với Đức Thanh',
     'contact_title_2' => 'để được hỗ trợ',
-    'contact_note' => 'Nếu quý khách có góp ý hoặc câu hỏi nào dành cho Đức Thanh, vui lòng gửi thông tin theo biểu mẫu:',
+    'contact_note' => 'Quý khách có góp ý hoặc câu hỏi nào dành cho Đức Thanh, vui lòng gửi thông tin theo biểu mẫu:',
     'contact_name' => 'Họ và tên',
     'contact_name_placeholder' => 'Nhập họ và tên',
     'contact_phone' => 'Số điện thoại',
