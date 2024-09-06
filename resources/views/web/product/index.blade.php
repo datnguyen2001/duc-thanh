@@ -34,11 +34,11 @@
             <div class="line-header-product">
                 <span>{{__('product.home')}} > </span>
                 <span style="margin-left: 4px"> {{__('product.sub_home')}} > </span>
-                <span style="color: #D23C36;margin-left: 4px"> {{$productDetails->category->name ?? ''}}</span>
+                <span style="color: #D23C36;margin-left: 4px"> {{$productDetails->name ?? ''}}</span>
             </div>
             <div class="box-content-product">
                 <div class="content-left" data-aos="fade-up">
-                    <span class="title-product background-title">{{$productDetails->category->name ?? ''}}</span>
+                    <span class="title-product background-title">{{$productDetails->name ?? ''}}</span>
                     <a href="{{route('category')}}" class="close-product-mobile">
                         <img src="{{asset('assets/images/close.webp')}}" alt="" class="btn-close-sp">
                     </a>
