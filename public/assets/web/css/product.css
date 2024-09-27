@@ -111,7 +111,10 @@
     border-radius: 50px;
     border: 1px solid #FF6663;
     padding: 30px;
-    height: 744px;
+    height: auto;
+}
+blockquote{
+    height: 576px!important;
 }
 .product-details-img{
     object-fit: cover;
@@ -236,7 +239,7 @@
         width: 35%;
     }
     .col-video {
-        width: 75% !important;
+        width: 94% !important;
     }
 }
 @media (max-width: 1200px) {
@@ -256,7 +259,7 @@
         max-height: 200px;
     }
     .video-image {
-        height: 600px;
+        height: auto;
     }
 }
 
@@ -438,6 +441,11 @@
     }
     .btn-close-sp {
         right: -45px;
+    }
+}
+@media (max-width: 370px) {
+    .video-image {
+        padding: 5;
     }
 }
 @media (max-width: 350px) {
