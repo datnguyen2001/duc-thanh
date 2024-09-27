@@ -16,13 +16,9 @@
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-3">Hình ảnh video:</div>
+                        <div class="col-3">Link iframe :</div>
                         <div class="col-8">
-                            <div class="form-control position-relative" style="padding-top: 50%">
-                                <button type="button" class="position-absolute border-0 bg-transparent select-image" style="top: 50%;left: 50%;transform: translate(-50%,-50%)">
-                                    <i style="font-size: 30px" class="bi bi-download"></i>
-                                </button>
-                            </div>
+                            <input class="form-control" name="src" type="text" required>
                         </div>
                     </div>
                     <div class="row mt-3">

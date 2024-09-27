@@ -65,7 +65,7 @@
                                 <div class="swiper-slide">
                                     <div class="col-video">
                                         <div class="video-image">
-                                            <img src="{{$videoProduct->src}}" alt="Image" class="product-details-video"/>
+                                            {!! $videoProduct->src !!}
                                         </div>
                                         <div class="video-text">
                                             <div class="d-flex justify-content-between align-items-center">
