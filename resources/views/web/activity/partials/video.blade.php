@@ -7,11 +7,12 @@
                 @foreach($video as $videos)
                 <div class="swiper-slide">
                     <div class="video-image">
-                        <a href="{{$videos->link}}">
+                        <div class="position-relative">
                             <img src="{{asset('assets/images/activity/frame-video.png')}}" alt="Frame" class="frame"/>
-                            <img src="{{asset($videos->src)}}" alt="Image" class="video"/>
-    {{--                        <img src="{{asset('assets/images/activity/tiktok.png')}}" alt="TikTok" class="tiktok"/>--}}
-                        </a>
+                            <div class="position-absolute box-iframe-video">
+                                {!! $videos->src !!}
+                            </div>
+                        </div>
                     </div>
                     <div class="video-text">
                         <div class="d-flex justify-content-between">
@@ -48,7 +49,7 @@
                     spaceBetween: 20,
                 },
                 768: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                     spaceBetween: 10,
                 },
                 300: {
