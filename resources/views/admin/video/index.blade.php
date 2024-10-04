@@ -16,7 +16,6 @@
                                 <tr>
                                     <th scope="col">STT</th>
                                     <th scope="col">Mô tả</th>
-                                    <th scope="col">Hình ảnh</th>
                                     <th scope="col">Trạng thái</th>
                                     <th scope="col">...</th>
                                 </tr>
@@ -28,13 +27,6 @@
                                             <th scope="row">{{$key+1}}</th>
                                             <td>
                                                 {{$value->describe}}
-                                            </td>
-                                            <td>
-                                                <div class="w-100 position-relative"
-                                                     style="padding-top: 50%;min-width: 150px">
-                                                    <img src="{{asset($value->src)}}" class="position-absolute w-100 h-100"
-                                                         style="top: 0;left: 0;object-fit: cover">
-                                                </div>
                                             </td>
                                             <td>
                                                 @if($value->display == 1)

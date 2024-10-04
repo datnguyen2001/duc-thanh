@@ -8,6 +8,69 @@
     <meta property="og:image" content="{{asset(@$meta->image)}}"/>
 @endsection
 @section('style_page')
+    <style>
+        .box-iframe-video{
+            top: 20px;
+            left: 50%;
+            transform: translateX(-40%);
+        }
+        .box-iframe-video blockquote{
+            max-height: 510px;
+            border-radius: 8px;
+            min-width: 270px!important;
+        }
+        .frame{
+            max-height: 615px;
+        }
+        @media (max-width: 1400px) {
+            .activity-video .list-video-product .frame {
+                width: 100%;
+            }
+        }
+        @media (max-width: 1200px) {
+            .box-iframe-video blockquote{
+                min-width: unset!important;
+                width: 100%!important;
+            }
+            .box-iframe-video{
+                width: 90%;
+            }
+        }
+        @media (max-width: 992px) {
+            .box-iframe-video blockquote{
+                max-height: 540px;
+            }
+            .home-activity-product .frame-2 {
+                height: auto!important;
+            }
+            .box-iframe-video {
+                width: 50%;
+                top: 15px;
+            }
+            .home-activity-product .frame-2 {
+                width: 83%;
+            }
+        }
+        @media (max-width: 768px) {
+            .box-iframe-video blockquote{
+                width: 100%!important;
+            }
+            .home-activity-product .frame-2 {
+                width: 100%;
+            }
+            .box-iframe-video {
+                width: 75%;
+            }
+            .box-iframe-video blockquote {
+                max-height: 460px;
+            }
+        }
+        @media (max-width: 400px) {
+            .box-iframe-video blockquote {
+                max-height: 420px;
+            }
+        }
+    </style>
 @stop
 {{--content of page--}}
 @section('content')

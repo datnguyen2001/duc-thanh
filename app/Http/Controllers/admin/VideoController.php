@@ -36,13 +36,6 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         try {
-            $imagePath = null;
-            if ($request->hasFile('file')) {
-                $file = $request->file('file');
-                $imagePath = Storage::url($file->store('product', 'public'));
-            }else{
-                return redirect()->back()->with(['error'=>'Vui lòng thêm hình ảnh để tiếp tục']);
-            }
             if ($request->get('display') == 'on'){
                 $display = 1;
             }else{
@@ -57,7 +50,7 @@ class VideoController extends Controller
                 'describe_en'=>$translatedDescribe,
                 'link'=>$request->get('link'),
                 'channel_name'=>$request->get('channel_name'),
-                'src' => $imagePath,
+                'src' => $request->get('src'),
                 'display'=>$display
             ]);
             $product->save();
@@ -97,14 +90,6 @@ class VideoController extends Controller
         try {
             $product = VideoModel::find($id);
 
-            if ($request->hasFile('file')) {
-                $file = $request->file('file');
-                $imagePath = Storage::url($file->store('product', 'public'));
-                if (isset($product->src) && Storage::exists(str_replace('/storage', 'public', $product->src))) {
-                    Storage::delete(str_replace('/storage', 'public', $product->src));
-                }
-                $product->src = $imagePath;
-            }
             if ($request->get('display') == 'on'){
                 $display = 1;
             }else{
@@ -117,6 +102,7 @@ class VideoController extends Controller
             $product->channel_name = $request->get('channel_name');
             $product->describe = $request->get('describe');
             $product->link = $request->get('link');
+            $product->src = $request->get('src');
             $product->display=$display;
             $product->save();
 

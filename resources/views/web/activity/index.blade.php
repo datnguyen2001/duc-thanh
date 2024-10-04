@@ -10,6 +10,43 @@
 @section('style_page')
     <link rel="stylesheet" href="{{ asset('assets/web/css/activity.css') }}">
     <style>
+        .box-iframe-video{
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .box-iframe-video blockquote{
+            max-height: 575px;
+            border-radius: 8px;
+        }
+        .frame{
+            max-height: 615px;
+        }
+        @media (max-width: 1400px) {
+            .activity-video .list-video-product .frame {
+                width: 100%;
+            }
+        }
+        @media (max-width: 1200px) {
+            .box-iframe-video blockquote{
+                min-width: unset!important;
+                width: 100%!important;
+                max-height: 565px;
+            }
+            .box-iframe-video{
+                width: 90%;
+            }
+        }
+        @media (max-width: 992px) {
+            .box-iframe-video blockquote{
+                max-height: 575px;
+            }
+        }
+        @media (max-width: 768px) {
+            .box-iframe-video blockquote{
+                width: 88%!important;
+            }
+        }
         @if ($banner)
             /* Desktop background */
         .activity-page .activity-banner {

@@ -16,14 +16,9 @@
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-3">Hình ảnh video:</div>
+                        <div class="col-3">Link iframe :</div>
                         <div class="col-8">
-                            <div class="form-control position-relative div-parent" style="padding-top: 50%">
-                                <div class="position-absolute w-100 h-100 div-file" style="top: 0; left: 0;z-index: 10">
-                                    <button type="button" class="position-absolute clear border-0 bg-danger p-0 d-flex justify-content-center align-items-center" style="top: -10px;right: -10px;width: 30px;height: 30px;border-radius: 50%"><i class="bi bi-x-lg text-white"></i></button>
-                                    <img src="{{asset($data->src)}}" class="w-100 h-100" style="object-fit: cover">
-                                </div>
-                            </div>
+                            <input class="form-control" name="src" value="{{$data->src}}" type="text" required>
                         </div>
                     </div>
                     <div class="row mt-3">

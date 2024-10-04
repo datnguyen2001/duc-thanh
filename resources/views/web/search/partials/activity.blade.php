@@ -7,12 +7,12 @@
                     @foreach($image as $images)
                         <div class="swiper-slide">
                             <div class="product-image">
-{{--                                <img src="{{asset('assets/images/activity/frame-img.png')}}" alt="Frame" class="frame"/>--}}
+                                {{--                                <img src="{{asset('assets/images/activity/frame-img.png')}}" alt="Frame" class="frame"/>--}}
                                 <img src="{{asset($images->src)}}" alt="Image" class="image"/>
                             </div>
                             <div class="product-text">
                                 <a href="{{$images->link}}">
-                                <h5 class="product-title">{{$images->names}}</h5>
+                                    <h5 class="product-title">{{$images->names}}</h5>
                                 </a>
                                 <p class="product-detail">{{$images->describes}}</p>
                                 <span><a href="{{$images->link}}">{{__('activity.image_details')}} -></a></span>
@@ -21,8 +21,10 @@
                     @endforeach
                 </div>
                 <!-- Add Navigation -->
-                <div class="swiper-button-next"><img src="{{asset('assets/images/activity/next-btn.png')}}" alt="Next"/></div>
-                <div class="swiper-button-prev"><img src="{{asset('assets/images/activity/prev-btn.png')}}" alt="Prev"/></div>
+                <div class="swiper-button-next"><img src="{{asset('assets/images/activity/next-btn.png')}}" alt="Next"/>
+                </div>
+                <div class="swiper-button-prev"><img src="{{asset('assets/images/activity/prev-btn.png')}}" alt="Prev"/>
+                </div>
             </div>
         @else
             <div class="text-center" style="margin-top: 20px;">
@@ -41,13 +43,19 @@
                     @foreach($video as $videos)
                         <div class="swiper-slide">
                             <div class="video-image-search">
-                                <img src="{{asset('assets/images/activity/frame-video.png')}}" alt="Frame" class="frame"/>
-                                <img src="{{asset($videos->src)}}" alt="Image" class="video"/>
+                                <div class="position-relative">
+                                    <img src="{{asset('assets/images/activity/frame-video.png')}}" alt="Frame"
+                                         class="frame"/>
+                                    <div class="position-absolute box-iframe-video">
+                                        {!! $videos->src !!}
+                                    </div>
+                                </div>
                             </div>
                             <div class="video-text">
                                 <div class="d-flex justify-content-between">
                                     <p class="d-flex align-items-center">{{__('activity.video_see_more')}} ...</p>
-                                    <a href="{{$videos->link}}" target="_blank" class="video-btn">{{__('activity.video_see_now')}}</a>
+                                    <a href="{{$videos->link}}" target="_blank"
+                                       class="video-btn">{{__('activity.video_see_now')}}</a>
                                 </div>
                                 <p class="title-channel_name">{{$videos->channel_name}}</p>
                                 <p class="content-describes">{{$videos->describes}}</p>
@@ -56,7 +64,8 @@
                     @endforeach
                 </div>
                 <!-- Add Navigation -->
-                <div class="swiper-button-next"><img src="{{asset('assets/images/activity/next-btn.png')}}" alt="Next"/></div>
+                <div class="swiper-button-next"><img src="{{asset('assets/images/activity/next-btn.png')}}" alt="Next"/>
+                </div>
                 <div class="swiper-button-prev" style="position: absolute; left: 0">
                     <img src="{{asset('assets/images/activity/prev-btn.png')}}" alt="Prev"/>
                 </div>
@@ -85,6 +94,10 @@
                     spaceBetween: 20,
                 },
                 768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                300: {
                     slidesPerView: 1,
                     spaceBetween: 10,
                 },

@@ -26,8 +26,13 @@
         </div>
         <div class="acts-video col-lg-4 col-12" data-aos="fade-up">
             <div class="frame-container">
-                <img src="{{asset('assets/images/home/frame2.png')}}" alt="Frame2" class="frame-2">
-                <img src="{{$videoProduct->src ?? ''}}" alt="Tiktok Activity" class="home-activity-video">
+                <div class="position-relative">
+                    <img src="{{asset('assets/images/home/frame2.png')}}" alt="Frame2" class="frame-2 frame">
+                    <div class="position-absolute box-iframe-video">
+                        {!! $videoProduct->src !!}
+                    </div>
+                </div>
+
             </div>
             <a href="{{route('activity') . '#video-field'}}"><h5>{{__('home.activity_video')}}</h5></a>
         </div>
