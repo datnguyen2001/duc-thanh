@@ -1,4 +1,4 @@
-<div class="container" style="padding-top: 215px">
+<div class="container" style="padding-top: 215px" id="image-field">
     <span class="home">{{__('activity.home')}} ></span>
     <span class="activity">{{__('activity.sub_home')}}</span>
     <div class="list-image">

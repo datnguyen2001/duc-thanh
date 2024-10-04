@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="video-field">
     <div class="list-video">
         <h5 class="sub-title">{{__('activity.video')}}</h5>
         <h1>{{__('activity.video_title')}}</h1>

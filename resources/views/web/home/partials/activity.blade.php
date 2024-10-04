@@ -22,7 +22,7 @@
                 <img src="{{asset('assets/images/home/frame1-mobile.png')}}" alt="Frame1" class="frame-1 frame-1-mobile">
 
             </div>
-            <h5>{{__('home.activity_image')}}</h5>
+            <a href="{{route('activity') . '#image-field'}}"><h5>{{__('home.activity_image')}}</h5></a>
         </div>
         <div class="acts-video col-lg-4 col-12" data-aos="fade-up">
             <div class="frame-container">
@@ -34,7 +34,7 @@
                 </div>
 
             </div>
-            <h5>{{__('home.activity_video')}}</h5>
+            <a href="{{route('activity') . '#video-field'}}"><h5>{{__('home.activity_video')}}</h5></a>
         </div>
     </div>
 </div>
