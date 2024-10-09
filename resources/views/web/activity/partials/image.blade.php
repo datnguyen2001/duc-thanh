@@ -1,5 +1,6 @@
 <div class="container" style="padding-top: 215px" id="image-field">
-    <span class="home">{{__('activity.home')}} ></span>
+    <a href="{{route('home')}}">
+        <span class="home">{{__('activity.home')}} > </span></a>
     <span class="activity">{{__('activity.sub_home')}}</span>
     <div class="list-image">
         <h5 class="sub-title">{{__('activity.image')}}</h5>

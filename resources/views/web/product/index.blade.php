@@ -32,8 +32,11 @@
         </div>
         <div class="container box-big-content">
             <div class="line-header-product">
-                <span>{{__('product.home')}} > </span>
+                <a href="{{route('home')}}">
+                    <span>{{__('product.home')}} > </span></a>
+                <a href="{{route('category')}}">
                 <span style="margin-left: 4px"> {{__('product.sub_home')}} > </span>
+                </a>
                 <span style="color: #D23C36;margin-left: 4px"> {{$productDetails->name ?? ''}}</span>
             </div>
             <div class="box-content-product">
