@@ -34,7 +34,8 @@
         <div class="home-contact">
             <div class="container">
                 <div class="title-link">
-                    <span class="home">{{__('contact.home')}} > </span>
+                    <a href="{{route('home')}}">
+                        <span class="home">{{__('contact.home')}} > </span></a>
                     <span class="contact">{{__('contact.sub_home')}}</span>
                 </div>
                 @include('web.home.partials.contact')

@@ -33,7 +33,8 @@
     <div class="category-page">
         <div class="container">
             <div class="title-link">
-                <span class="home">{{__('category.home')}} > </span>
+                <a href="{{route('home')}}">
+                <span class="home">{{__('category.home')}} > </span></a>
                 <span class="product">{{__('category.sub_home')}}</span>
             </div>
         </div>
