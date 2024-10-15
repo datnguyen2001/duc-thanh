@@ -25,12 +25,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-3">Link :</div>
-                        <div class="col-8">
-                            <input class="form-control" name="link" type="text" required>
-                        </div>
-                    </div>
+{{--                    <div class="row mt-3">--}}
+{{--                        <div class="col-3">Link :</div>--}}
+{{--                        <div class="col-8">--}}
+{{--                            <input class="form-control" name="link" type="text" required>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <div class="card mt-3">
                         <div class="card-header bg-info text-white">
                             Mô tả

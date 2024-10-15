@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('src');
             $table->longText('describe');
             $table->longText('describe_en');
-            $table->string('link');
+            $table->string('link')->nullable();
             $table->integer('display')->default(1);
             $table->timestamps();
         });

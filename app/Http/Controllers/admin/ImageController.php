@@ -56,7 +56,7 @@ class ImageController extends Controller
             $image = new ImageModel([
                 'describe'=>$request->get('describe'),
                 'describe_en'=>$translatedDescribe,
-                'link'=>$request->get('link'),
+//                'link'=>$request->get('link'),
                 'name'=>$request->get('name'),
                 'name_en'=>$translatedName,
                 'src' => $imagePath,
@@ -119,7 +119,7 @@ class ImageController extends Controller
             $product->name_en = $translator->translate($request->get('name'));
             $product->name = $request->get('name');
             $product->describe = $request->get('describe');
-            $product->link = $request->get('link');
+//            $product->link = $request->get('link');
             $product->display=$display;
             $product->save();
 
