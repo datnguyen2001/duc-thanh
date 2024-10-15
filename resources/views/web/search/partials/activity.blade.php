@@ -11,11 +11,11 @@
                                 <img src="{{asset($images->src)}}" alt="Image" class="image"/>
                             </div>
                             <div class="product-text">
-                                <a href="{{$images->link}}">
+                                <a >
                                     <h5 class="product-title">{{$images->names}}</h5>
                                 </a>
                                 <p class="product-detail">{{$images->describes}}</p>
-                                <span><a href="{{$images->link}}">{{__('activity.image_details')}} -></a></span>
+{{--                                <span><a >{{__('activity.image_details')}} -></a></span>--}}
                             </div>
                         </div>
                     @endforeach
