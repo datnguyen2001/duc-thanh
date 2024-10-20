@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\SettingModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class SettingController extends Controller
 {
@@ -21,6 +22,10 @@ class SettingController extends Controller
 
     public function save(Request $request){
         $setting = SettingModel::first();
+        $translator = new GoogleTranslate();
+        $translator->setSource('vi');
+        $translator->setTarget('en');
+        $translatedAddress = $translator->translate($request->get('address'));
         if ($setting){
             if ($request->hasFile('file')){
                 $file = $request->file('file');
@@ -31,6 +36,7 @@ class SettingController extends Controller
                 $setting->logo = $imagePath;
             }
             $setting->address = $request->get('address');
+            $setting->address_en = $translatedAddress;
             $setting->phone = $request->get('phone');
             $setting->email = $request->get('email');
             $setting->website = $request->get('website');
@@ -48,6 +54,7 @@ class SettingController extends Controller
             }
             $setting = new SettingModel([
                 'address'=>$request->get('address'),
+                'address_en'=>$translatedAddress,
                 'phone'=>$request->get('phone'),
                 'email'=>$request->get('email'),
                 'logo'=>$imagePath,

@@ -15,7 +15,7 @@ class VideoController extends Controller
         $titlePage = 'Danh sách video ';
         $page_menu = 'work';
         $page_sub = 'video';
-        $listData = VideoModel::orderBy('created_at', 'desc')->paginate(15);
+        $listData = VideoModel::orderBy('location', 'asc')->paginate(15);
 
         return view('admin.video.index', compact('titlePage', 'page_menu', 'page_sub', 'listData'));
     }
@@ -51,7 +51,8 @@ class VideoController extends Controller
                 'link'=>$request->get('link'),
                 'channel_name'=>$request->get('channel_name'),
                 'src' => $request->get('src'),
-                'display'=>$display
+                'display'=>$display,
+                'location'=>$request->get('location'),
             ]);
             $product->save();
 
@@ -104,6 +105,7 @@ class VideoController extends Controller
             $product->link = $request->get('link');
             $product->src = $request->get('src');
             $product->display=$display;
+            $product->location = $request->get('location');
             $product->save();
 
             return redirect()->route('admin.video.index')->with(['success' => 'Cập nhật dữ liệu thành công']);

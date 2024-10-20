@@ -5,15 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ImageModel extends Model
+class ImageDetailModel extends Model
 {
     use HasFactory;
-    protected $table = 'image';
+    protected $table = 'image_detail';
     protected $fillable = [
+        'image_id',
         'src',
-        'link',
-        'name',
-        'name_en',
         'describe',
         'describe_en',
         'display',

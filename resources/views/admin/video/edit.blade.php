@@ -36,6 +36,12 @@
                         </div>
                     </div>
                     <div class="row mt-3">
+                        <div class="col-3">Thứ tự vị trí :</div>
+                        <div class="col-8">
+                            <input class="form-control" name="location" type="number" value="{{@$data->location}}" required>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
                         <div class="col-3">Trạng thái :</div>
                         <div class="col-8">
                             <div class="form-check form-switch">

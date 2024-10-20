@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Mail\ContactFormSubmitted;
 use App\Models\BannerModel;
 use App\Models\ContactModel;
+use App\Models\ImageDetailModel;
 use App\Models\ImageModel;
 use App\Models\IntroduceModel;
 use App\Models\CategoryModel;
@@ -34,8 +35,8 @@ class HomeController extends Controller
     {
         $banners = BannerModel::where('page', 'home')->get();
         $categories = CategoryModel::orderBy('index','asc')->get();
-        $imageProduct = ImageModel::first();
-        $videoProduct = VideoModel::first();
+        $imageProduct = ImageModel::where('display',1)->orderBy('location', 'asc')->get();
+        $videoProduct = VideoModel::where('display',1)->orderBy('location', 'asc')->get();
 
         $currentLocale = app()->getLocale();
         foreach ($categories as $category){
@@ -53,7 +54,7 @@ class HomeController extends Controller
 
     public function activity()
     {
-        $image = ImageModel::where('display',1)->orderBy('created_at','desc')->get();
+        $image = ImageModel::where('display',1)->orderBy('location', 'asc')->get();
         $banner = BannerModel::where('page', 'activities')->first();
         $currentLocale = app()->getLocale();
         foreach ($image as $images){
@@ -77,6 +78,30 @@ class HomeController extends Controller
         $is_active = 4;
 
         return view('web.activity.index',compact('image','video','meta','is_active', 'banner'));
+    }
+    public function detailActivity($id)
+    {
+        $image = ImageModel::find($id);
+        if (!$image){
+            toastr()->error('Hình ảnh không tồn tại');
+            return back();
+        }
+        $banner = BannerModel::where('page', 'activities')->first();
+        $currentLocale = app()->getLocale();
+        $listData = ImageDetailModel::where('image_id',$id)->get();
+        foreach ($listData as $images){
+            if ($currentLocale == 'vi') {
+                $images->names = $images->name;
+                $images->describes = $images->describe;
+            } else if ($currentLocale == 'en') {
+                $images->names = $images->name_en;
+                $images->describes = $images->describe_en;
+            }
+        }
+        $meta = MetaModel::where('type',3)->first();
+        $is_active = 4;
+
+        return view('web.activity.list',compact('listData','meta','is_active', 'banner'));
     }
 
     public function contact()
@@ -241,8 +266,10 @@ class HomeController extends Controller
         $banner = BannerModel::where('page', 'products')->first();
         $currentLocale = app()->getLocale();
         if($currentLocale == 'vi'){
+            $productDetails->names = $productDetails->name;
             $productDetails->contents = $productDetails->content;
         } else if ($currentLocale == 'en'){
+            $productDetails->names = $productDetails->name_en;
             $productDetails->contents = $productDetails->content_en;
         }
 
@@ -293,12 +320,12 @@ class HomeController extends Controller
 
         if ($currentLocale == 'vi') {
             $categoryProducts = ProductModel::where('name', 'LIKE', '%' . $keyword . '%')->get();
-            $image = ImageModel::where('name', 'LIKE', '%' . $keyword . '%')->get();
-            $video = VideoModel::where('channel_name', 'LIKE', '%' . $keyword . '%')->get();
+            $image = ImageModel::where('name', 'LIKE', '%' . $keyword . '%')->orderBy('location', 'asc')->get();
+            $video = VideoModel::where('channel_name', 'LIKE', '%' . $keyword . '%')->orderBy('location', 'asc')->get();
         } else if ($currentLocale == 'en') {
             $categoryProducts = ProductModel::where('name_en', 'LIKE', '%' . $keyword . '%')->get();
-            $image = ImageModel::where('name_en', 'LIKE', '%' . $keyword . '%')->get();
-            $video = VideoModel::where('channel_name', 'LIKE', '%' . $keyword . '%')->get();
+            $image = ImageModel::where('name_en', 'LIKE', '%' . $keyword . '%')->orderBy('location', 'asc')->get();
+            $video = VideoModel::where('channel_name', 'LIKE', '%' . $keyword . '%')->orderBy('location', 'asc')->get();
         } else {
             $categoryProducts = collect();
             $image = collect();

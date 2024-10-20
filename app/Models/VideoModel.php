@@ -16,5 +16,6 @@ class VideoModel extends Model
         'describe',
         'describe_en',
         'display',
+        'location',
     ];
 }
