@@ -16,6 +16,7 @@ use \App\Http\Controllers\web\HomeController;
 Route::get('language/{language}', [HomeController::class, 'language'])->name('language');
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/hoat-dong', [HomeController::class, 'activity'])->name('activity');
+Route::get('/chi-tiet-hoat-dong/{id}', [HomeController::class, 'detailActivity'])->name('detail-activity');
 Route::get('/chinh-sach-bao-mat', [HomeController::class, 'policy'])->name('policy');
 Route::get('/gioi-thieu-ve-duc-thanh', [HomeController::class, 'introduce'])->name('introduce');
 Route::get('/san-pham/{slug}', [HomeController::class, 'detailProduct'])->name('detail-product');

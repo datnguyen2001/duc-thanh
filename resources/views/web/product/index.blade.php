@@ -37,11 +37,11 @@
                 <a href="{{route('category')}}">
                 <span style="margin-left: 4px"> {{__('product.sub_home')}} > </span>
                 </a>
-                <span style="color: #D23C36;margin-left: 4px"> {{$productDetails->name ?? ''}}</span>
+                <span style="color: #D23C36;margin-left: 4px"> {{$productDetails->names ?? ''}}</span>
             </div>
             <div class="box-content-product">
                 <div class="content-left" data-aos="fade-up">
-                    <span class="title-product background-title">{{$productDetails->name ?? ''}}</span>
+                    <span class="title-product background-title">{{$productDetails->names ?? ''}}</span>
                     <a href="{{route('category')}}" class="close-product-mobile">
                         <img src="{{asset('assets/images/close.webp')}}" alt="" class="btn-close-sp">
                     </a>

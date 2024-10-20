@@ -5,7 +5,7 @@ return [
     'about_more' => 'Xem thêm',
     'about_text_1' => 'Đức thanh - Vẽ nên tương lai rực rỡ!',
     'about_text_2' => 'Hành trình học tập của con bạn bắt đầu từ những nét vẽ nguệch ngoạc đầu tiên.',
-    'about_text_3' => 'Hãy để Đức thanh đồng hành cùng bé trên con đường ấy với những sản phẩm văn phòng phẩm chất lượng ao, an toàn và đầy cảm hứng:',
+    'about_text_3' => 'Hãy để Đức thanh đồng hành cùng bé trên con đường ấy với những sản phẩm văn phòng phẩm, đồ dùng học sinh chất lượng cao, an toàn và đầy cảm hứng',
     'about_text_4' => '',
 
     'product' => 'Sản phẩm',

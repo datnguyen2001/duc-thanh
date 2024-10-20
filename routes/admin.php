@@ -104,6 +104,15 @@ Route::middleware('check-admin-auth')->group(function () {
         Route::get('delete/{id}', [ImageController::class, 'delete']);
     });
 
+    Route::prefix('image-detail')->name('image-detail.')->group(function () {
+        Route::get('index/{id}', [ImageController::class, 'indexImage'])->name('index-image');
+        Route::get('create-image/{id}', [ImageController::class, 'createImage'])->name('create-image');
+        Route::post('store-image/{id}', [ImageController::class, 'storeImage'])->name('store-image');
+        Route::get('edit-image/{id}', [ImageController::class, 'editImage']);
+        Route::post('update-image/{id}', [ImageController::class, 'updateImage'])->name('update-image');
+        Route::get('delete-image/{id}', [ImageController::class, 'deleteImage']);
+    });
+
     Route::prefix('seo')->name('seo.')->group(function () {
         Route::get('', [MetaController::class, 'index'])->name('index');
         Route::get('create', [MetaController::class, 'create'])->name('create');

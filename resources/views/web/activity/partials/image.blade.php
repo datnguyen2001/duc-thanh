@@ -17,7 +17,7 @@
                         </a>
                     </div>
                     <div class="product-text">
-                        <a>
+                        <a href="{{route('detail-activity',$images->id)}}">
                             <h5 class="product-title">{{$images->names}}</h5>
                         </a>
                         <p class="product-detail">{{$images->describes}}</p>

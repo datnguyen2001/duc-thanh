@@ -5,7 +5,7 @@ return [
     'about_more' => 'See more',
     'about_text_1' => 'Duc Thanh - Painting a bright future!',
     'about_text_2' => "Your child's learning journey begins with their first scribbles.",
-    'about_text_3' => 'Let Duc Thanh accompany your child on this path with high-quality office supplies that are safe and full of inspiration:',
+    'about_text_3' => 'Let Duc Thanh accompany your child on that path with high-quality, safe and inspirational stationery and student supplies',
     'about_text_4' => '',
 
     'product' => 'Products',

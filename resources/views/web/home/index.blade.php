@@ -15,7 +15,7 @@
             transform: translateX(-40%);
         }
         .box-iframe-video blockquote{
-            max-height: 510px;
+            max-height: 525px;
             border-radius: 8px;
             min-width: 270px!important;
         }

@@ -12,6 +12,7 @@ class SettingModel extends Model
     protected $fillable = [
         'logo',
         'address',
+        'address_en',
         'phone',
         'email',
         'website',

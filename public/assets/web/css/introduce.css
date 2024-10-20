@@ -84,7 +84,7 @@
     left: 15%;
     background: #FFC600;
     width: 100%;
-    max-width: 390px;
+    max-width: 415px;
     text-align: center;
     color: #D23C36;
     font-size: 26px;
@@ -282,7 +282,7 @@
         top: 100px;
     }
     .title1{
-        max-width: 340px;
+        max-width: 365px;
         font-size: 25px;
         padding: 10px 40px;
     }
@@ -320,7 +320,7 @@
         right: 21%;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
     .line-header-introduce {
         margin-top: -265px;
         padding-left: 34px;
