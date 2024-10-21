@@ -8,14 +8,16 @@
                         <div class="swiper-slide">
                             <div class="product-image">
                                 {{--                                <img src="{{asset('assets/images/activity/frame-img.png')}}" alt="Frame" class="frame"/>--}}
-                                <img src="{{asset($images->src)}}" alt="Image" class="image"/>
+                                <a href="{{route('detail-activity',$images->id)}}">
+                                    <img src="{{asset($images->src)}}" alt="Image" class="image"/>
+                                </a>
                             </div>
                             <div class="product-text">
                                 <a href="{{route('detail-activity',$images->id)}}">
                                     <h5 class="product-title">{{$images->names}}</h5>
                                 </a>
                                 <p class="product-detail">{{$images->describes}}</p>
-{{--                                <span><a >{{__('activity.image_details')}} -></a></span>--}}
+                                {{--                                <span><a >{{__('activity.image_details')}} -></a></span>--}}
                             </div>
                         </div>
                     @endforeach

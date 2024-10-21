@@ -12,7 +12,7 @@
                 @foreach($image as $images)
                 <div class="swiper-slide">
                     <div class="product-image product-image-hd">
-                        <a>
+                        <a href="{{route('detail-activity',$images->id)}}">
                             <img src="{{asset($images->src)}}" alt="Image" class="image-hd"/>
                         </a>
                     </div>
