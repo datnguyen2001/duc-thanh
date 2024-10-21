@@ -68,6 +68,10 @@
 </script>
 <script>
     var swiper = new Swiper(".mySwiperImages", {
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -76,6 +80,10 @@
     var swiper = new Swiper(".mySwiperVideos", {
         slidesPerView: 1,
         spaceBetween: 30,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
