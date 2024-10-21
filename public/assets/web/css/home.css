@@ -21,7 +21,7 @@
     background: black!important;
 }
 .swiper-pagination-bullet-active{
-    background: white!important;
+    background: red!important;
 }
 .carousel-indicators {
     position: absolute;
