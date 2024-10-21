@@ -28,9 +28,9 @@
                     <div class="col-lg-6 col-12 d-flex">
                         <div class="introduction col-6">
                             <h5>{{__('footer.introduce')}}</h5>
-                            <p><a href="{{route('policy')}}">{{__('footer.policy')}}</a></p>
                             <p><a href="{{route('introduce')}}">{{__('footer.about')}}</a></p>
                             <p><a href="{{route('activity')}}">{{__('footer.activity')}}</a></p>
+                            <p><a href="{{route('policy')}}">{{__('footer.policy')}}</a></p>
                             <p><a href="{{route('contact')}}">{{__('footer.contact')}}</a></p>
                         </div>
                         <div class="product col-6">

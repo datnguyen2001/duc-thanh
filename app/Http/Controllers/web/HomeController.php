@@ -66,7 +66,7 @@ class HomeController extends Controller
                 $images->describes = $images->describe_en;
             }
         }
-        $video = VideoModel::where('display',1)->orderBy('created_at','desc')->get();
+        $video = VideoModel::where('display',1)->orderBy('location','asc')->get();
         foreach ($video as $videos){
             if ($currentLocale == 'vi') {
                 $videos->describes = $videos->describe;
