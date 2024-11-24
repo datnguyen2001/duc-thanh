@@ -8,7 +8,7 @@ return [
     'image_title' => 'Product experience images with Duc Thanh',
     'image_details' => 'Details',
     'video' => 'Product videos',
-    'video_title' => 'Short product introduction videos',
+    'video_title' => 'Product introduction videos',
     'video_see_more' => 'See more videos',
     'video_see_now' => 'Watch now',
     'see_more' => 'Show more',

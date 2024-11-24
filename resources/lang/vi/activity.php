@@ -8,7 +8,7 @@ return [
     'image_title' => 'Hình ảnh trải nghiệm sản phẩm cùng Đức Thanh',
     'image_details' => 'Chi tiết',
     'video' => 'Video sản phẩm',
-    'video_title' => 'Video ngắn giới thiệu sản phẩm',
+    'video_title' => 'Video giới thiệu sản phẩm',
     'video_see_more' => 'Xem thêm các video',
     'video_see_now' => 'Xem ngay',
     'see_more' => 'Xem thêm',
